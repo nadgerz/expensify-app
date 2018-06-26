@@ -7,7 +7,7 @@ console.log(template + ', app.js is running');
 template = React.createElement(
   'h1',
   null,
-  'Does this change?'
+  'YES IT DOES!!!'
 );
 
 var appRoot = document.getElementById('app');
