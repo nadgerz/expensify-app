@@ -17,9 +17,11 @@ const template = (
 // 2: root div
 // 3: Render it.
 
+const userName = "Bibble"
+
 const templateTwo = (
   <div>
-    <h1>Steve Ingram</h1>
+    <h1>{userName.toLocaleUpperCase()}</h1>
     <p>Age: 52</p>
     <p>Location: Berlin</p>
   </div>

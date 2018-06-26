@@ -37,13 +37,15 @@ var template = React.createElement(
 // 2: root div
 // 3: Render it.
 
+var userName = "Bibble";
+
 var templateTwo = React.createElement(
   'div',
   null,
   React.createElement(
     'h1',
     null,
-    'Steve Ingram'
+    userName.toLocaleUpperCase()
   ),
   React.createElement(
     'p',
