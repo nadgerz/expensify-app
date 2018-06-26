@@ -17,21 +17,21 @@ const template = (
 // 2: root div
 // 3: Render it.
 
-const userName = 'Bibble';
+const userName = 'Babble';
 const userAge = 14;
 const userLocation = 'Paris';
 
 const user = {
-  userName,
-  userAge,
-  userLocation
+  name: userName,
+  age: userAge,
+  location: userLocation
 };
 
 const templateTwo = (
   <div>
-    <h1>{user.userName.toLocaleUpperCase()}</h1>
-    <p>Age: {user.userAge}</p>
-    <p>Location: {user.userLocation}</p>
+    <h1>{user.name.toLocaleUpperCase()}</h1>
+    <p>Age: {user.age}</p>
+    <p>Location: {user.location}</p>
   </div>
 );
 
