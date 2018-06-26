@@ -17,13 +17,15 @@ const template = (
 // 2: root div
 // 3: Render it.
 
-const userName = "Bibble"
+const userName = 'Bibble';
+const userAge = 14;
+const userLocation = 'Paris';
 
 const templateTwo = (
   <div>
     <h1>{userName.toLocaleUpperCase()}</h1>
-    <p>Age: 52</p>
-    <p>Location: Berlin</p>
+    <p>Age: {userAge}</p>
+    <p>Location: {userLocation}</p>
   </div>
 );
 

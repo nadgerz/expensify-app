@@ -37,7 +37,9 @@ var template = React.createElement(
 // 2: root div
 // 3: Render it.
 
-var userName = "Bibble";
+var userName = 'Bibble';
+var userAge = 14;
+var userLocation = 'Paris';
 
 var templateTwo = React.createElement(
   'div',
@@ -50,12 +52,14 @@ var templateTwo = React.createElement(
   React.createElement(
     'p',
     null,
-    'Age: 52'
+    'Age: ',
+    userAge
   ),
   React.createElement(
     'p',
     null,
-    'Location: Berlin'
+    'Location: ',
+    userLocation
   )
 );
 
