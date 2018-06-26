@@ -5,7 +5,7 @@ var template = 'Steve';
 console.log(template + ', app.js is running');
 
 template = React.createElement(
-  'p',
+  'h1',
   null,
   'This is JSX from app.js'
 );
