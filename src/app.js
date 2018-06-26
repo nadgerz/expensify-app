@@ -2,7 +2,7 @@ var template = 'Steve';
 
 console.log( `${template}, app.js is running` );
 
-template = <p>This is JSX from app.js</p>;
+template = <h1>This is JSX from app.js</h1>;
 
 var appRoot = document.getElementById( 'app' );
 
