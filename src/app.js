@@ -29,9 +29,9 @@ const user = {
 
 const templateTwo = (
   <div>
-    <h1>{userName.toLocaleUpperCase()}</h1>
-    <p>Age: {user}</p>
-    <p>Location: {userLocation}</p>
+    <h1>{user.userName.toLocaleUpperCase()}</h1>
+    <p>Age: {user.userAge}</p>
+    <p>Location: {user.userLocation}</p>
   </div>
 );
 
