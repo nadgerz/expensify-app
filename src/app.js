@@ -1,8 +1,8 @@
-var template = 'Steve';
+const name = 'Steve';
 
-console.log( `${template}, app.js is running` );
+console.log( `${name}, app.js is running` );
 
-template = <h1>YES IT DOES!!!</h1>;
+const template = <h1>Indecision App</h1><p>This is some infp</p>;
 
 var appRoot = document.getElementById( 'app' );
 
