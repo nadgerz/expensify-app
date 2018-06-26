@@ -6,6 +6,10 @@ const template = (
   <div>
     <h1>Indecision App</h1>
     <p>This is some info</p>
+    <ol>
+      <li>Item One</li>
+      <li>Item Two</li>
+    </ol>
   </div>
 );
 
