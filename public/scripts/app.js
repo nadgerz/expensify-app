@@ -33,6 +33,30 @@ var template = React.createElement(
   )
 );
 
+// 1: create a new template - JSX
+// 2: root div
+// 3: Render it.
+
+var templateTwo = React.createElement(
+  'div',
+  null,
+  React.createElement(
+    'h1',
+    null,
+    'Steve Ingram'
+  ),
+  React.createElement(
+    'p',
+    null,
+    'Age: 52'
+  ),
+  React.createElement(
+    'p',
+    null,
+    'Location: Berlin'
+  )
+);
+
 var appRoot = document.getElementById('app');
 
-ReactDOM.render(template, appRoot);
+ReactDOM.render(templateTwo, appRoot);

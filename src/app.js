@@ -13,6 +13,18 @@ const template = (
   </div>
 );
 
+// 1: create a new template - JSX
+// 2: root div
+// 3: Render it.
+
+const templateTwo = (
+  <div>
+    <h1>Steve Ingram</h1>
+    <p>Age: 52</p>
+    <p>Location: Berlin</p>
+  </div>
+);
+
 var appRoot = document.getElementById( 'app' );
 
-ReactDOM.render( template, appRoot );
+ReactDOM.render( templateTwo, appRoot );
