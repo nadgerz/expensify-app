@@ -4,4 +4,12 @@ console.log( `${template}, app.js is running` );
 
 template = <p>This is JSX from app.js</p>;
 
-ReactDom.render( template, document.getElementById( 'id' ) );
+xtemplate = React.createElement(
+  'h1',
+  { id: 'someid' },
+  'Something new'
+);
+
+var appRoot = document.getElementById( 'app' );
+
+ReactDOM.render( template, appRoot );
