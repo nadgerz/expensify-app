@@ -4,18 +4,23 @@ var name = 'Steve';
 
 console.log(name + ', app.js is running');
 
+var app = {
+  title: 'My Big App',
+  subTitle: 'This is more info'
+};
+
 var template = React.createElement(
   'div',
   null,
   React.createElement(
     'h1',
     null,
-    'Indecision App'
+    app.title
   ),
   React.createElement(
     'p',
     null,
-    'This is some info'
+    app.subTitle
   ),
   React.createElement(
     'ol',
@@ -37,14 +42,14 @@ var template = React.createElement(
 // 2: root div
 // 3: Render it.
 
-var userName = 'Bibble';
+var userName = 'Babble';
 var userAge = 14;
 var userLocation = 'Paris';
 
 var user = {
-  userName: userName,
-  userAge: userAge,
-  userLocation: userLocation
+  name: userName,
+  age: userAge,
+  location: userLocation
 };
 
 var templateTwo = React.createElement(
@@ -53,22 +58,22 @@ var templateTwo = React.createElement(
   React.createElement(
     'h1',
     null,
-    userName.toLocaleUpperCase()
+    user.name.toLocaleUpperCase()
   ),
   React.createElement(
     'p',
     null,
     'Age: ',
-    user
+    user.age
   ),
   React.createElement(
     'p',
     null,
     'Location: ',
-    userLocation
+    user.location
   )
 );
 
 var appRoot = document.getElementById('app');
 
-ReactDOM.render(templateTwo, appRoot);
+ReactDOM.render(template, appRoot);

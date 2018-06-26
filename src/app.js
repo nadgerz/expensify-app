@@ -2,10 +2,15 @@ const name = 'Steve';
 
 console.log( `${name}, app.js is running` );
 
+const app = {
+  title: 'My Big App',
+  subTitle: 'This is more info'
+};
+
 const template = (
   <div>
-    <h1>Indecision App</h1>
-    <p>This is some info</p>
+    <h1>{app.title}</h1>
+    <p>{app.subTitle}</p>
     <ol>
       <li>Item One</li>
       <li>Item Two</li>
@@ -37,4 +42,4 @@ const templateTwo = (
 
 var appRoot = document.getElementById( 'app' );
 
-ReactDOM.render( templateTwo, appRoot );
+ReactDOM.render( template, appRoot );
