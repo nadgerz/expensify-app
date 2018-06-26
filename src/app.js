@@ -21,10 +21,16 @@ const userName = 'Bibble';
 const userAge = 14;
 const userLocation = 'Paris';
 
+const user = {
+  userName,
+  userAge,
+  userLocation
+};
+
 const templateTwo = (
   <div>
     <h1>{userName.toLocaleUpperCase()}</h1>
-    <p>Age: {userAge}</p>
+    <p>Age: {user}</p>
     <p>Location: {userLocation}</p>
   </div>
 );
