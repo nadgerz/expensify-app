@@ -28,16 +28,16 @@ const userLocation = 'Paris';
 
 const user = {
   name: userName,
-  age: userAge
-  // location: userLocation
+  age: userAge,
+  location: userLocation
 };
 
 function getLocation( location ) {
   if ( location ) {
-    return location;
+    return <p>Location: {location}</p>;
   }
   else {
-    return 'Unknown';
+    return undefined;
   }
 }
 
@@ -45,8 +45,8 @@ const templateTwo = (
   <div>
     <h1>{user.name.toLocaleUpperCase()}</h1>
     <p>Age: {user.age}</p>
-    <p>Location: {getLocation( user.location )}</p>
-    {123}
+    {<h3>my h3</h3>}
+    {getLocation( user.location )}
   </div>
 );
 
