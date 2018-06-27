@@ -41,6 +41,10 @@ var onMakeDecision = function onMakeDecision() {
 
   var randomNum = Math.floor(Math.random() * app.options.length);
 
+  var option = app.options[randomNum];
+
+  alert(option);
+
   console.log(randomNum);
 
   renderApp();
