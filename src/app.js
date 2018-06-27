@@ -1,3 +1,5 @@
+console.clear();
+
 const name = 'Steve';
 
 console.log( `${name}, app.js is running` );
@@ -6,6 +8,13 @@ const app = {
   title: 'My Big App',
   subTitle: 'This is more info',
   options: ['One', 'Two']
+};
+
+const handleOnFormSubmit = ( event ) => {
+  event.preventDefault();
+  
+  // console.log( event );
+  console.log( 'Form submitted' );
 };
 
 const template = (
@@ -18,8 +27,8 @@ const template = (
       <li>Item One</li>
       <li>Item Two</li>
     </ol>
-  
-    <form action="">
+    
+    <form onSubmit={handleOnFormSubmit}>
       <input type="text" name="option"/>
       <button>Add Option</button>
     </form>

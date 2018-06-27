@@ -1,5 +1,7 @@
 'use strict';
 
+console.clear();
+
 var name = 'Steve';
 
 console.log(name + ', app.js is running');
@@ -8,6 +10,13 @@ var app = {
   title: 'My Big App',
   subTitle: 'This is more info',
   options: ['One', 'Two']
+};
+
+var handleOnFormSubmit = function handleOnFormSubmit(event) {
+  event.preventDefault();
+
+  // console.log( event );
+  console.log('Form submitted');
 };
 
 var template = React.createElement(
@@ -44,7 +53,7 @@ var template = React.createElement(
   ),
   React.createElement(
     'form',
-    { action: '' },
+    { onSubmit: handleOnFormSubmit },
     React.createElement('input', { type: 'text', name: 'option' }),
     React.createElement(
       'button',
