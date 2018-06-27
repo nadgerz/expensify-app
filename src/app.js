@@ -26,14 +26,24 @@ const template = (
 let count = 0;
 
 const addOne = () => {
-  console.log( 'KMA' );
+  console.log( '+1' );
+};
+
+const minusOne = () => {
+  console.log( '-1' );
+};
+
+const reset = () => {
+  console.log( 'reset to 0' );
 };
 
 const templateTwo = (
   <div>
     <h1>Count: {count}</h1>
-    <button onClick={() => console.log( 'KMA!' )}>+1</button>
+    {/*<button onClick={() => console.log( 'KMA!' )}>+1</button>*/}
     <button onClick={addOne}>+1</button>
+    <button onClick={minusOne}>-1</button>
+    <button onClick={reset}>reset</button>
   </div>
 );
 

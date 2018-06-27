@@ -28,7 +28,15 @@ const template = (
 var count = 0;
 
 var addOne = function addOne() {
-  console.log('KMA');
+  console.log('+1');
+};
+
+var minusOne = function minusOne() {
+  console.log('-1');
+};
+
+var reset = function reset() {
+  console.log('reset to 0');
 };
 
 var templateTwo = React.createElement(
@@ -42,15 +50,18 @@ var templateTwo = React.createElement(
   ),
   React.createElement(
     'button',
-    { onClick: function onClick() {
-        return console.log('KMA!');
-      } },
+    { onClick: addOne },
     '+1'
   ),
   React.createElement(
     'button',
-    { onClick: addOne },
-    '+1'
+    { onClick: minusOne },
+    '-1'
+  ),
+  React.createElement(
+    'button',
+    { onClick: reset },
+    'reset'
   )
 );
 
