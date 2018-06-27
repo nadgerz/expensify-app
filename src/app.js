@@ -2,6 +2,7 @@ const name = 'Steve';
 
 console.log( `${name}, app.js is running` );
 
+/*
 const app = {
   title: 'My Big App',
   subTitle: 'This is more info',
@@ -20,6 +21,7 @@ const template = (
     </ol>
   </div>
 );
+*/
 
 
 let count = 0;
@@ -27,9 +29,12 @@ let count = 0;
 const templateTwo = (
   <div>
     <h1>Count: {count}</h1>
-    <button id={"my-id"} class="button">+1</button>
+    <button id={"my-id"} className="button">+1</button>
   </div>
 );
+
+console.log( templateTwo );
+console.log( typeof templateTwo );
 
 const appRoot = document.getElementById( 'app' );
 
