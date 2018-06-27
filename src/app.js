@@ -59,7 +59,7 @@ const renderApp = () => {
       {app.subTitle && <p>{app.subTitle}</p>}
       <h3>{(app.options && app.options.length > 0) ? 'Here are your options:'.toLocaleUpperCase() : 'No soup for you!'}</h3>
       
-      <button onClick={onMakeDecision}>What should I do?</button>
+      <button disabled={app.options.length === 0} onClick={onMakeDecision}>What should I do?</button>
       <button onClick={removeAll}>Remove All</button>
       
       {/*
