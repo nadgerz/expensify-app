@@ -6,7 +6,8 @@ console.log(name + ', app.js is running');
 
 var app = {
   title: 'My Big App',
-  subTitle: 'This is more info'
+  subTitle: 'This is more info',
+  optionsX: ['One', 'Two']
 };
 
 var template = React.createElement(
@@ -17,10 +18,15 @@ var template = React.createElement(
     null,
     app.title
   ),
-  React.createElement(
+  app.subTitle && React.createElement(
     'p',
     null,
     app.subTitle
+  ),
+  React.createElement(
+    'h3',
+    null,
+    app.options && app.options.length > 0 ? 'Here are your options:'.toLocaleUpperCase() : 'No soup for you!'
   ),
   React.createElement(
     'ol',
@@ -80,4 +86,4 @@ var templateTwo = React.createElement(
 
 var appRoot = document.getElementById('app');
 
-ReactDOM.render(templateTwo, appRoot);
+ReactDOM.render(template, appRoot);

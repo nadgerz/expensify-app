@@ -4,13 +4,16 @@ console.log( `${name}, app.js is running` );
 
 const app = {
   title: 'My Big App',
-  subTitle: 'This is more info'
+  subTitle: 'This is more info',
+  optionsX: ['One', 'Two']
 };
 
 const template = (
   <div>
     <h1>{app.title}</h1>
-    <p>{app.subTitle}</p>
+    {app.subTitle && <p>{app.subTitle}</p>}
+    <h3>{(app.options && app.options.length > 0) ? 'Here are your options:'.toLocaleUpperCase() : 'No soup for you!'}</h3>
+    
     <ol>
       <li>Item One</li>
       <li>Item Two</li>
@@ -46,4 +49,4 @@ const templateTwo = (
 
 var appRoot = document.getElementById( 'app' );
 
-ReactDOM.render( templateTwo, appRoot );
+ReactDOM.render( template, appRoot );
