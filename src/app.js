@@ -27,6 +27,7 @@ let count = 0;
 const templateTwo = (
   <div>
     <h1>Count: {count}</h1>
+    <button id={"my-id"} class="button">+1</button>
   </div>
 );
 
