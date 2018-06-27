@@ -28,12 +28,17 @@ const userLocation = 'Paris';
 
 const user = {
   name: userName,
-  age: userAge,
-  location: userLocation
+  age: userAge
+  // location: userLocation
 };
 
 function getLocation( location ) {
-  return location;
+  if ( location ) {
+    return location;
+  }
+  else {
+    return 'Unknown';
+  }
 }
 
 const templateTwo = (
