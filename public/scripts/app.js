@@ -70,6 +70,28 @@ var renderApp = function renderApp() {
       'Remove All'
     ),
     React.createElement(
+      'ul',
+      null,
+      ['one', 'two', 'three'].map(function (bibble, index) {
+        return React.createElement(
+          'li',
+          null,
+          bibble
+        );
+      })
+    ),
+    React.createElement(
+      'ul',
+      null,
+      app.options.map(function (option, index) {
+        return React.createElement(
+          'li',
+          null,
+          option
+        );
+      })
+    ),
+    React.createElement(
       'ol',
       null,
       React.createElement(

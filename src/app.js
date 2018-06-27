@@ -50,6 +50,26 @@ const renderApp = () => {
       
       <button onClick={removeAll}>Remove All</button>
       
+      <ul>
+        {
+          ['one', 'two', 'three'].map( ( bibble, index ) => {
+            return (
+              <li>{bibble}</li>
+            );
+          } )
+        }
+      </ul>
+      
+      <ul>
+        {
+          app.options.map( ( option, index ) => {
+            return (
+              <li>{option}</li>
+            );
+          } )
+        }
+      </ul>
+      
       <ol>
         <li>Item One</li>
         <li>Item Two</li>
