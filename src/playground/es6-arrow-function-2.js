@@ -25,6 +25,7 @@ const user = {
     return this.cities.map( ( city ) => this.name + ' has lived in ' + city );
   }
 };
+console.log( 'user.printPlacesLived()' );
 console.log( user.printPlacesLived() );
 
 const userES5 = {
@@ -36,12 +37,25 @@ const userES5 = {
     const that = this;
     
     this.cities.forEach( function( city ) {
-      console.log( city );
+      // console.log( city );
       console.log( that.name + ' has lived in ' + city );
     } );
   }
 };
-console.log( userES5.printPlacesLived() );
+console.log( 'userES5.printPlacesLived()' );
+userES5.printPlacesLived();
+
+const userES6 = {
+  name: 'Andrew',
+  cities: ['Philadelphia', 'New York', 'Dublin'],
+  printPlacesLived: function() {
+    this.cities.forEach( ( city ) => {
+      console.log( this.name + ' has lived in ' + city );
+    } );
+  }
+};
+console.log( 'userES6.printPlacesLived()' );
+userES6.printPlacesLived();
 
 // Challenge area
 

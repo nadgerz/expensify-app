@@ -31,6 +31,7 @@ var user = {
     });
   }
 };
+console.log('user.printPlacesLived()');
 console.log(user.printPlacesLived());
 
 var userES5 = {
@@ -42,12 +43,27 @@ var userES5 = {
     var that = this;
 
     this.cities.forEach(function (city) {
-      console.log(city);
+      // console.log( city );
       console.log(that.name + ' has lived in ' + city);
     });
   }
 };
-console.log(userES5.printPlacesLived());
+console.log('userES5.printPlacesLived()');
+userES5.printPlacesLived();
+
+var userES6 = {
+  name: 'Andrew',
+  cities: ['Philadelphia', 'New York', 'Dublin'],
+  printPlacesLived: function printPlacesLived() {
+    var _this2 = this;
+
+    this.cities.forEach(function (city) {
+      console.log(_this2.name + ' has lived in ' + city);
+    });
+  }
+};
+console.log('userES6.printPlacesLived()');
+userES6.printPlacesLived();
 
 // Challenge area
 
@@ -55,10 +71,10 @@ var multiplier = {
   numbers: [10, 20, 30],
   multiplyBy: 3,
   multiply: function multiply() {
-    var _this2 = this;
+    var _this3 = this;
 
     return this.numbers.map(function (number) {
-      return number * _this2.multiplyBy;
+      return number * _this3.multiplyBy;
     });
   }
 };
