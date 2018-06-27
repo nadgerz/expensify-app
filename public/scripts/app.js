@@ -52,6 +52,11 @@ var user = {
   location: userLocation
 };
 
+function getLocation(location) {
+  return 'Unknown';
+  // return user.location;
+}
+
 var templateTwo = React.createElement(
   'div',
   null,
@@ -70,10 +75,10 @@ var templateTwo = React.createElement(
     'p',
     null,
     'Location: ',
-    user.location
+    getLocation(user.location)
   )
 );
 
 var appRoot = document.getElementById('app');
 
-ReactDOM.render(template, appRoot);
+ReactDOM.render(templateTwo, appRoot);

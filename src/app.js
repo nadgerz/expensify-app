@@ -32,14 +32,19 @@ const user = {
   location: userLocation
 };
 
+function getLocation( location ) {
+  return 'Unknown';
+  // return user.location;
+}
+
 const templateTwo = (
   <div>
     <h1>{user.name.toLocaleUpperCase()}</h1>
     <p>Age: {user.age}</p>
-    <p>Location: {user.location}</p>
+    <p>Location: {getLocation( user.location )}</p>
   </div>
 );
 
 var appRoot = document.getElementById( 'app' );
 
-ReactDOM.render( template, appRoot );
+ReactDOM.render( templateTwo, appRoot );
