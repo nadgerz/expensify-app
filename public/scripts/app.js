@@ -38,12 +38,8 @@ var template = React.createElement(
   )
 );
 
-// 1: create a new template - JSX
-// 2: root div
-// 3: Render it.
-
 var userName = 'Babble';
-var userAge = 14;
+var userAge = 124;
 var userLocation = 'Paris';
 
 var user = {
@@ -71,7 +67,7 @@ var templateTwo = React.createElement(
     null,
     user.name ? user.name.toLocaleUpperCase() : 'Anonymous'
   ),
-  React.createElement(
+  user.age >= 18 && React.createElement(
     'p',
     null,
     'Age: ',
