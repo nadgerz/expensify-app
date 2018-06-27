@@ -8,3 +8,7 @@ console.log( 'nameLet', nameLet );
 
 nameLet = 'Julie';
 console.log( 'nameLet', nameLet );
+
+const nameConst = 'Frank';
+const nameConst = 'Frank';
+console.log( 'nameConst', nameConst );
