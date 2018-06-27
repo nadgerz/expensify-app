@@ -53,8 +53,7 @@ var user = {
 };
 
 function getLocation(location) {
-  return 'Unknown';
-  // return user.location;
+  return location;
 }
 
 var templateTwo = React.createElement(

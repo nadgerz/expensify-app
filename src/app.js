@@ -33,8 +33,7 @@ const user = {
 };
 
 function getLocation( location ) {
-  return 'Unknown';
-  // return user.location;
+  return location;
 }
 
 const templateTwo = (
