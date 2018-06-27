@@ -17,7 +17,7 @@ var handleOnFormSubmit = function handleOnFormSubmit(event) {
 
   // console.log( event );
   console.log('Form submitted');
-  var option = event.target.elements;
+  var option = event.target.elements.option.value;
   console.log(option);
 };
 
