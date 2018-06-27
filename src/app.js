@@ -22,11 +22,13 @@ const userName = 'Babble';
 const userAge = 124;
 const userLocation = 'Paris';
 
-const user = {
-  name: userName,
-  age: userAge,
-  location: userLocation
-};
+// const user = {
+//   name: userName,
+//   age: userAge,
+//   location: userLocation
+// };
+
+const user = {};
 
 function getLocation( location ) {
   if ( location ) {
@@ -37,7 +39,7 @@ function getLocation( location ) {
 const templateTwo = (
   <div>
     <h1>{user.name ? user.name.toLocaleUpperCase() : 'Anonymous'}</h1>
-    {user.age >= 18 && <p>Age: {user.age}</p>}
+    {(user.age && user.age >= 18) && <p>Age: {user.age}</p>}
     {getLocation( user.location )}
   </div>
 );

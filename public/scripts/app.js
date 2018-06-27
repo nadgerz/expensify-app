@@ -42,11 +42,13 @@ var userName = 'Babble';
 var userAge = 124;
 var userLocation = 'Paris';
 
-var user = {
-  name: userName,
-  age: userAge,
-  location: userLocation
-};
+// const user = {
+//   name: userName,
+//   age: userAge,
+//   location: userLocation
+// };
+
+var user = {};
 
 function getLocation(location) {
   if (location) {
@@ -67,7 +69,7 @@ var templateTwo = React.createElement(
     null,
     user.name ? user.name.toLocaleUpperCase() : 'Anonymous'
   ),
-  user.age >= 18 && React.createElement(
+  user.age && user.age >= 18 && React.createElement(
     'p',
     null,
     'Age: ',
