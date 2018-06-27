@@ -54,7 +54,7 @@ const renderApp = () => {
         {
           ['one', 'two', 'three'].map( ( bibble, index ) => {
             return (
-              <li>{bibble}</li>
+              <li key={index}>{bibble}</li>
             );
           } )
         }
@@ -64,7 +64,7 @@ const renderApp = () => {
         {
           app.options.map( ( option, index ) => {
             return (
-              <li>{option}</li>
+              <li key={index}>{option}</li>
             );
           } )
         }

@@ -75,7 +75,7 @@ var renderApp = function renderApp() {
       ['one', 'two', 'three'].map(function (bibble, index) {
         return React.createElement(
           'li',
-          null,
+          { key: index },
           bibble
         );
       })
@@ -86,7 +86,7 @@ var renderApp = function renderApp() {
       app.options.map(function (option, index) {
         return React.createElement(
           'li',
-          null,
+          { key: index },
           option
         );
       })
