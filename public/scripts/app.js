@@ -3,11 +3,18 @@
 // arguments object - no longer bound with arrow functions
 
 var add = function add(a, b) {
-  // console.log(arguments);
   return a + b;
 };
 // console.log(add(55, 1));
 console.log(add(55, 1, 1001));
+
+var addES5 = function addES5(a, b) {
+  console.log(arguments);
+  return a + b;
+};
+
+// console.log(addES5(55, 1));
+console.log(addES5(55, 1, 1001));
 
 // this keyword - no longer bound
 
@@ -23,6 +30,16 @@ var user = {
   }
 };
 console.log(user.printPlacesLived());
+
+var userES5 = {
+  name: 'Andrew',
+  cities: ['Philadelphia', 'New York', 'Dublin'],
+  printPlacesLived: function printPlacesLived() {
+    console.log(this.name);
+    console.log(this.cities);
+  }
+};
+console.log(userES5.printPlacesLived());
 
 // Challenge area
 
