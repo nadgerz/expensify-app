@@ -1,5 +1,7 @@
 'use strict';
 
+console.clear();
+
 // arguments object - no longer bound with arrow functions
 
 var add = function add(a, b) {
@@ -37,10 +39,11 @@ var userES5 = {
   printPlacesLived: function printPlacesLived() {
     console.log(this.name);
     console.log(this.cities);
+    var that = this;
 
     this.cities.forEach(function (city) {
       console.log(city);
-      console.log(this.name + ' has lived in ' + city);
+      console.log(that.name + ' has lived in ' + city);
     });
   }
 };

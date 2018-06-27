@@ -1,3 +1,5 @@
+console.clear();
+
 // arguments object - no longer bound with arrow functions
 
 const add = ( a, b ) => {
@@ -31,10 +33,11 @@ const userES5 = {
   printPlacesLived: function() {
     console.log( this.name );
     console.log( this.cities );
+    const that = this;
     
     this.cities.forEach( function( city ) {
       console.log( city );
-      console.log( this.name + ' has lived in ' + city );
+      console.log( that.name + ' has lived in ' + city );
     } );
   }
 };
