@@ -17,8 +17,12 @@ var handleOnFormSubmit = function handleOnFormSubmit(event) {
 
   // console.log( event );
   console.log('Form submitted');
+
   var option = event.target.elements.option.value;
-  console.log(option);
+
+  if (option) {
+    console.log(option);
+  }
 };
 
 var template = React.createElement(
