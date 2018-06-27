@@ -21,32 +21,15 @@ const template = (
   </div>
 );
 
-const userName = 'Babble';
-const userAge = 124;
-const userLocation = 'Paris';
 
-// const user = {
-//   name: userName,
-//   age: userAge,
-//   location: userLocation
-// };
-
-const user = {};
-
-function getLocation( location ) {
-  if ( location ) {
-    return <p>Location: {location}</p>;
-  }
-}
+let count = 0;
 
 const templateTwo = (
   <div>
-    <h1>{user.name ? user.name.toLocaleUpperCase() : 'Anonymous'}</h1>
-    {(user.age && user.age >= 18) && <p>Age: {user.age}</p>}
-    {getLocation( user.location )}
+    <h1>Count: {count}</h1>
   </div>
 );
 
 const appRoot = document.getElementById( 'app' );
 
-ReactDOM.render( template, appRoot );
+ReactDOM.render( templateTwo, appRoot );

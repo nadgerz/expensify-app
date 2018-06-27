@@ -1,82 +1,62 @@
 'use strict';
 
-console.clear();
+var name = 'Steve';
 
-// arguments object - no longer bound with arrow functions
+console.log(name + ', app.js is running');
 
-var add = function add(a, b) {
-  return a + b;
-};
-// console.log(add(55, 1));
-console.log(add(55, 1, 1001));
-
-var addES5 = function addES5(a, b) {
-  console.log(arguments);
-  return a + b;
+var app = {
+  title: 'My Big App',
+  subTitle: 'This is more info',
+  options: ['One', 'Two']
 };
 
-// console.log(addES5(55, 1));
-console.log(addES5(55, 1, 1001));
+var template = React.createElement(
+  'div',
+  null,
+  React.createElement(
+    'h1',
+    null,
+    app.title
+  ),
+  app.subTitle && React.createElement(
+    'p',
+    null,
+    app.subTitle
+  ),
+  React.createElement(
+    'h3',
+    null,
+    app.options && app.options.length > 0 ? 'Here are your options:'.toLocaleUpperCase() : 'No soup for you!'
+  ),
+  React.createElement(
+    'ol',
+    null,
+    React.createElement(
+      'li',
+      null,
+      'Item One'
+    ),
+    React.createElement(
+      'li',
+      null,
+      'Item Two'
+    )
+  )
+);
 
-// this keyword - no longer bound
+var count = 0;
 
-var user = {
-  name: 'Andrew',
-  cities: ['Philadelphia', 'New York', 'Dublin'],
-  printPlacesLived: function printPlacesLived() {
-    var _this = this;
+var templateTwo = React.createElement(
+  'div',
+  null,
+  React.createElement(
+    'h1',
+    null,
+    'Count: ',
+    count
+  )
+);
 
-    return this.cities.map(function (city) {
-      return _this.name + ' has lived in ' + city;
-    });
-  }
-};
-console.log('user.printPlacesLived()');
-console.log(user.printPlacesLived());
+var appRoot = document.getElementById('app');
 
-var userES5 = {
-  name: 'Andrew',
-  cities: ['Philadelphia', 'New York', 'Dublin'],
-  printPlacesLived: function printPlacesLived() {
-    console.log(this.name);
-    console.log(this.cities);
-    var that = this;
-
-    this.cities.forEach(function (city) {
-      // console.log( city );
-      console.log(that.name + ' has lived in ' + city);
-    });
-  }
-};
-console.log('userES5.printPlacesLived()');
-userES5.printPlacesLived();
-
-var userES6 = {
-  name: 'Andrew',
-  cities: ['Philadelphia', 'New York', 'Dublin'],
-  printPlacesLived: function printPlacesLived() {
-    var _this2 = this;
-
-    this.cities.forEach(function (city) {
-      console.log(_this2.name + ' has lived in ' + city);
-    });
-  }
-};
-console.log('userES6.printPlacesLived()');
-userES6.printPlacesLived();
-
-// Challenge area
-
-var multiplier = {
-  numbers: [10, 20, 30],
-  multiplyBy: 3,
-  multiply: function multiply() {
-    var _this3 = this;
-
-    return this.numbers.map(function (number) {
-      return number * _this3.multiplyBy;
-    });
-  }
-};
-
-console.log(multiplier.multiply());
+ReactDOM.render(templateTwo, appRoot);
