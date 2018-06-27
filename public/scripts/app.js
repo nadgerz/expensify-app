@@ -26,7 +26,11 @@ const template = (
 */
 
 var count = 0;
-var someId = 'myidhere';
+
+var addOne = function addOne() {
+  console.log('KMA');
+};
+
 var templateTwo = React.createElement(
   'div',
   null,
@@ -38,7 +42,7 @@ var templateTwo = React.createElement(
   ),
   React.createElement(
     'button',
-    { id: someId, className: 'button' },
+    { onClick: addOne },
     '+1'
   )
 );
