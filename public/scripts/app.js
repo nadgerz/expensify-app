@@ -1,10 +1,8 @@
-"use strict";
-
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+'use strict';
 
 var name = 'Steve';
 
-console.log(name + ", app.js is running");
+console.log(name + ', app.js is running');
 
 /*
 const app = {
@@ -28,25 +26,22 @@ const template = (
 */
 
 var count = 0;
-
+var someId = 'myidhere';
 var templateTwo = React.createElement(
-  "div",
+  'div',
   null,
   React.createElement(
-    "h1",
+    'h1',
     null,
-    "Count: ",
+    'Count: ',
     count
   ),
   React.createElement(
-    "button",
-    { id: "my-id", className: "button" },
-    "+1"
+    'button',
+    { id: someId, className: 'button' },
+    '+1'
   )
 );
-
-console.log(templateTwo);
-console.log(typeof templateTwo === "undefined" ? "undefined" : _typeof(templateTwo));
 
 var appRoot = document.getElementById('app');
 
