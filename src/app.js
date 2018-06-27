@@ -5,7 +5,7 @@ console.log( `${name}, app.js is running` );
 const app = {
   title: 'My Big App',
   subTitle: 'This is more info',
-  optionsX: ['One', 'Two']
+  options: ['One', 'Two']
 };
 
 const template = (
