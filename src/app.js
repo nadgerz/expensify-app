@@ -28,6 +28,14 @@ const handleOnFormSubmit = ( event ) => {
   }
 };
 
+const removeAll = () => {
+  
+  app.options = [];
+  
+  renderApp();
+  
+};
+
 const appRoot = document.getElementById( 'app' );
 
 const renderApp = () => {
@@ -39,6 +47,8 @@ const renderApp = () => {
       <h3>{(app.options && app.options.length > 0) ? 'Here are your options:'.toLocaleUpperCase() : 'No soup for you!'}</h3>
       
       <p>{app.options.length}</p>
+      
+      <button onClick={removeAll}>Remove All</button>
       
       <ol>
         <li>Item One</li>
