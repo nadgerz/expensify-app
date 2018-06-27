@@ -17,6 +17,8 @@ var handleOnFormSubmit = function handleOnFormSubmit(event) {
 
   // console.log( event );
   console.log('Form submitted');
+  var option = event.target.elements;
+  console.log(option);
 };
 
 var template = React.createElement(

@@ -15,6 +15,8 @@ const handleOnFormSubmit = ( event ) => {
   
   // console.log( event );
   console.log( 'Form submitted' );
+  const option = event.target.elements;
+  console.log( option );
 };
 
 const template = (
