@@ -10,5 +10,5 @@ nameLet = 'Julie';
 console.log( 'nameLet', nameLet );
 
 const nameConst = 'Frank';
-const nameConst = 'Frank';
+nameConst = 'Frank';
 console.log( 'nameConst', nameConst );
