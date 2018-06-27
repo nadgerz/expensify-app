@@ -79,7 +79,8 @@ var templateTwo = React.createElement(
     null,
     'Location: ',
     getLocation(user.location)
-  )
+  ),
+  123
 );
 
 var appRoot = document.getElementById('app');

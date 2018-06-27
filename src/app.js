@@ -46,6 +46,7 @@ const templateTwo = (
     <h1>{user.name.toLocaleUpperCase()}</h1>
     <p>Age: {user.age}</p>
     <p>Location: {getLocation( user.location )}</p>
+    {123}
   </div>
 );
 
