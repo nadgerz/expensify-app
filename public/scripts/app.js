@@ -42,6 +42,13 @@ var templateTwo = React.createElement(
   ),
   React.createElement(
     'button',
+    { onClick: function onClick() {
+        return console.log('KMA!');
+      } },
+    '+1'
+  ),
+  React.createElement(
+    'button',
     { onClick: addOne },
     '+1'
   )

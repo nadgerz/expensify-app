@@ -32,6 +32,7 @@ const addOne = () => {
 const templateTwo = (
   <div>
     <h1>Count: {count}</h1>
+    <button onClick={() => console.log( 'KMA!' )}>+1</button>
     <button onClick={addOne}>+1</button>
   </div>
 );
