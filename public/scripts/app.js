@@ -37,6 +37,15 @@ var removeAll = function removeAll() {
   renderApp();
 };
 
+var onMakeDecision = function onMakeDecision() {
+
+  var randomNum = Math.floor(Math.random() * app.options.length);
+
+  console.log(randomNum);
+
+  renderApp();
+};
+
 var appRoot = document.getElementById('app');
 
 var renderApp = function renderApp() {
@@ -60,9 +69,9 @@ var renderApp = function renderApp() {
       app.options && app.options.length > 0 ? 'Here are your options:'.toLocaleUpperCase() : 'No soup for you!'
     ),
     React.createElement(
-      'p',
-      null,
-      app.options.length
+      'button',
+      { onClick: onMakeDecision },
+      'What should I do?'
     ),
     React.createElement(
       'button',
@@ -72,21 +81,10 @@ var renderApp = function renderApp() {
     React.createElement(
       'ul',
       null,
-      ['one', 'two', 'three'].map(function (bibble, index) {
+      app.options.map(function (option) {
         return React.createElement(
           'li',
-          { key: index },
-          bibble
-        );
-      })
-    ),
-    React.createElement(
-      'ul',
-      null,
-      app.options.map(function (option, index) {
-        return React.createElement(
-          'li',
-          { key: index },
+          { key: option },
           option
         );
       })

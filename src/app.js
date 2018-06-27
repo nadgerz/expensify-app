@@ -36,6 +36,15 @@ const removeAll = () => {
   
 };
 
+const onMakeDecision = () => {
+  
+  const randomNum = Math.floor( Math.random() * app.options.length );
+  
+  console.log( randomNum );
+  
+  renderApp();
+};
+
 const appRoot = document.getElementById( 'app' );
 
 const renderApp = () => {
@@ -46,10 +55,10 @@ const renderApp = () => {
       {app.subTitle && <p>{app.subTitle}</p>}
       <h3>{(app.options && app.options.length > 0) ? 'Here are your options:'.toLocaleUpperCase() : 'No soup for you!'}</h3>
       
-      <p>{app.options.length}</p>
-      
+      <button onClick={onMakeDecision}>What should I do?</button>
       <button onClick={removeAll}>Remove All</button>
       
+      {/*
       <ul>
         {
           ['one', 'two', 'three'].map( ( bibble, index ) => {
@@ -59,6 +68,7 @@ const renderApp = () => {
           } )
         }
       </ul>
+*/}
       
       <ul>
         {
