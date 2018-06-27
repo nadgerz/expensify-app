@@ -36,16 +36,12 @@ function getLocation( location ) {
   if ( location ) {
     return <p>Location: {location}</p>;
   }
-  else {
-    return undefined;
-  }
 }
 
 const templateTwo = (
   <div>
     <h1>{user.name.toLocaleUpperCase()}</h1>
     <p>Age: {user.age}</p>
-    {<h3>my h3</h3>}
     {getLocation( user.location )}
   </div>
 );
