@@ -60,8 +60,6 @@ function getLocation(location) {
       'Location: ',
       location
     );
-  } else {
-    return undefined;
   }
 }
 
@@ -71,18 +69,13 @@ var templateTwo = React.createElement(
   React.createElement(
     'h1',
     null,
-    user.name.toLocaleUpperCase()
+    user.name ? user.name.toLocaleUpperCase() : 'Anonymous'
   ),
   React.createElement(
     'p',
     null,
     'Age: ',
     user.age
-  ),
-  React.createElement(
-    'h3',
-    null,
-    'my h3'
   ),
   getLocation(user.location)
 );
