@@ -22,6 +22,9 @@ var handleOnFormSubmit = function handleOnFormSubmit(event) {
 
   if (option) {
     console.log(option);
+    app.options.push(option);
+
+    event.target.elements.option.value = '';
   }
 };
 
