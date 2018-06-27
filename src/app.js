@@ -62,11 +62,7 @@ const renderApp = () => {
       
       <ul>
         {
-          app.options.map( ( option, index ) => {
-            return (
-              <li key={index}>{option}</li>
-            );
-          } )
+          app.options.map( ( option ) => <li key={option}>{option}</li> )
         }
       </ul>
       
