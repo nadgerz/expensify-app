@@ -31,5 +31,7 @@ if (fullName) {
   console.log(firstName);
 }
 
+/*
 firstName = 'Doink';
-console.log(firstName);
+console.log( firstName );
+*/

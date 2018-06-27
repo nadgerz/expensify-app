@@ -25,9 +25,11 @@ console.log( petName );
 var fullName = 'Steve ingram';
 
 if ( fullName ) {
-  var firstName = fullName.split( ' ' )[0];
+  const firstName = fullName.split( ' ' )[0];
   console.log( firstName );
 }
 
+/*
 firstName = 'Doink';
 console.log( firstName );
+*/
