@@ -22,12 +22,21 @@ console.log( petName );
 
 // Block scoping
 
-var fullName = 'Steve ingram';
+const fullName = 'Steve ingram';
 
 if ( fullName ) {
   const firstName = fullName.split( ' ' )[0];
   console.log( firstName );
 }
+
+let fName;
+
+if ( fullName ) {
+  const fName = fullName.split( ' ' )[0];
+  console.log( fName );
+}
+
+console.log( fName );
 
 /*
 firstName = 'Doink';

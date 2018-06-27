@@ -31,6 +31,15 @@ if (fullName) {
   console.log(firstName);
 }
 
+var fName = void 0;
+
+if (fullName) {
+  var _fName = fullName.split(' ')[0];
+  console.log(_fName);
+}
+
+console.log(fName);
+
 /*
 firstName = 'Doink';
 console.log( firstName );
