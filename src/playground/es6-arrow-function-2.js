@@ -31,6 +31,11 @@ const userES5 = {
   printPlacesLived: function() {
     console.log( this.name );
     console.log( this.cities );
+    
+    this.cities.forEach( function( city ) {
+      console.log( city );
+      console.log( this.name + ' has lived in ' + city );
+    } );
   }
 };
 console.log( userES5.printPlacesLived() );
