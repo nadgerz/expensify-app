@@ -36,6 +36,11 @@ class Header extends React.Component {
 
 
 class Action extends React.Component {
+  constructor( props ) {
+    super( props );
+    
+    this.handlePick = this.handlePick.bind( this );
+  }
   
   handlePick() {
     console.log( 'handlepick' );
@@ -90,6 +95,11 @@ class Option extends React.Component {
 
 
 class AddOption extends React.Component {
+  constructor( props ) {
+    super( props );
+    
+    this.handleAddOption = this.handleAddOption.bind( this );
+  }
   
   handleAddOption( event ) {
     
