@@ -92,7 +92,7 @@ class AddOption extends React.Component {
     // console.log( event );
     console.log( 'Form submitted' );
     
-    const option = event.target.elements.option.value;
+    const option = event.target.elements.option.value.trim();
     
     if ( option ) {
       console.log( option );
