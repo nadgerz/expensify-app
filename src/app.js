@@ -10,7 +10,7 @@ class IndecisionApp extends React.Component {
     this.state = {
       title: 'Indecision',
       subTitle: 'Put your life in the hands of a computer',
-      options: ['Thing one', 'Thing two', 'Thing four']
+      options: []
     };
   }
   
@@ -29,14 +29,15 @@ class IndecisionApp extends React.Component {
   }
   
   handleAddOption( option ) {
-    console.log( 'back in app' );
-    console.log( option );
+    
+    if ( !option ) {
+      return 'Enter valid value to add item';
+    }
+    else if ( this.state.options.indexOf( option ) > -1 ) {
+      return 'This option already exists';
+    }
     
     this.setState( ( prevState ) => {
-      console.log( prevState );
-      console.log( prevState.options );
-      console.log( typeof prevState.options );
-      
       return {
         options: prevState.options.concat( option )
       };
@@ -137,24 +138,26 @@ class AddOption extends React.Component {
     super( props );
     
     this.handleAddOption = this.handleAddOption.bind( this );
+    
+    this.state = {
+      error: undefined
+    };
   }
   
   handleAddOption( event ) {
     
     event.preventDefault();
     
-    // console.log( event );
-    console.log( 'Form submitted' );
-    
     const option = event.target.elements.option.value.trim();
     
-    if ( option ) {
-      console.log( option );
-      console.log( 'in AddOption' );
-      this.props.handleAddOption( option );
-      
-      event.target.elements.option.value = '';
-    }
+    const error = this.props.handleAddOption( option );
+    
+    this.setState( () => {
+      return {
+        error
+      };
+    } );
+    // event.target.elements.option.value = '';
   }
   
   render() {
