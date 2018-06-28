@@ -1,5 +1,7 @@
 'use strict';
 
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -18,6 +20,7 @@ var IndecisionApp = function (_React$Component) {
 
     _this.handleDeleteOptions = _this.handleDeleteOptions.bind(_this);
     _this.handlePick = _this.handlePick.bind(_this);
+    _this.handleAddOption = _this.handleAddOption.bind(_this);
 
     _this.state = {
       title: 'Indecision',
@@ -39,10 +42,25 @@ var IndecisionApp = function (_React$Component) {
   }, {
     key: 'handlePick',
     value: function handlePick() {
-
       var randomNum = Math.floor(Math.random() * this.state.options.length);
 
       console.log(this.state.options[randomNum]);
+    }
+  }, {
+    key: 'handleAddOption',
+    value: function handleAddOption(option) {
+      console.log('back in app');
+      console.log(option);
+
+      this.setState(function (prevState) {
+        console.log(prevState);
+        console.log(prevState.options);
+        console.log(_typeof(prevState.options));
+
+        return {
+          options: prevState.options.push(option)
+        };
+      });
     }
   }, {
     key: 'render',
@@ -63,7 +81,9 @@ var IndecisionApp = function (_React$Component) {
           options: this.state.options,
           handleDeleteOptions: this.handleDeleteOptions
         }),
-        React.createElement(AddOption, null)
+        React.createElement(AddOption, {
+          handleAddOption: this.handleAddOption
+        })
       );
     }
   }]);
@@ -146,6 +166,9 @@ var Options = function (_React$Component4) {
     key: 'render',
     value: function render() {
 
+      console.log(this.props.options);
+      console.log(_typeof(this.props.options));
+
       return React.createElement(
         'div',
         null,
@@ -213,6 +236,8 @@ var AddOption = function (_React$Component6) {
 
       if (option) {
         console.log(option);
+        console.log('in AddOption');
+        this.props.handleAddOption(option);
 
         event.target.elements.option.value = '';
       }
