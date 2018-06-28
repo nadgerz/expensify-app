@@ -1,3 +1,22 @@
+const obj = {
+  name: 'Bob',
+  getName() {
+    return this.name;
+  }
+};
+
+const func = function() {
+  console.log( this );
+};
+
+func();
+
+const getName = obj.getName;
+
+console.log( getName() );
+console.log( obj.getName() );
+
+
 class IndecisionApp extends React.Component {
   
   render() {
@@ -52,9 +71,13 @@ class Action extends React.Component {
 
 
 class Options extends React.Component {
+  constructor() {
+    super();
+  }
   
   handleRemoveAll() {
     console.log( 'remove all' );
+    console.log( this.props );
   }
   
   render() {
