@@ -5,8 +5,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 var Person = function Person(name) {
   _classCallCheck(this, Person);
 
-  console.log('test');
-  console.log(name);
+  // console.log( 'test' );
+  // console.log( name );
+  this.name = name;
 };
 
 var me = new Person('Steve Ingram');
