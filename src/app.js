@@ -5,13 +5,15 @@ class IndecisionApp extends React.Component {
     const title = 'Indecision';
     const subTitle = 'Put your life in the hands of a computer';
     
+    const options = ['Thing one', 'Thing two', 'Thing four'];
+    
     return (
       <div>
         <Header title={title} subTitle={subTitle}/>
         
         <Action/>
         
-        <Options/>
+        <Options options={options}/>
         
         <AddOption/>
       </div>
@@ -48,13 +50,19 @@ class Action extends React.Component {
 class Options extends React.Component {
   
   render() {
+    
+    const numOptions = this.props.options.length;
+    
     return (
       <div>
         Options component here
-        <Option/>
-        <Option/>
-        <Option/>
-        <Option/>
+        {
+          this.props.options.map( ( option ) => {
+            return (
+              <p key={option}>{option}</p>
+            );
+          } )
+        }
       </div>
     );
   }

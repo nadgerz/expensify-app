@@ -24,12 +24,14 @@ var IndecisionApp = function (_React$Component) {
       var title = 'Indecision';
       var subTitle = 'Put your life in the hands of a computer';
 
+      var options = ['Thing one', 'Thing two', 'Thing four'];
+
       return React.createElement(
         'div',
         null,
         React.createElement(Header, { title: title, subTitle: subTitle }),
         React.createElement(Action, null),
-        React.createElement(Options, null),
+        React.createElement(Options, { options: options }),
         React.createElement(AddOption, null)
       );
     }
@@ -109,14 +111,20 @@ var Options = function (_React$Component4) {
   _createClass(Options, [{
     key: 'render',
     value: function render() {
+
+      var numOptions = this.props.options.length;
+
       return React.createElement(
         'div',
         null,
         'Options component here',
-        React.createElement(Option, null),
-        React.createElement(Option, null),
-        React.createElement(Option, null),
-        React.createElement(Option, null)
+        this.props.options.map(function (option) {
+          return React.createElement(
+            'p',
+            { key: option },
+            option
+          );
+        })
       );
     }
   }]);
