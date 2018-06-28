@@ -1,22 +1,3 @@
-const obj = {
-  name: 'Bob',
-  getName() {
-    return this.name;
-  }
-};
-
-const func = function() {
-  console.log( this );
-};
-
-func();
-
-const getName = obj.getName.bind( obj );
-
-console.log( getName() );
-console.log( obj.getName() );
-
-
 class IndecisionApp extends React.Component {
   
   render() {
@@ -73,6 +54,7 @@ class Action extends React.Component {
 class Options extends React.Component {
   constructor() {
     super();
+    
   }
   
   handleRemoveAll() {
@@ -84,7 +66,7 @@ class Options extends React.Component {
     
     return (
       <div>
-        <button onClick={this.handleRemoveAll}>Remova All</button>
+        <button onClick={this.handleRemoveAll.bind( this )}>Remova All</button>
         {
           this.props.options.map( ( option ) => <Option key={option} optionText={option}/> )
         }
