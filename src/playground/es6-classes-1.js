@@ -9,3 +9,5 @@ class Person {
 
 const me = new Person( 'Steve Ingram' );
 console.log( me );
+const other = new Person();
+console.log( other );
