@@ -1,8 +1,8 @@
 class Person {
-  constructor( name ) {
+  constructor( name = 'testy' ) {
     // console.log( 'test' );
     // console.log( name );
-    this.name = name || 'test';
+    this.name = name;
   }
 }
 
