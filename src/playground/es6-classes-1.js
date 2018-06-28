@@ -27,6 +27,16 @@ class Student extends Person {
   hasMajor() {
     return !!this.major;
   }
+  
+  getDescription() {
+    let description = super.getDescription();
+    
+    if ( this.hasMajor() ) {
+      description += ` They have a major`;
+    }
+    
+    return description;
+  }
 }
 
 
