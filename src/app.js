@@ -51,17 +51,11 @@ class Options extends React.Component {
   
   render() {
     
-    const numOptions = this.props.options.length;
-    
     return (
       <div>
         Options component here
         {
-          this.props.options.map( ( option ) => {
-            return (
-              <p key={option}>{option}</p>
-            );
-          } )
+          this.props.options.map( ( option ) => <p key={option}>{option}</p> )
         }
       </div>
     );

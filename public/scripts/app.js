@@ -112,8 +112,6 @@ var Options = function (_React$Component4) {
     key: 'render',
     value: function render() {
 
-      var numOptions = this.props.options.length;
-
       return React.createElement(
         'div',
         null,
