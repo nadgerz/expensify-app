@@ -65,10 +65,4 @@ class AddOption extends React.Component {
 }
 
 
-const jsx = (
-  <div>
-    <IndecisionApp/>
-  </div>
-);
-
-ReactDOM.render( jsx, document.getElementById( 'app' ) );
+ReactDOM.render( <IndecisionApp/>, document.getElementById( 'app' ) );
