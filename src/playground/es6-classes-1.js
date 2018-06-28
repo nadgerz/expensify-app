@@ -2,7 +2,7 @@ class Person {
   constructor( name ) {
     // console.log( 'test' );
     // console.log( name );
-    this.name = name;
+    this.name = name || 'test';
   }
 }
 

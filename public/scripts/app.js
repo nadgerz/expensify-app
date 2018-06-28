@@ -7,7 +7,7 @@ var Person = function Person(name) {
 
   // console.log( 'test' );
   // console.log( name );
-  this.name = name;
+  this.name = name || 'test';
 };
 
 var me = new Person('Steve Ingram');
