@@ -9,7 +9,7 @@ class Person {
   }
   
   getDescription() {
-    return `${this.name} is ${this.age} years old.`;
+    return `${this.name} is ${this.age} year(s) old.`;
   }
 }
 
