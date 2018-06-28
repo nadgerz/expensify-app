@@ -11,11 +11,20 @@ class Counter extends React.Component {
     };
   }
   
-  handleAddOne() {
+  handleAddOneX() {
     console.log( 'handleAddOne' );
     this.setState( ( prevState, props ) => ({
       count: prevState.count + 1
     }) );
+  }
+  
+  handleAddOne() {
+    console.log( 'handleAddOne' );
+    this.setState( () => {
+      return {
+        count: '§'
+      };
+    } );
   }
   
   handleMinusOne() {

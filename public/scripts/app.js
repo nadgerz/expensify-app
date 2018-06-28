@@ -27,12 +27,22 @@ var Counter = function (_React$Component) {
   }
 
   _createClass(Counter, [{
-    key: 'handleAddOne',
-    value: function handleAddOne() {
+    key: 'handleAddOneX',
+    value: function handleAddOneX() {
       console.log('handleAddOne');
       this.setState(function (prevState, props) {
         return {
           count: prevState.count + 1
+        };
+      });
+    }
+  }, {
+    key: 'handleAddOne',
+    value: function handleAddOne() {
+      console.log('handleAddOne');
+      this.setState(function () {
+        return {
+          count: '§'
         };
       });
     }
