@@ -238,9 +238,7 @@ var AddOption = function (_React$Component6) {
       var error = this.props.handleAddOption(option);
 
       this.setState(function () {
-        return {
-          error: error
-        };
+        return { error: error };
       });
       // event.target.elements.option.value = '';
     }
@@ -253,7 +251,7 @@ var AddOption = function (_React$Component6) {
         this.state.error && React.createElement(
           'p',
           null,
-          error
+          this.state.error
         ),
         React.createElement(
           'form',

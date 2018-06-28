@@ -153,9 +153,7 @@ class AddOption extends React.Component {
     const error = this.props.handleAddOption( option );
     
     this.setState( () => {
-      return {
-        error
-      };
+      return { error };
     } );
     // event.target.elements.option.value = '';
   }
@@ -164,7 +162,7 @@ class AddOption extends React.Component {
     return (
       <div>
         
-        {this.state.error && <p>{error}</p>}
+        {this.state.error && <p>{this.state.error}</p>}
         
         <form onSubmit={this.handleAddOption}>
           <input type="text" name="option"/>
