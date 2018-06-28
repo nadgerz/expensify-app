@@ -37,13 +37,21 @@ var Counter = function (_React$Component) {
       });
     }
   }, {
+    key: 'handleAddOneY',
+    value: function handleAddOneY() {
+      console.log('handleAddOne');
+      this.setState(function (prevState) {
+        return {
+          count: prevState.count + 1
+        };
+      });
+    }
+  }, {
     key: 'handleAddOne',
     value: function handleAddOne() {
       console.log('handleAddOne');
-      this.setState(function () {
-        return {
-          count: '§'
-        };
+      this.setState(function (prevState) {
+        return { count: prevState.count + 1 };
       });
     }
   }, {

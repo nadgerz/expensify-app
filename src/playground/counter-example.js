@@ -18,13 +18,18 @@ class Counter extends React.Component {
     }) );
   }
   
-  handleAddOne() {
+  handleAddOneY() {
     console.log( 'handleAddOne' );
-    this.setState( () => {
+    this.setState( ( prevState ) => {
       return {
-        count: '§'
+        count: prevState.count + 1
       };
     } );
+  }
+  
+  handleAddOne() {
+    console.log( 'handleAddOne' );
+    this.setState( ( prevState ) => ({ count: prevState.count + 1 }) );
   }
   
   handleMinusOne() {
