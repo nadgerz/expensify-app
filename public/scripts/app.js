@@ -58,7 +58,7 @@ var IndecisionApp = function (_React$Component) {
         console.log(_typeof(prevState.options));
 
         return {
-          options: prevState.options.push(option)
+          options: prevState.options.concat(option)
         };
       });
     }

@@ -38,7 +38,7 @@ class IndecisionApp extends React.Component {
       console.log( typeof prevState.options );
       
       return {
-        options: prevState.options.push( option )
+        options: prevState.options.concat( option )
       };
     } );
   }
