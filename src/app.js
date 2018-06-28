@@ -19,7 +19,7 @@ class IndecisionApp extends React.Component {
           subTitle={this.state.subTitle}
         />
         
-        <Action/>
+        <Action hasOptions={this.state.options.length > 0}/>
         
         <Options options={this.state.options}/>
         
