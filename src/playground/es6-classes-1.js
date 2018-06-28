@@ -19,7 +19,7 @@ class Person {
 
 class Student extends Person {
   constructor( name, age, major ) {
-    super();
+    super( name, age );
     
     this.major = major;
   }
@@ -32,7 +32,7 @@ class Student extends Person {
     let description = super.getDescription();
     
     if ( this.hasMajor() ) {
-      description += ` They have a major`;
+      description += ` Their major is ${this.major}.`;
     }
     
     return description;
@@ -41,19 +41,19 @@ class Student extends Person {
 
 
 const me = new Student( 'Steve Ingram', 52 );
-console.log( me );
-console.log( me.getGreeting() );
+// console.log( me );
+// console.log( me.getGreeting() );
 console.log( me.getDescription() );
-console.log( me.hasMajor() );
+// console.log( me.hasMajor() );
 
 const other = new Student();
-console.log( other );
-console.log( other.getGreeting() );
+// console.log( other );
+// console.log( other.getGreeting() );
 console.log( other.getDescription() );
-console.log( other.hasMajor() );
+// console.log( other.hasMajor() );
 
 const boop = new Student( undefined, 18, 'Computer Science' );
-console.log( boop );
-console.log( boop.getGreeting() );
+// console.log( boop );
+// console.log( boop.getGreeting() );
 console.log( boop.getDescription() );
-console.log( boop.hasMajor() );
+// console.log( boop.hasMajor() );

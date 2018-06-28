@@ -44,7 +44,7 @@ var Student = function (_Person) {
   function Student(name, age, major) {
     _classCallCheck(this, Student);
 
-    var _this = _possibleConstructorReturn(this, (Student.__proto__ || Object.getPrototypeOf(Student)).call(this));
+    var _this = _possibleConstructorReturn(this, (Student.__proto__ || Object.getPrototypeOf(Student)).call(this, name, age));
 
     _this.major = major;
     return _this;
@@ -61,7 +61,7 @@ var Student = function (_Person) {
       var description = _get(Student.prototype.__proto__ || Object.getPrototypeOf(Student.prototype), 'getDescription', this).call(this);
 
       if (this.hasMajor()) {
-        description += ' They have a major';
+        description += ' Their major is ' + this.major + '.';
       }
 
       return description;
@@ -72,19 +72,19 @@ var Student = function (_Person) {
 }(Person);
 
 var me = new Student('Steve Ingram', 52);
-console.log(me);
-console.log(me.getGreeting());
+// console.log( me );
+// console.log( me.getGreeting() );
 console.log(me.getDescription());
-console.log(me.hasMajor());
+// console.log( me.hasMajor() );
 
 var other = new Student();
-console.log(other);
-console.log(other.getGreeting());
+// console.log( other );
+// console.log( other.getGreeting() );
 console.log(other.getDescription());
-console.log(other.hasMajor());
+// console.log( other.hasMajor() );
 
 var boop = new Student(undefined, 18, 'Computer Science');
-console.log(boop);
-console.log(boop.getGreeting());
+// console.log( boop );
+// console.log( boop.getGreeting() );
 console.log(boop.getDescription());
-console.log(boop.hasMajor());
+// console.log( boop.hasMajor() );
