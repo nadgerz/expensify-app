@@ -1,17 +1,37 @@
 class Header extends React.Component {
   
   render() {
-    return <p>This is from Header</p>;
+    return (
+      <div>
+        <p>This is from Header</p>
+      </div>
+    );
   }
+}
+
+
+class Action extends React.Component {
+  
+  render() {
+    return (
+      <div>
+        <button>What should I do?</button>
+      </div>
+    );
+  }
+  
 }
 
 
 const jsx = (
   <div>
+    
     <h1>Title</h1>
+    
     <Header/>
-    <Header/>
-    <Header/>
+    
+    <Action/>
+  
   </div>
 );
 
