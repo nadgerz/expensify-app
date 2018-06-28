@@ -21,7 +21,7 @@ var func = function func() {
 
 func();
 
-var getName = obj.getName;
+var getName = obj.getName.bind(obj);
 
 console.log(getName());
 console.log(obj.getName());

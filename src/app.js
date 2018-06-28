@@ -11,7 +11,7 @@ const func = function() {
 
 func();
 
-const getName = obj.getName;
+const getName = obj.getName.bind( obj );
 
 console.log( getName() );
 console.log( obj.getName() );
