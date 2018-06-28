@@ -40,6 +40,26 @@ class Student extends Person {
 }
 
 
+class Traveller extends Person {
+  
+  constructor( name, age, homeLocation ) {
+    super( name, age );
+    
+    this.homeLocation = homeLocation;
+  }
+  
+  getGreeting() {
+    let greeting = super.getGreeting();
+    
+    if ( this.homeLocation ) {
+      greeting += ` I live in ${this.homeLocation}.`;
+    }
+    
+    return greeting;
+  }
+}
+
+
 const me = new Student( 'Steve Ingram', 52 );
 // console.log( me );
 // console.log( me.getGreeting() );
@@ -57,3 +77,8 @@ const boop = new Student( undefined, 18, 'Computer Science' );
 // console.log( boop.getGreeting() );
 console.log( boop.getDescription() );
 // console.log( boop.hasMajor() );
+
+const betty = new Traveller( 'Betty', 25, 'Berlin' );
+// console.log( betty );
+console.log( betty.getGreeting() );
+console.log( betty.getDescription() );

@@ -71,6 +71,34 @@ var Student = function (_Person) {
   return Student;
 }(Person);
 
+var Traveller = function (_Person2) {
+  _inherits(Traveller, _Person2);
+
+  function Traveller(name, age, homeLocation) {
+    _classCallCheck(this, Traveller);
+
+    var _this2 = _possibleConstructorReturn(this, (Traveller.__proto__ || Object.getPrototypeOf(Traveller)).call(this, name, age));
+
+    _this2.homeLocation = homeLocation;
+    return _this2;
+  }
+
+  _createClass(Traveller, [{
+    key: 'getGreeting',
+    value: function getGreeting() {
+      var greeting = _get(Traveller.prototype.__proto__ || Object.getPrototypeOf(Traveller.prototype), 'getGreeting', this).call(this);
+
+      if (this.homeLocation) {
+        greeting += ' I live in ' + this.homeLocation + '.';
+      }
+
+      return greeting;
+    }
+  }]);
+
+  return Traveller;
+}(Person);
+
 var me = new Student('Steve Ingram', 52);
 // console.log( me );
 // console.log( me.getGreeting() );
@@ -88,3 +116,8 @@ var boop = new Student(undefined, 18, 'Computer Science');
 // console.log( boop.getGreeting() );
 console.log(boop.getDescription());
 // console.log( boop.hasMajor() );
+
+var betty = new Traveller('Betty', 25, 'Berlin');
+// console.log( betty );
+console.log(betty.getGreeting());
+console.log(betty.getDescription());
