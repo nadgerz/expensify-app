@@ -3,6 +3,8 @@ class IndecisionApp extends React.Component {
   constructor( props ) {
     super( props );
     
+    this.handleDeleteOptions = this.handleDeleteOptions.bind( this );
+    
     this.state = {
       title: 'Indecision',
       subTitle: 'Put your life in the hands of a computer',
@@ -86,7 +88,7 @@ class Options extends React.Component {
     
     return (
       <div>
-        <button onClick={this.props.handleDeleteOptions}>Remova All</button>
+        <button onClick={this.props.handleDeleteOptions}>Remove All</button>
         {
           this.props.options.map( ( option ) => <Option key={option} optionText={option}/> )
         }

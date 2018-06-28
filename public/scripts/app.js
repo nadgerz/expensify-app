@@ -16,6 +16,8 @@ var IndecisionApp = function (_React$Component) {
 
     var _this = _possibleConstructorReturn(this, (IndecisionApp.__proto__ || Object.getPrototypeOf(IndecisionApp)).call(this, props));
 
+    _this.handleDeleteOptions = _this.handleDeleteOptions.bind(_this);
+
     _this.state = {
       title: 'Indecision',
       subTitle: 'Put your life in the hands of a computer',
@@ -146,7 +148,7 @@ var Options = function (_React$Component4) {
         React.createElement(
           'button',
           { onClick: this.props.handleDeleteOptions },
-          'Remova All'
+          'Remove All'
         ),
         this.props.options.map(function (option) {
           return React.createElement(Option, { key: option, optionText: option });
