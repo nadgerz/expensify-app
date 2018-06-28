@@ -174,12 +174,38 @@ var AddOption = function (_React$Component6) {
   }
 
   _createClass(AddOption, [{
+    key: 'handleAddOption',
+    value: function handleAddOption(event) {
+
+      event.preventDefault();
+
+      // console.log( event );
+      console.log('Form submitted');
+
+      var option = event.target.elements.option.value;
+
+      if (option) {
+        console.log(option);
+
+        event.target.elements.option.value = '';
+      }
+    }
+  }, {
     key: 'render',
     value: function render() {
       return React.createElement(
         'div',
         null,
-        'AddOptions component here'
+        React.createElement(
+          'form',
+          { onSubmit: this.handleAddOption },
+          React.createElement('input', { type: 'text', name: 'option' }),
+          React.createElement(
+            'button',
+            null,
+            'Add Option'
+          )
+        )
       );
     }
   }]);
