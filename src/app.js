@@ -5,13 +5,12 @@ class IndecisionApp extends React.Component {
     
     this.state = {
       title: 'Indecision',
-      subTitle: 'Put your life in the hands of a computer'
+      subTitle: 'Put your life in the hands of a computer',
+      options: ['Thing one', 'Thing two', 'Thing four']
     };
   }
   
   render() {
-    
-    const options = ['Thing one', 'Thing two', 'Thing four'];
     
     return (
       <div>
@@ -22,7 +21,7 @@ class IndecisionApp extends React.Component {
         
         <Action/>
         
-        <Options options={options}/>
+        <Options options={this.state.options}/>
         
         <AddOption/>
       </div>

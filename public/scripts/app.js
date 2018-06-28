@@ -18,7 +18,8 @@ var IndecisionApp = function (_React$Component) {
 
     _this.state = {
       title: 'Indecision',
-      subTitle: 'Put your life in the hands of a computer'
+      subTitle: 'Put your life in the hands of a computer',
+      options: ['Thing one', 'Thing two', 'Thing four']
     };
     return _this;
   }
@@ -26,8 +27,6 @@ var IndecisionApp = function (_React$Component) {
   _createClass(IndecisionApp, [{
     key: 'render',
     value: function render() {
-
-      var options = ['Thing one', 'Thing two', 'Thing four'];
 
       return React.createElement(
         'div',
@@ -37,7 +36,7 @@ var IndecisionApp = function (_React$Component) {
           subTitle: this.state.subTitle
         }),
         React.createElement(Action, null),
-        React.createElement(Options, { options: options }),
+        React.createElement(Options, { options: this.state.options }),
         React.createElement(AddOption, null)
       );
     }
