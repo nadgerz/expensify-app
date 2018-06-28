@@ -25,7 +25,7 @@ class Student extends Person {
   }
   
   hasMajor() {
-    this.major ? true : false;
+    return !!this.major;
   }
 }
 
