@@ -3,7 +3,8 @@ class Header extends React.Component {
   render() {
     return (
       <div>
-        <p>This is from Header</p>
+        <h1>Indecison</h1>
+        <h2>Put your life in the hands of a computer</h2>
       </div>
     );
   }
@@ -25,8 +26,6 @@ class Action extends React.Component {
 
 const jsx = (
   <div>
-    
-    <h1>Title</h1>
     
     <Header/>
     

@@ -24,9 +24,14 @@ var Header = function (_React$Component) {
         'div',
         null,
         React.createElement(
-          'p',
+          'h1',
           null,
-          'This is from Header'
+          'Indecison'
+        ),
+        React.createElement(
+          'h2',
+          null,
+          'Put your life in the hands of a computer'
         )
       );
     }
@@ -65,11 +70,6 @@ var Action = function (_React$Component2) {
 var jsx = React.createElement(
   'div',
   null,
-  React.createElement(
-    'h1',
-    null,
-    'Title'
-  ),
   React.createElement(Header, null),
   React.createElement(Action, null)
 );
