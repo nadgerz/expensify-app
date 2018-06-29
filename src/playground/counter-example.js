@@ -11,6 +11,34 @@ class Counter extends React.Component {
     };
   }
   
+  componentWillMount() {
+    console.log( 'cwm' );
+    
+    try {
+      const json = localStorage.getItem( 'count' );
+      let count = JSON.parse( json );
+      
+      if ( !count ) {
+        console.log( 'nullie' );
+        count = 0;
+      }
+      
+      this.setState( () => ({ count }) );
+    }
+    catch ( e ) {
+      // Do nothing. Default count to 0.
+    }
+  }
+  
+  componentDidUpdate( prevProps, prevState ) {
+    console.log( 'cdu' );
+    
+    if ( prevState.count !== this.state.count ) {
+      const json = JSON.stringify( this.state.count );
+      localStorage.setItem( 'count', json );
+    }
+  }
+  
   handleAddOne() {
     console.log( 'handleAddOne' );
     this.setState( ( prevState ) => ({ count: prevState.count + 1 }) );
@@ -30,6 +58,7 @@ class Counter extends React.Component {
     return (
       <div>
         <h1>Count: {this.state.count}</h1>
+        
         <button onClick={this.handleAddOne}>+1</button>
         <button onClick={this.handleMinusOne}>-1</button>
         <button onClick={this.handleReset}>reset</button>

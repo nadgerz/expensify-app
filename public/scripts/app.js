@@ -27,24 +27,35 @@ var Counter = function (_React$Component) {
   }
 
   _createClass(Counter, [{
-    key: 'handleAddOneX',
-    value: function handleAddOneX() {
-      console.log('handleAddOne');
-      this.setState(function (prevState, props) {
-        return {
-          count: prevState.count + 1
-        };
-      });
+    key: 'componentWillMount',
+    value: function componentWillMount() {
+      console.log('cwm');
+
+      try {
+        var json = localStorage.getItem('count');
+        var count = JSON.parse(json);
+
+        if (!count) {
+          console.log('nullie');
+          count = 0;
+        }
+
+        this.setState(function () {
+          return { count: count };
+        });
+      } catch (e) {
+        // Do nothing. Default count to 0.
+      }
     }
   }, {
-    key: 'handleAddOneY',
-    value: function handleAddOneY() {
-      console.log('handleAddOne');
-      this.setState(function (prevState) {
-        return {
-          count: prevState.count + 1
-        };
-      });
+    key: 'componentDidUpdate',
+    value: function componentDidUpdate(prevProps, prevState) {
+      console.log('cdu');
+
+      if (prevState.count !== this.state.count) {
+        var json = JSON.stringify(this.state.count);
+        localStorage.setItem('count', json);
+      }
     }
   }, {
     key: 'handleAddOne',
@@ -59,19 +70,7 @@ var Counter = function (_React$Component) {
     value: function handleMinusOne() {
       console.log('handleMinusOne');
       this.setState(function (prevState) {
-        return {
-          count: prevState.count - 1
-        };
-      });
-    }
-  }, {
-    key: 'handleResetX',
-    value: function handleResetX() {
-      console.log('handleReset');
-      this.setState(function (prevState, props) {
-        return {
-          count: 0
-        };
+        return { count: prevState.count - 1 };
       });
     }
   }, {
@@ -79,9 +78,7 @@ var Counter = function (_React$Component) {
     value: function handleReset() {
       console.log('handleReset');
       this.setState(function () {
-        return {
-          count: 0
-        };
+        return { count: 0 };
       });
     }
   }, {
