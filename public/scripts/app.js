@@ -38,7 +38,15 @@ var IndecisionApp = function (_React$Component) {
   }, {
     key: 'handleDeleteOption',
     value: function handleDeleteOption(option) {
+
       console.log(option);
+      this.setState(function (prevState) {
+        return {
+          options: prevState.options.filter(function (option) {
+            return false;
+          })
+        };
+      });
     }
   }, {
     key: 'handlePick',
