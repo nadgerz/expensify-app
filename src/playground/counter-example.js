@@ -23,6 +23,10 @@ class Counter extends React.Component {
         count = 0;
       }
       
+      if ( isNaN( count ) ) {
+        count = 0;
+      }
+      
       this.setState( () => ({ count }) );
     }
     catch ( e ) {
@@ -32,6 +36,8 @@ class Counter extends React.Component {
   
   componentDidUpdate( prevProps, prevState ) {
     console.log( 'cdu' );
+    
+    // could use parseInt, but we need to protect against NaN
     
     if ( prevState.count !== this.state.count ) {
       const json = JSON.stringify( this.state.count );

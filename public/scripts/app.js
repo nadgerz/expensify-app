@@ -40,6 +40,10 @@ var Counter = function (_React$Component) {
           count = 0;
         }
 
+        if (isNaN(count)) {
+          count = 0;
+        }
+
         this.setState(function () {
           return { count: count };
         });
@@ -51,6 +55,8 @@ var Counter = function (_React$Component) {
     key: 'componentDidUpdate',
     value: function componentDidUpdate(prevProps, prevState) {
       console.log('cdu');
+
+      // could use parseInt, but we need to protect against NaN
 
       if (prevState.count !== this.state.count) {
         var json = JSON.stringify(this.state.count);
