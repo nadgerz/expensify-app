@@ -21,11 +21,19 @@ class IndecisionApp extends React.Component {
   
   componentDidUpdate( prevProps, prevState ) {
     console.log( 'Indecision: componentDidUpdate()' );
+    
     console.log( prevState );
     console.log( this.state );
+    
     // console.log( prevProps );
     // console.log( this.props );
-    console.log( 'save data' );
+    
+    if ( prevState.options.length !== this.state.options.length ) {
+      console.log( 'save data' );
+      
+      const json = JSON.stringify( this.state.options );
+      localStorage.setItem( 'options', json );
+    }
   }
   
   componentWillUnmount() {
