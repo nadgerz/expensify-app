@@ -7,11 +7,11 @@ class Counter extends React.Component {
     this.handleReset = this.handleReset.bind( this );
     
     this.state = {
-      count: props.count
+      count: 0
     };
   }
   
-  componentWillMount() {
+  componentDidMount() {
     console.log( 'cwm' );
     
     try {
@@ -74,8 +74,10 @@ class Counter extends React.Component {
 }
 
 
+/*
 Counter.defaultProps = {
   count: 0
 };
+*/
 
 ReactDOM.render( <Counter count={7}/>, document.getElementById( 'app' ) );
