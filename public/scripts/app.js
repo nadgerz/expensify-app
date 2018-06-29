@@ -29,6 +29,11 @@ var IndecisionApp = function (_React$Component) {
   }
 
   _createClass(IndecisionApp, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      console.log('Indecision: componentDidMount()');
+    }
+  }, {
     key: 'handleDeleteOptions',
     value: function handleDeleteOptions() {
       this.setState(function () {
@@ -39,7 +44,6 @@ var IndecisionApp = function (_React$Component) {
     key: 'handleDeleteOption',
     value: function handleDeleteOption(optionToRemove) {
 
-      // console.log( optionToRemove );
       this.setState(function (prevState) {
         return {
           options: prevState.options.filter(function (option) {
