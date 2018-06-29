@@ -1,5 +1,3 @@
-// Where does our application kick off?
-// Where do we output our bundle.js
 const path = require( 'path' );
 
 module.exports = {
@@ -8,5 +6,12 @@ module.exports = {
     path: path.resolve( __dirname, 'public' ),
     filename: 'bundle.js'
   },
-  mode: 'development'
+  mode: 'development',
+  module: {
+    rules: [{
+      loader: 'babel-loader',
+      test: /.js$/,
+      exclude: /node_modules/
+    }]
+  }
 };

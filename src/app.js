@@ -8,4 +8,4 @@ console.log( isEmail( 'stephen.a.ingram@gmail.com' ) );
 
 const template = <p>testing 123</p>;
 
-ReactDOM.render( template, document.getElementById( 'add' ) );
+ReactDOM.render( template, document.getElementById( 'app' ) );
