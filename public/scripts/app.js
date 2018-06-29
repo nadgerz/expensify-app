@@ -34,12 +34,18 @@ var IndecisionApp = function (_React$Component) {
       console.log('Indecision: componentDidMount()');
       console.log('fetch data');
 
-      var json = localStorage.getItem('options');
-      var options = JSON.parse(json);
+      try {
+        var json = localStorage.getItem('options');
+        var options = JSON.parse(json);
 
-      this.setState(function () {
-        return { options: options };
-      });
+        if (options) {
+          this.setState(function () {
+            return { options: options };
+          });
+        }
+      } catch (e) {
+        // Do nothing at all. Default to empty array.
+      }
     }
   }, {
     key: 'componentDidUpdate',
