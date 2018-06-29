@@ -11,22 +11,6 @@ class Counter extends React.Component {
     };
   }
   
-  handleAddOneX() {
-    console.log( 'handleAddOne' );
-    this.setState( ( prevState, props ) => ({
-      count: prevState.count + 1
-    }) );
-  }
-  
-  handleAddOneY() {
-    console.log( 'handleAddOne' );
-    this.setState( ( prevState ) => {
-      return {
-        count: prevState.count + 1
-      };
-    } );
-  }
-  
   handleAddOne() {
     console.log( 'handleAddOne' );
     this.setState( ( prevState ) => ({ count: prevState.count + 1 }) );
@@ -34,25 +18,12 @@ class Counter extends React.Component {
   
   handleMinusOne() {
     console.log( 'handleMinusOne' );
-    this.setState( ( prevState ) => ({
-      count: prevState.count - 1
-    }) );
-  }
-  
-  handleResetX() {
-    console.log( 'handleReset' );
-    this.setState( ( prevState, props ) => ({
-      count: 0
-    }) );
+    this.setState( ( prevState ) => ({ count: prevState.count - 1 }) );
   }
   
   handleReset() {
     console.log( 'handleReset' );
-    this.setState( () => {
-      return {
-        count: 0
-      };
-    } );
+    this.setState( () => ({ count: 0 }) );
   }
   
   render() {
