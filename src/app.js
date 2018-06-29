@@ -1,5 +1,5 @@
 import anything, { add, square } from './utils';
-import { canDrink, isAdult } from './person';
+import isOldFart, { canDrink, isAdult } from './person';
 
 
 console.clear();
@@ -11,3 +11,4 @@ console.log( anything( 9, 23 ) );
 
 console.log( canDrink( 4 ) );
 console.log( isAdult( 23 ) );
+console.log( isOldFart( 66 ) );
