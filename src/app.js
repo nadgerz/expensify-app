@@ -9,7 +9,7 @@ class IndecisionApp extends React.Component {
     
     this.state = {
       subTitle: 'Put your life in the hands of a computer',
-      options: []
+      options: props.options
     };
   }
   
@@ -69,6 +69,10 @@ class IndecisionApp extends React.Component {
   }
 }
 
+
+IndecisionApp.defaultProps = {
+  options: []
+};
 
 const Header = ( props ) => {
   
@@ -175,4 +179,4 @@ const User = ( props ) => {
 };
 */
 
-ReactDOM.render( <IndecisionApp/>, document.getElementById( 'app' ) );
+ReactDOM.render( <IndecisionApp options={[1,2,3 ]}/>, document.getElementById( 'app' ) );
