@@ -17,18 +17,11 @@ class Counter extends React.Component {
     try {
       const value = localStorage.getItem( 'count' );
       // let count = JSON.parse( json );
-      let count = parseInt( value, 10 );
+      const count = parseInt( value, 10 );
       
-      if ( !count ) {
-        console.log( 'nullie' );
-        count = 0;
+      if ( !isNaN( count ) ) {
+        this.setState( () => ({ count }) );
       }
-      
-      if ( isNaN( count ) ) {
-        count = 0;
-      }
-      
-      this.setState( () => ({ count }) );
     }
     catch ( e ) {
       // Do nothing. Default count to 0.
