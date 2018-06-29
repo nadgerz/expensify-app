@@ -119,10 +119,10 @@ var Counter = function (_React$Component) {
 }(React.Component);
 
 Counter.defaultProps = {
-  count: 5
+  count: 0
 };
 
-ReactDOM.render(React.createElement(Counter, null), document.getElementById('app'));
+ReactDOM.render(React.createElement(Counter, { count: 7 }), document.getElementById('app'));
 
 // let count = 0;
 // const addOne = () => {
