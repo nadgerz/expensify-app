@@ -18,12 +18,12 @@ class IndecisionApp extends React.Component {
     this.setState( () => ({ options: [] }) );
   }
   
-  handleDeleteOption( option ) {
+  handleDeleteOption( optionToRemove ) {
     
-    console.log( option );
+    // console.log( optionToRemove );
     this.setState( ( prevState ) => ({
       options: prevState.options.filter( ( option ) => {
-        return false;
+        return optionToRemove !== option;
       } )
     }) );
   }
