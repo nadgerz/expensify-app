@@ -1,6 +1,6 @@
 // console.clear();
 
-import './utils';
+import { square } from './utils';
 
 
 console.log( 'app.js is running!' );
