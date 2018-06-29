@@ -154,6 +154,10 @@ const Options = ( props ) => {
       <button onClick={props.handleDeleteOptions}>Remove All</button>
       
       {
+        props.options.length === 0 && <p>Please add an option to get started</p>
+      }
+      
+      {
         props.options.map( ( option ) => (
           <Option
             key={option}
@@ -205,7 +209,9 @@ class AddOption extends React.Component {
     
     this.setState( () => ({ error }) );
     
-    event.target.elements.option.value = '';
+    if ( !error ) {
+      event.target.elements.option.value = '';
+    }
   }
   
   render() {
