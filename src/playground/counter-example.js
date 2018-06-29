@@ -15,8 +15,9 @@ class Counter extends React.Component {
     console.log( 'cwm' );
     
     try {
-      const json = localStorage.getItem( 'count' );
-      let count = JSON.parse( json );
+      const value = localStorage.getItem( 'count' );
+      // let count = JSON.parse( json );
+      let count = parseInt( value, 10 );
       
       if ( !count ) {
         console.log( 'nullie' );
@@ -40,8 +41,9 @@ class Counter extends React.Component {
     // could use parseInt, but we need to protect against NaN
     
     if ( prevState.count !== this.state.count ) {
-      const json = JSON.stringify( this.state.count );
-      localStorage.setItem( 'count', json );
+      // const json = JSON.stringify( this.state.count );
+      // localStorage.setItem( 'count', json );
+      localStorage.setItem( 'count', this.state.count );
     }
   }
   

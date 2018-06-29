@@ -21,19 +21,20 @@ var Counter = function (_React$Component) {
     _this.handleReset = _this.handleReset.bind(_this);
 
     _this.state = {
-      count: props.count
+      count: 0
     };
     return _this;
   }
 
   _createClass(Counter, [{
-    key: 'componentWillMount',
-    value: function componentWillMount() {
+    key: 'componentDidMount',
+    value: function componentDidMount() {
       console.log('cwm');
 
       try {
-        var json = localStorage.getItem('count');
-        var count = JSON.parse(json);
+        var value = localStorage.getItem('count');
+        // let count = JSON.parse( json );
+        var count = parseInt(value, 10);
 
         if (!count) {
           console.log('nullie');
@@ -59,8 +60,9 @@ var Counter = function (_React$Component) {
       // could use parseInt, but we need to protect against NaN
 
       if (prevState.count !== this.state.count) {
-        var json = JSON.stringify(this.state.count);
-        localStorage.setItem('count', json);
+        // const json = JSON.stringify( this.state.count );
+        // localStorage.setItem( 'count', json );
+        localStorage.setItem('count', this.state.count);
       }
     }
   }, {
@@ -121,8 +123,10 @@ var Counter = function (_React$Component) {
   return Counter;
 }(React.Component);
 
+/*
 Counter.defaultProps = {
   count: 0
 };
+*/
 
 ReactDOM.render(React.createElement(Counter, { count: 7 }), document.getElementById('app'));
