@@ -16,6 +16,7 @@ class IndecisionApp extends React.Component {
   
   componentDidMount() {
     console.log( 'Indecision: componentDidMount()' );
+    console.log( 'fetch data' );
   }
   
   componentDidUpdate( prevProps, prevState ) {
@@ -24,6 +25,11 @@ class IndecisionApp extends React.Component {
     console.log( this.state );
     // console.log( prevProps );
     // console.log( this.props );
+    console.log( 'save data' );
+  }
+  
+  componentWillUnmount() {
+    console.log( 'Indecision: componentWillUnmount()' );
   }
   
   handleDeleteOptions() {

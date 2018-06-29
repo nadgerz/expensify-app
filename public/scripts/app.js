@@ -32,6 +32,7 @@ var IndecisionApp = function (_React$Component) {
     key: 'componentDidMount',
     value: function componentDidMount() {
       console.log('Indecision: componentDidMount()');
+      console.log('fetch data');
     }
   }, {
     key: 'componentDidUpdate',
@@ -41,6 +42,12 @@ var IndecisionApp = function (_React$Component) {
       console.log(this.state);
       // console.log( prevProps );
       // console.log( this.props );
+      console.log('save data');
+    }
+  }, {
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      console.log('Indecision: componentWillUnmount()');
     }
   }, {
     key: 'handleDeleteOptions',
