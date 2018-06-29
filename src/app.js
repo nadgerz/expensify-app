@@ -179,4 +179,4 @@ const User = ( props ) => {
 };
 */
 
-ReactDOM.render( <IndecisionApp options={[1,2,3 ]}/>, document.getElementById( 'app' ) );
+ReactDOM.render( <IndecisionApp/>, document.getElementById( 'app' ) );
