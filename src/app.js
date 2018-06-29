@@ -17,6 +17,11 @@ class IndecisionApp extends React.Component {
   componentDidMount() {
     console.log( 'Indecision: componentDidMount()' );
     console.log( 'fetch data' );
+    
+    const json = localStorage.getItem( 'options' );
+    const options = JSON.parse( json );
+    
+    this.setState( () => ({ options }) );
   }
   
   componentDidUpdate( prevProps, prevState ) {
