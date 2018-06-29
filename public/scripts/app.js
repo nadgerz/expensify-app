@@ -21,7 +21,6 @@ var IndecisionApp = function (_React$Component) {
     _this.handleAddOption = _this.handleAddOption.bind(_this);
 
     _this.state = {
-      title: 'Indecision',
       subTitle: 'Put your life in the hands of a computer',
       options: []
     };
@@ -68,7 +67,6 @@ var IndecisionApp = function (_React$Component) {
         'div',
         null,
         React.createElement(Header, {
-          title: this.state.title,
           subTitle: this.state.subTitle
         }),
         React.createElement(Action, {
@@ -99,12 +97,16 @@ var Header = function Header(props) {
       null,
       props.title
     ),
-    React.createElement(
+    props.subTitle && React.createElement(
       'h2',
       null,
       props.subTitle
     )
   );
+};
+
+Header.defaultProps = {
+  title: 'Indecision'
 };
 
 var Action = function Action(props) {
