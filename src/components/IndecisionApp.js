@@ -10,7 +10,7 @@ export default class IndecisionApp extends Component {
   
   state = {
     subTitle: 'Put your life in the hands of a computer',
-    options: this.props.options
+    options: []
   };
   
   handleDeleteOptions = () => {
@@ -101,7 +101,3 @@ export default class IndecisionApp extends Component {
     );
   }
 }
-
-IndecisionApp.defaultProps = {
-  options: []
-};
