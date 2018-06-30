@@ -13,6 +13,7 @@ ReactDOM.render( <IndecisionApp/>, document.getElementById( 'app' ) );
 class OldSyntax {
   constructor() {
     this.name = 'Mike';
+    this.getOldGreeting = this.getOldGreeting.bind( this );
   }
   
   getOldGreeting() {
@@ -25,7 +26,7 @@ const oldSyntax = new OldSyntax();
 const getOldGreeting = oldSyntax.getOldGreeting;
 console.log( oldSyntax );
 console.log( oldSyntax.getOldGreeting() );
-// console.log( getOldGreeting() );
+console.log( getOldGreeting() );
 
 // ---------
 
