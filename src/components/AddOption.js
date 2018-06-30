@@ -7,13 +7,7 @@ export default class AddOption extends Component {
     error: undefined
   };
   
-  constructor( props ) {
-    super( props );
-    
-    this.handleAddOption = this.handleAddOption.bind( this );
-  }
-  
-  handleAddOption( event ) {
+  handleAddOption = ( event ) => {
     
     event.preventDefault();
     
@@ -26,7 +20,7 @@ export default class AddOption extends Component {
     if ( !error ) {
       event.target.elements.option.value = '';
     }
-  }
+  };
   
   render() {
     return (
