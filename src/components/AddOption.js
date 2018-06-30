@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 
-class AddOption extends React.Component {
+export default class AddOption extends Component {
   constructor( props ) {
     super( props );
     
@@ -42,3 +42,4 @@ class AddOption extends React.Component {
     );
   }
 }
+
