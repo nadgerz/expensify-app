@@ -9,7 +9,7 @@ console.log( isEmail( 'stephen.a.ingram@gmail.com' ) );
 
 ReactDOM.render( <IndecisionApp/>, document.getElementById( 'app' ) );
 
-
+/*
 class OldSyntax {
   constructor() {
     this.name = 'Mike';
@@ -45,3 +45,4 @@ console.log( newSyntax.getNewGreeting() );
 const getNewGreeting = newSyntax.getNewGreeting;
 console.log( getNewGreeting() );
 
+*/

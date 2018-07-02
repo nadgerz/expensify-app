@@ -6,8 +6,9 @@ const OptionModal = ( props ) => (
   <Modal
     isOpen={!!props.selectedOption}
     contentLabel={'Selected Option'}
+    ariaHideApp={false}
   >
-    <h3>Selected Option:</h3>
+    <h3>Selected Option: {props.selectedOption}</h3>
   </Modal>
 
 );

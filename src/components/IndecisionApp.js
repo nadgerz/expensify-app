@@ -29,7 +29,14 @@ export default class IndecisionApp extends Component {
   handlePick = () => {
     const randomNum = Math.floor( Math.random() * this.state.options.length );
     
-    console.log( this.state.options[randomNum] );
+    const option = this.state.options[randomNum];
+    console.log( option );
+    
+    this.setState( () => (
+      {
+        selectedOption: option
+      }
+    ) );
   };
   
   handleAddOption = ( option ) => {
@@ -73,9 +80,11 @@ export default class IndecisionApp extends Component {
     }
   }
   
-  componentWillUnmount() {
-    console.log( 'Indecision: componentWillUnmount()' );
-  }
+  /*
+    componentWillUnmount() {
+      console.log( 'Indecision: componentWillUnmount()' );
+    }
+  */
   
   render() {
     
