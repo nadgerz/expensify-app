@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import OptionModal from './OptionModal'
+import OptionModal from './OptionModal';
 import AddOption from './AddOption';
 import Options from './Options';
 import Header from './Header';
@@ -11,7 +11,8 @@ export default class IndecisionApp extends Component {
   
   state = {
     subTitle: 'Put your life in the hands of a computer',
-    options: []
+    options: [],
+    selectedOption: undefined
   };
   
   handleDeleteOptions = () => {
@@ -99,7 +100,9 @@ export default class IndecisionApp extends Component {
           handleAddOption={this.handleAddOption}
         />
         
-        <OptionModal></OptionModal>
+        <OptionModal
+          selectedOption={this.state.selectedOption}
+        />
       </div>
     );
   }
