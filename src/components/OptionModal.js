@@ -6,6 +6,7 @@ const OptionModal = ( props ) => (
   <Modal
     isOpen={!!props.selectedOption}
     contentLabel={'Selected Option'}
+    onRequestClose={props.handleModalDismiss}
     ariaHideApp={false}
   >
     <h3>Selected Option:</h3>
@@ -13,9 +14,12 @@ const OptionModal = ( props ) => (
     {props.selectedOption && <p>{props.selectedOption}</p>}
     
     <button
+/*
       onClick={( e ) => {
         props.handleModalDismiss();
       }}
+*/
+      onClick={props.handleModalDismiss}
     >
       Okay
     </button>
