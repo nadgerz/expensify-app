@@ -9,7 +9,16 @@ const OptionModal = ( props ) => (
     ariaHideApp={false}
   >
     <h3>Selected Option:</h3>
+    
     {props.selectedOption && <p>{props.selectedOption}</p>}
+    
+    <button
+      onClick={( e ) => {
+        props.handleModalDismiss();
+      }}
+    >
+      Okay
+    </button>
   </Modal>
 
 );

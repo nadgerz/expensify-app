@@ -19,6 +19,10 @@ export default class IndecisionApp extends Component {
     this.setState( () => ({ options: [] }) );
   };
   
+  handleModalDismiss = () => {
+    this.setState( () => ({ selectedOption: undefined }) );
+  };
+  
   handleDeleteOption = ( optionToRemove ) => {
     
     this.setState( ( prevState ) => ({
@@ -111,6 +115,7 @@ export default class IndecisionApp extends Component {
         
         <OptionModal
           selectedOption={this.state.selectedOption}
+          handleModalDismiss={this.handleModalDismiss}
         />
       </div>
     );
