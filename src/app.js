@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import IndecisionApp from './components/IndecisionApp';
 
-import './styles/styles.css';
+import './styles/styles.scss';
 /*
 import validator from 'validator';
 import isEmail from 'validator/lib/isEmail';
