@@ -3,6 +3,6 @@ import { createStore } from 'redux';
 
 console.clear();
 
-const store = createStore( () => {
+const store = createStore( ( state = {} ) => {
 
 } );
