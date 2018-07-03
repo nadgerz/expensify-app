@@ -8,31 +8,34 @@ const store = createStore( ( state = { count: 0 }, action ) => {
   
                              switch ( action.type ) {
                                case 'INCREMENT':
+                                 // console.log( action.type );
                                  return {
                                    count: state.count + 1
                                  };
     
                                case 'DECREMENT':
+                                 // console.log( action.type );
                                  return {
                                    count: state.count - 1
                                  };
     
                                case 'RESET':
+                                 // console.log( action.type );
                                  return {
                                    count: 0
                                  };
     
                                default:
+                                 // console.log( action.type );
                                  return state;
                              }
                            }
 );
 
-console.log( store.getState() );
+store.subscribe( () => {
+  console.log( store.getState() );
+} );
 
-// Actions - an object that gets sent to the store
-
-// I'd like to increment the count
 store.dispatch( {
                   type: 'INCREMENT'
                 } );
@@ -48,7 +51,3 @@ store.dispatch( {
 store.dispatch( {
                   type: 'DECREMENT'
                 } );
-
-// I'd like to reset the count to zero
-
-console.log( store.getState() );
