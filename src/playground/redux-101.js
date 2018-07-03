@@ -1,5 +1,8 @@
-import { createStore } from 'redux'
+import { createStore } from 'redux';
+
 
 console.clear();
 
-console.log( '101' );
+const store = createStore( () => {
+
+} );
