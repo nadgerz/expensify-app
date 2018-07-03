@@ -32,13 +32,15 @@ const store = createStore( ( state = { count: 0 }, action ) => {
                            }
 );
 
-store.subscribe( () => {
+const unsubscribe1 = store.subscribe( () => {
   console.log( store.getState() );
 } );
 
 store.dispatch( {
                   type: 'INCREMENT'
                 } );
+
+unsubscribe1();
 
 store.dispatch( {
                   type: 'INCREMENT'
@@ -47,6 +49,11 @@ store.dispatch( {
 store.dispatch( {
                   type: 'RESET'
                 } );
+
+const unsubscribe2 = store.subscribe( () => {
+  console.log( store.getState() );
+} );
+
 
 store.dispatch( {
                   type: 'DECREMENT'
