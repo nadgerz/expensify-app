@@ -3,6 +3,6 @@ import { createStore } from 'redux';
 
 console.clear();
 
-const store = createStore( ( state = {} ) => {
+const store = createStore( ( state = { count: 0 } ) => {
 
 } );
