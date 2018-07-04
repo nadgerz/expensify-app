@@ -58,7 +58,6 @@ store.dispatch( {
 store.dispatch( incrementCount( { incrementBy: 5 } ) );
 
 store.dispatch( incrementCount() );
-// debugger;
 
 store.dispatch( {
                   type: 'INCREMENTT'
@@ -74,14 +73,7 @@ const unsubscribe2 = store.subscribe( () => {
 } );
 */
 
-store.dispatch( {
-                  type: 'DECREMENT',
-                  decrementBy: 10
-                } );
-
-store.dispatch( {
-                  type: 'DECREMENT'
-                } );
+store.dispatch( decrementCount( { decrementBy: 10 } ) );
 
 store.dispatch( decrementCount() );
 
