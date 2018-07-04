@@ -23,6 +23,16 @@ const addExpense = (
 });
 
 // REMOVE_EXPENSE
+const removeExpense = (
+  {
+    id
+  } = {} ) => ({
+  type: 'REMOVE_EXPENSE',
+  expense: {
+    id
+  }
+});
+
 // EDIT_EXPENSE
 // SET_TEXT_FILTER
 // SORT_BY_DATE
@@ -43,7 +53,11 @@ const expensesReducer = ( state = expensesReducerDefaultState, action ) => {
         action.expense
       ];
     
+    case 'REMOVE_EXPENSE':
+      return state.filter( ( expense ) => action.expense.id !== expense.id );
+    
     default:
+      console.log( `WARNING: Unknown action type: ${action.type}` );
       return state;
   }
 };
@@ -74,15 +88,19 @@ const unsubscribe1 = store.subscribe( () => {
   console.log( store.getState() );
 } );
 
-store.dispatch( addExpense( {
-                              description: 'Beer',
-                              amount: 500
-                            } ) );
+const expense1 = store.dispatch( addExpense( {
+                                               description: 'Beer',
+                                               amount: 500
+                                             } ) );
+console.log( expense1 );
+const expense2 = store.dispatch( addExpense( {
+                                               description: 'Sex',
+                                               amount: 5
+                                             } ) );
+console.log( expense2 );
 
-store.dispatch( addExpense( {
-                              description: 'Sex',
-                              amount: 5
-                            } ) );
+const removeExpense1 = store.dispatch( removeExpense( { id: expense1.expense.id } ) );
+console.log( removeExpense1 );
 
 const demoState = {
   expenses: [{
