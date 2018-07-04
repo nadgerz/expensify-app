@@ -6,13 +6,12 @@ import uuid from 'uuid';
 console.clear();
 
 // ADD_EXPENSE
-const addExpense = (
-  {
-    description = '',
-    note = '',
-    amount = 0,
-    createdAt = 0
-  } = {} ) => ({
+const addExpense = ( {
+                       description = '',
+                       note = '',
+                       amount = 0,
+                       createdAt = 0
+                     } = {} ) => ({
   type: 'ADD_EXPENSE',
   expense: {
     id: uuid(),
@@ -23,15 +22,23 @@ const addExpense = (
 });
 
 // REMOVE_EXPENSE
-const removeExpense = (
-  {
-    id
-  } = {} ) => ({
+const removeExpense = ( {
+                          id
+                        } = {} ) => ({
   type: 'REMOVE_EXPENSE',
   id
 });
 
 // EDIT_EXPENSE
+const editExpense = ( {
+                        id,
+                        updates
+                      } = {} ) => ({
+  type: 'EDIT_EXPENSE',
+  id,
+  updates
+});
+
 // SET_TEXT_FILTER
 // SORT_BY_DATE
 // SORT_BY_AMOUNT
@@ -53,6 +60,22 @@ const expensesReducer = ( state = expensesReducerDefaultState, action ) => {
     
     case 'REMOVE_EXPENSE':
       return state.filter( ( { id } ) => id !== action.id );
+    
+    case 'EDIT_EXPENSE':
+      console.log( 'hmm' );
+      console.log( action.id );
+      console.log( action.updates );
+      console.log( state );
+      // console.log( state.getState().expenses );
+      console.log( 'hmm' );
+      
+      return state.map( ( expense ) => {
+                          console.log( `EXPENSE: ${expense}` );
+                          if ( expense.id === action.id ) {
+                            return { ...expenses[id], updates };
+                          }
+                        }
+      );
     
     default:
       console.log( `WARNING: Unknown action type: ${action.type}` );
@@ -99,6 +122,9 @@ console.log( expense2 );
 
 const removeExpense1 = store.dispatch( removeExpense( { id: expense1.expense.id } ) );
 console.log( removeExpense1 );
+
+const editExpense2 = store.dispatch( editExpense( { id: expense2.expense.id }, { amount: 666 } ) );
+console.log( editExpense2 );
 
 const demoState = {
   expenses: [{
