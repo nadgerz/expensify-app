@@ -54,7 +54,16 @@ const sortByAmount = () => ({
 });
 
 // SET_START_DATE
+const setStartDate = ( startDate = 'undefined' ) => ({
+  type: 'SET_START_DATE',
+  startDate
+});
+
 // SET_END_DATE
+const setEndDate = ( endDate = 'undefined' ) => ({
+  type: 'SET_END_DATE',
+  endDate
+});
 
 // Expenses Reducer
 
@@ -129,6 +138,18 @@ const filtersReducer = ( state = filtersReducerDefaultState, action ) => {
         sortBy: 'date'
       };
     
+    case 'SET_START_DATE':
+      return {
+        ...state,
+        startDate: action.startDate
+      };
+    
+    case 'SET_END_DATE':
+      return {
+        ...state,
+        endDate: action.endDate
+      };
+    
     default:
       return state;
   }
@@ -145,6 +166,7 @@ const unsubscribe1 = store.subscribe( () => {
   console.log( store.getState() );
 } );
 
+/*
 const expense1 = store.dispatch( addExpense( {
                                                description: 'Beer',
                                                amount: 500
@@ -162,7 +184,9 @@ console.log( removeExpense1 );
 // console.log( expense2.expense.id );
 const editExpense2 = store.dispatch( editExpense( expense2.expense.id, { amount: 666 } ) );
 console.log( editExpense2 );
+*/
 
+/*
 const setFilter1 = store.dispatch( setTextFilter( 'rent' ) );
 console.log( setFilter1 );
 
@@ -174,6 +198,19 @@ console.log( sortBy1 );
 
 const sortBy2 = store.dispatch( sortByDate() );
 console.log( sortBy2 );
+*/
+
+const setStartDate1 = store.dispatch( setStartDate( 125 ) );
+console.log( setStartDate1 );
+
+const setStartDate2 = store.dispatch();
+console.log( setStartDate2 );
+
+const setEndDate1 = store.dispatch( setEndDate( 1250 ) );
+console.log( setEndDate1 );
+
+const setEndDate2 = store.dispatch();
+console.log( setEndDate2 );
 
 const demoState = {
   expenses: [{
