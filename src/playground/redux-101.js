@@ -7,7 +7,7 @@ console.clear();
 
 const incrementCount = ( { incrementBy = 1 } = {} ) => ({
   type: 'INCREMENT',
-  incrementBy: incrementBy
+  incrementBy
 });
 
 const decrementCount = ( { decrementBy = 1 } = {} ) => ({
