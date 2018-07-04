@@ -70,9 +70,16 @@ const expensesReducer = ( state = expensesReducerDefaultState, action ) => {
       console.log( 'hmm' );
       
       return state.map( ( expense ) => {
-                          console.log( `EXPENSE: ${expense}` );
+                          // console.log( `EXPENSE: ${expense}` );
+                          
                           if ( expense.id === action.id ) {
-                            return { ...expenses[id], updates };
+                            return {
+                              ...expense,
+                              ...action.updates
+                            };
+                          }
+                          else {
+                            return expense;
                           }
                         }
       );
