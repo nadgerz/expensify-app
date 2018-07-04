@@ -54,13 +54,13 @@ const sortByAmount = () => ({
 });
 
 // SET_START_DATE
-const setStartDate = ( startDate = 'undefined' ) => ({
+const setStartDate = ( startDate = undefined ) => ({
   type: 'SET_START_DATE',
   startDate
 });
 
 // SET_END_DATE
-const setEndDate = ( endDate = 'undefined' ) => ({
+const setEndDate = ( endDate = undefined ) => ({
   type: 'SET_END_DATE',
   endDate
 });
@@ -200,17 +200,16 @@ const sortBy2 = store.dispatch( sortByDate() );
 console.log( sortBy2 );
 */
 
+console.log( store.getState() );
+
 const setStartDate1 = store.dispatch( setStartDate( 125 ) );
 console.log( setStartDate1 );
 
-const setStartDate2 = store.dispatch();
+const setStartDate2 = store.dispatch( setStartDate() );
 console.log( setStartDate2 );
 
 const setEndDate1 = store.dispatch( setEndDate( 1250 ) );
 console.log( setEndDate1 );
-
-const setEndDate2 = store.dispatch();
-console.log( setEndDate2 );
 
 const demoState = {
   expenses: [{
