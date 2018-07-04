@@ -88,6 +88,8 @@ store.dispatch( {
                   type: 'DECREMENT'
                 } );
 
+store.dispatch( decrementCount() );
+
 store.dispatch( {
                   type: 'SET',
                   count: 101
