@@ -5,9 +5,9 @@ console.clear();
 
 // Action generators - functions that return action objects.
 
-const incrementCount = ( payload = {} ) => ({
+const incrementCount = ( { incrementBy } = {} ) => ({
   type: 'INCREMENT',
-  incrementBy: typeof payload.incrementBy === 'number' ? payload.incrementBy : 1
+  incrementBy: typeof incrementBy === 'number' ? incrementBy : 1
 });
 
 const decrementCount = ( payload = {} ) => ({
