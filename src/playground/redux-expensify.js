@@ -80,7 +80,7 @@ const expensesReducer = ( state = expensesReducerDefaultState, action ) => {
       );
     
     default:
-      console.log( `WARNING: Unknown action type: ${action.type}` );
+      // console.log( `WARNING: Unknown action type: ${action.type}` );
       return state;
   }
 };
@@ -125,7 +125,7 @@ console.log( expense2 );
 const removeExpense1 = store.dispatch( removeExpense( { id: expense1.expense.id } ) );
 console.log( removeExpense1 );
 
-console.log( expense2.expense.id );
+// console.log( expense2.expense.id );
 const editExpense2 = store.dispatch( editExpense( expense2.expense.id, { amount: 666 } ) );
 console.log( editExpense2 );
 
