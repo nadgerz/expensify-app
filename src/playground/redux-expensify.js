@@ -1,4 +1,4 @@
-import { createStore } from 'redux';
+import { combineReducers, createStore } from 'redux';
 
 
 console.clear();
@@ -24,7 +24,12 @@ const expensesReducer = ( state = expensesReducerDefaultState, action ) => {
   }
 };
 
-const store = createStore( expensesReducer );
+const store = createStore(
+  combineReducers( {
+                     expenses: expensesReducer
+                   } )
+);
+
 console.log( store.getState() );
 
 const demoState = {
