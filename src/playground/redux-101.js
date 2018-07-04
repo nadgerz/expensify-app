@@ -3,6 +3,14 @@ import { createStore } from 'redux';
 
 console.clear();
 
+// Action generators - functions that return action objects.
+
+const incrementCount = () => {
+  return {
+    type: 'INCREMENT'
+  };
+};
+
 const store = createStore( ( state = { count: 0 }, action ) => {
   
                              switch ( action.type ) {
@@ -47,8 +55,10 @@ store.dispatch( {
 
 // unsubscribe1();
 
+store.dispatch( incrementCount() );
+
 store.dispatch( {
-                  type: 'INCREMENT'
+                  type: 'INCREMENTT'
                 } );
 
 store.dispatch( {
