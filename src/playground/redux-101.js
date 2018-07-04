@@ -11,6 +11,12 @@ const incrementCount = () => {
   };
 };
 
+const decrementCount = () => {
+  return {
+    type: 'DECREMENT'
+  };
+};
+
 const store = createStore( ( state = { count: 0 }, action ) => {
   
                              switch ( action.type ) {
@@ -54,6 +60,8 @@ store.dispatch( {
                 } );
 
 // unsubscribe1();
+
+store.dispatch( incrementCount( { incrementBy: 5 } ) );
 
 store.dispatch( incrementCount() );
 
