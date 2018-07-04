@@ -14,7 +14,7 @@ console.clear();
 
 // Expenses Reducer
 
-const expensesReducer = ( state, action ) => {
+const expensesReducer = ( state = [], action ) => {
 
 };
 const demoState = {
