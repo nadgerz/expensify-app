@@ -9,8 +9,10 @@ const store = createStore( ( state = { count: 0 }, action ) => {
                              switch ( action.type ) {
                                case 'INCREMENT':
                                  // console.log( action.type );
+                                 const incrementBy = typeof action.incrementBy === 'number' ? action.incrementBy : 1;
+      
                                  return {
-                                   count: state.count + 1
+                                   count: state.count + incrementBy
                                  };
     
                                case 'DECREMENT':
@@ -37,10 +39,11 @@ const unsubscribe1 = store.subscribe( () => {
 } );
 
 store.dispatch( {
-                  type: 'INCREMENT'
+                  type: 'INCREMENT',
+                  incrementBy: 5
                 } );
 
-unsubscribe1();
+// unsubscribe1();
 
 store.dispatch( {
                   type: 'INCREMENT'
@@ -50,10 +53,11 @@ store.dispatch( {
                   type: 'RESET'
                 } );
 
+/*
 const unsubscribe2 = store.subscribe( () => {
   console.log( store.getState() );
 } );
-
+*/
 
 store.dispatch( {
                   type: 'DECREMENT'
