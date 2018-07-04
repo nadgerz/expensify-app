@@ -24,34 +24,35 @@ const setCount = ( { count } = {} ) => ({
   count
 });
 
-const store = createStore( ( state = { count: 0 }, action ) => {
+const countReducer = ( state = { count: 0 }, action ) => {
   
-                             switch ( action.type ) {
-                               case 'INCREMENT':
-                                 return {
-                                   count: state.count + action.incrementBy
-                                 };
+  switch ( action.type ) {
+    case 'INCREMENT':
+      return {
+        count: state.count + action.incrementBy
+      };
     
-                               case 'DECREMENT':
-                                 return {
-                                   count: state.count - action.decrementBy
-                                 };
+    case 'DECREMENT':
+      return {
+        count: state.count - action.decrementBy
+      };
     
-                               case 'RESET':
-                                 return {
-                                   count: 0
-                                 };
+    case 'RESET':
+      return {
+        count: 0
+      };
     
-                               case 'SET':
-                                 return {
-                                   count: action.count
-                                 };
+    case 'SET':
+      return {
+        count: action.count
+      };
     
-                               default:
-                                 return state;
-                             }
-                           }
-);
+    default:
+      return state;
+  }
+};
+
+const store = createStore( countReducer() );
 
 const unsubscribe1 = store.subscribe( () => {
   console.log( store.getState() );
