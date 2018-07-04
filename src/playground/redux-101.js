@@ -52,7 +52,7 @@ const countReducer = ( state = { count: 0 }, action ) => {
   }
 };
 
-const store = createStore( countReducer() );
+const store = createStore( countReducer );
 
 const unsubscribe1 = store.subscribe( () => {
   console.log( store.getState() );
