@@ -28,9 +28,7 @@ const removeExpense = (
     id
   } = {} ) => ({
   type: 'REMOVE_EXPENSE',
-  expense: {
-    id
-  }
+  id
 });
 
 // EDIT_EXPENSE
@@ -54,7 +52,7 @@ const expensesReducer = ( state = expensesReducerDefaultState, action ) => {
       ];
     
     case 'REMOVE_EXPENSE':
-      return state.filter( ( expense ) => action.expense.id !== expense.id );
+      return state.filter( ( { id } ) => id !== action.id );
     
     default:
       console.log( `WARNING: Unknown action type: ${action.type}` );
