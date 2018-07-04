@@ -4,11 +4,9 @@ import { createStore } from 'redux';
 console.clear();
 
 const store = createStore( ( state = { count: 0 }, action ) => {
-                             // console.log( 'running' );
   
                              switch ( action.type ) {
                                case 'INCREMENT':
-                                 // console.log( action.type );
                                  const incrementBy = typeof action.incrementBy === 'number' ? action.incrementBy : 1;
       
                                  return {
@@ -16,7 +14,6 @@ const store = createStore( ( state = { count: 0 }, action ) => {
                                  };
     
                                case 'DECREMENT':
-                                 // console.log( action.type );
                                  const decrementBy = typeof action.decrementBy === 'number' ? action.decrementBy : 1;
       
                                  return {
@@ -24,19 +21,16 @@ const store = createStore( ( state = { count: 0 }, action ) => {
                                  };
     
                                case 'RESET':
-                                 // console.log( action.type );
                                  return {
                                    count: 0
                                  };
     
                                case 'SET':
-                                 // console.log( action.type );
                                  return {
                                    count: action.count
                                  };
     
                                default:
-                                 // console.log( action.type );
                                  return state;
                              }
                            }
