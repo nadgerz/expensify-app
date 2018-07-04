@@ -14,9 +14,19 @@ console.clear();
 
 // Expenses Reducer
 
-const expensesReducer = ( state = [], action ) => {
+const expensesReducerDefaultState = [];
 
+const expensesReducer = ( state = expensesReducerDefaultState, action ) => {
+  
+  switch ( action.type ) {
+    default:
+      return state;
+  }
 };
+
+const store = createStore( expensesReducer );
+console.log( store.getState() );
+
 const demoState = {
   expenses: [{
     id: 'sdiufhiah',
@@ -32,8 +42,6 @@ const demoState = {
     endDate: undefined
   }
 };
-
-const store = createStore( countReducer );
 
 const unsubscribe1 = store.subscribe( () => {
   console.log( store.getState() );
