@@ -13,7 +13,7 @@ const addExpense = (
     amount = 0,
     createdAt = 0
   } = {} ) => ({
-  type: 'ADD',
+  type: 'ADD_EXPENSE',
   expense: {
     id: uuid(),
     description,
@@ -37,10 +37,8 @@ const expensesReducerDefaultState = [];
 const expensesReducer = ( state = expensesReducerDefaultState, action ) => {
   
   switch ( action.type ) {
-    case 'ADD':
-      return {
-        expenses: expensesReducerDefaultState
-      };
+    case 'ADD_EXPENSE':
+      return state.concat( action.expense );
     
     default:
       return state;
@@ -77,8 +75,6 @@ store.dispatch( addExpense( {
                               description: 'Beer',
                               amount: 500
                             } ) );
-
-console.log( store.getState() );
 
 const demoState = {
   expenses: [{
