@@ -1,9 +1,27 @@
 import { combineReducers, createStore } from 'redux';
 
+import uuid from 'uuid';
+
 
 console.clear();
 
 // ADD_EXPENSE
+const addExpense = (
+  {
+    description = '',
+    note = '',
+    amount = 0,
+    createdAt = 0
+  } = {} ) => ({
+  type: 'ADD',
+  expense: {
+    id: uuid(),
+    description,
+    note,
+    createdAt
+  }
+});
+
 // REMOVE_EXPENSE
 // EDIT_EXPENSE
 // SET_TEXT_FILTER
@@ -19,6 +37,11 @@ const expensesReducerDefaultState = [];
 const expensesReducer = ( state = expensesReducerDefaultState, action ) => {
   
   switch ( action.type ) {
+    case 'ADD':
+      return {
+        expenses: expensesReducerDefaultState
+      };
+    
     default:
       return state;
   }
@@ -46,6 +69,15 @@ const store = createStore(
                    } )
 );
 
+const unsubscribe1 = store.subscribe( () => {
+  console.log( store.getState() );
+} );
+
+store.dispatch( addExpense( {
+                              description: 'Beer',
+                              amount: 500
+                            } ) );
+
 console.log( store.getState() );
 
 const demoState = {
@@ -63,8 +95,4 @@ const demoState = {
     endDate: undefined
   }
 };
-
-const unsubscribe1 = store.subscribe( () => {
-  console.log( store.getState() );
-} );
 
