@@ -12,6 +12,11 @@ console.clear();
 // SET_START_DATE
 // SET_END_DATE
 
+// Expenses Reducer
+
+const expensesReducer = ( state, action ) => {
+
+};
 const demoState = {
   expenses: [{
     id: 'sdiufhiah',
