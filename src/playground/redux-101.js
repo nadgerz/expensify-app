@@ -5,14 +5,14 @@ console.clear();
 
 // Action generators - functions that return action objects.
 
-const incrementCount = ( { incrementBy } = {} ) => ({
+const incrementCount = ( { incrementBy = 1 } = {} ) => ({
   type: 'INCREMENT',
-  incrementBy: typeof incrementBy === 'number' ? incrementBy : 1
+  incrementBy: incrementBy
 });
 
-const decrementCount = ( payload = {} ) => ({
+const decrementCount = ( { decrementBy = 1 } = {} ) => ({
   type: 'DECREMENT',
-  decrementBy: typeof payload.decrementBy === 'number' ? payload.decrementBy : 1
+  decrementBy
 });
 
 const store = createStore( ( state = { count: 0 }, action ) => {
