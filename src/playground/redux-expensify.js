@@ -17,7 +17,8 @@ const addExpense = ( {
     id: uuid(),
     description,
     note,
-    createdAt
+    createdAt,
+    amount
   }
 });
 
@@ -30,10 +31,7 @@ const removeExpense = ( {
 });
 
 // EDIT_EXPENSE
-const editExpense = ( {
-                        id,
-                        updates
-                      } = {} ) => ({
+const editExpense = ( id, updates ) => ({
   type: 'EDIT_EXPENSE',
   id,
   updates
@@ -65,13 +63,10 @@ const expensesReducer = ( state = expensesReducerDefaultState, action ) => {
       console.log( 'hmm' );
       console.log( action.id );
       console.log( action.updates );
-      console.log( state );
-      // console.log( state.getState().expenses );
-      console.log( 'hmm' );
       
       return state.map( ( expense ) => {
-                          // console.log( `EXPENSE: ${expense}` );
-                          
+                          console.log( `EXPENSE AMOUNT: ${expense.amount}` );
+        
                           if ( expense.id === action.id ) {
                             return {
                               ...expense,
@@ -130,7 +125,8 @@ console.log( expense2 );
 const removeExpense1 = store.dispatch( removeExpense( { id: expense1.expense.id } ) );
 console.log( removeExpense1 );
 
-const editExpense2 = store.dispatch( editExpense( { id: expense2.expense.id }, { amount: 666 } ) );
+console.log( expense2.expense.id );
+const editExpense2 = store.dispatch( editExpense( expense2.expense.id, { amount: 666 } ) );
 console.log( editExpense2 );
 
 const demoState = {
