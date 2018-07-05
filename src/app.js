@@ -38,6 +38,10 @@ const expense3 = store.dispatch( addExpense( {
 
 const setFilter1 = store.dispatch( setTextFilter( 'water' ) );
 
+setTimeout( () => {
+  const setFilter2 = store.dispatch( setTextFilter( 'gas' ) );
+}, 3000 );
+
 const unsubscribe1 = store.subscribe( () => {
   const state = store.getState();
   // console.log( state );
