@@ -1,8 +1,17 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 
 
 export default class ExpenseForm extends Component {
+  
+  state = {
+    description: ''
+  };
+  
+  onDescriptionChange = ( event ) => {
+    const description = event.target.value;
+    
+    this.setState( () => ({ description }) );
+  };
   
   render() {
     return (
@@ -12,6 +21,8 @@ export default class ExpenseForm extends Component {
             type="text"
             placeholder="Description"
             autoFocus
+            value={this.state.description}
+            onChange={this.onDescriptionChange}
           />
           
           <input
