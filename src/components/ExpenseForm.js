@@ -5,7 +5,8 @@ export default class ExpenseForm extends Component {
   
   state = {
     description: '',
-    note: ''
+    note: '',
+    amount: ''
   };
   
   onDescriptionChange = ( event ) => {
@@ -20,6 +21,14 @@ export default class ExpenseForm extends Component {
     this.setState( () => ({ note }) );
   };
   
+  onAmountChange = ( event ) => {
+    const amount = event.target.value;
+    
+    if ( amount.match( /^\d*(\.\d{0,2})?$/ ) ) {
+      this.setState( () => ({ amount }) );
+    }
+  };
+  
   render() {
     return (
       <div>
@@ -27,14 +36,16 @@ export default class ExpenseForm extends Component {
           <input
             type="text"
             placeholder="Description"
-            autoFocus
             value={this.state.description}
+            autoFocus
             onChange={this.onDescriptionChange}
           />
           
           <input
-            type="number"
+            type="text"
             placeholder="Amount"
+            value={this.state.amount}
+            onChange={this.onAmountChange}
           />
           
           <textarea
@@ -42,7 +53,6 @@ export default class ExpenseForm extends Component {
             value={this.state.note}
             onChange={this.onNoteChange}
           >
-          
           </textarea>
           
           <button>Add Expense</button>
