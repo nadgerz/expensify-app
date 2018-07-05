@@ -49,9 +49,10 @@ setTimeout( () => {
   }, wait );
 }, wait );
 
-const setFilter4 = store.dispatch( setTextFilter() );
+// const setFilter4 = store.dispatch( setTextFilter() );
 const setFilter5 = store.dispatch( setTextFilter( 'bill' ) );
 
+/*
 const unsubscribe1 = store.subscribe( () => {
   const state = store.getState();
   // console.log( state );
@@ -60,13 +61,14 @@ const unsubscribe1 = store.subscribe( () => {
   console.log( visibleExpenses );
   console.log( visibleExpenses.length );
 } );
+*/
 
 const state = store.getState();
 // console.log( state );
 
 const visibleExpenses = getVisibleExpenses( state.expenses, state.filters );
-console.log( visibleExpenses );
-console.log( visibleExpenses.length );
+// console.log( visibleExpenses );
+// console.log( visibleExpenses.length );
 
 console.log( 'ACTUAL STATE' );
 console.log( store.getState() );
