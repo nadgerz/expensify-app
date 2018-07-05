@@ -4,7 +4,13 @@ import { connect } from 'react-redux';
 
 const ExpenseListFilters = ( props ) => (
   <div>
-    <input type="text" value={props.filters.text}/>
+    <input
+      type="text"
+      value={props.filters.text}
+      onChange={( event ) => {
+        console.log( event.target.value );
+      }}
+    />
   </div>
 );
 
