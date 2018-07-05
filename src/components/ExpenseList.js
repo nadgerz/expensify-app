@@ -11,14 +11,7 @@ const ExpenseList = ( props ) => (
     
     {
       props.expenses.map( ( expense ) => {
-        return (
-          <ExpenseListItem
-            key={expense.id}
-            description={expense.description}
-            amount={expense.amount}
-            createdAt={expense.createdAt}
-          />
-        );
+        return <ExpenseListItem {...expense} key={expense.id}/>;
       } )
     }
   </div>
