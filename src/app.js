@@ -30,11 +30,19 @@ const expense2 = store.dispatch( addExpense( {
                                                amount: 50,
                                                createdAt: 800
                                              } ) );
+
 const expense3 = store.dispatch( addExpense( {
                                                description: 'Lekky Bill',
                                                amount: 60,
                                                createdAt: 1800
                                              } ) );
+
+const expense4 = store.dispatch( addExpense( {
+                                               description: 'Rent Bill',
+                                               amount: 109500,
+                                               createdAt: 400
+                                             } ) );
+/*
 const wait = 500;
 
 setTimeout( () => {
@@ -48,6 +56,7 @@ setTimeout( () => {
     }, wait );
   }, wait );
 }, wait );
+*/
 
 // const setFilter4 = store.dispatch( setTextFilter() );
 const setFilter5 = store.dispatch( setTextFilter( 'bill' ) );
@@ -67,11 +76,11 @@ const state = store.getState();
 // console.log( state );
 
 const visibleExpenses = getVisibleExpenses( state.expenses, state.filters );
-// console.log( visibleExpenses );
+console.log( visibleExpenses );
 // console.log( visibleExpenses.length );
 
-console.log( 'ACTUAL STATE' );
-console.log( store.getState() );
+// console.log( 'ACTUAL STATE' );
+// console.log( store.getState() );
 
 const jsx = (
   <Provider store={store}>
