@@ -35,6 +35,7 @@ const expense3 = store.dispatch( addExpense( {
                                                amount: 60,
                                                createdAt: 1800
                                              } ) );
+const wait = 500;
 
 setTimeout( () => {
   const setFilter1 = store.dispatch( setTextFilter( 'water' ) );
@@ -44,9 +45,9 @@ setTimeout( () => {
     
     setTimeout( () => {
       const setFilter3 = store.dispatch( setTextFilter( 'bill' ) );
-    }, 3000 );
-  }, 3000 );
-}, 3000 );
+    }, wait );
+  }, wait );
+}, wait );
 
 const setFilter4 = store.dispatch( setTextFilter() );
 const setFilter5 = store.dispatch( setTextFilter( 'bill' ) );
