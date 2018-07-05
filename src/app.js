@@ -12,7 +12,8 @@ import getVisibleExpenses from './selectors/expenses';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 
-// import {Provider} from 'react-redux'
+import { Provider } from 'react-redux';
+
 
 console.clear();
 
@@ -52,7 +53,9 @@ console.log( 'ACTUAL STATE' );
 console.log( store.getState() );
 
 const jsx = (
-  <AppRouter/>
+  <Provider store={store}>
+    <AppRouter/>
+  </Provider>
 );
 
 ReactDOM.render( jsx, document.getElementById( 'app' ) );
