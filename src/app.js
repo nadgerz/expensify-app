@@ -36,11 +36,21 @@ const expense3 = store.dispatch( addExpense( {
                                                createdAt: 1800
                                              } ) );
 
-const setFilter1 = store.dispatch( setTextFilter( 'water' ) );
-
+/*
 setTimeout( () => {
-  const setFilter2 = store.dispatch( setTextFilter( 'gas' ) );
+  const setFilter1 = store.dispatch( setTextFilter( 'water' ) );
+  
+  setTimeout( () => {
+    const setFilter2 = store.dispatch( setTextFilter( 'gas' ) );
+    
+    setTimeout( () => {
+      const setFilter2 = store.dispatch( setTextFilter( 'bill' ) );
+    }, 3000 );
+  }, 3000 );
 }, 3000 );
+*/
+
+const setFilter2 = store.dispatch( setTextFilter() );
 
 const unsubscribe1 = store.subscribe( () => {
   const state = store.getState();
