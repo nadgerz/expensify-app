@@ -5,8 +5,8 @@ export default ( expenses, { text, sortBy, startDate, endDate } ) => {
     const endDateMatch = typeof endDate !== 'number' || expense.createdAt <= endDate;
     
     const textMatch = expense.description.toLocaleLowerCase().includes( text.toLocaleLowerCase() );
-    console.log( text.toLocaleLowerCase() );
-    console.log( textMatch );
+    // console.log( text.toLocaleLowerCase() );
+    // console.log( textMatch );
     
     return startDateMatch && endDateMatch && textMatch;
   } );
