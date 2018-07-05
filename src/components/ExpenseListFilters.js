@@ -17,7 +17,7 @@ const ExpenseListFilters = ( props ) => (
     <select
       value={props.filters.sortBy}
       onChange={( event ) => {
-        console.log( event.target.value );
+        // console.log( event.target.value );
         
         const selectedValue = event.target.value;
         
