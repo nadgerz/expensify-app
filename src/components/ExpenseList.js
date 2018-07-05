@@ -16,4 +16,4 @@ const ConnectedExpenseList = connect( ( state ) => {
   };
 } )( ExpenseList );
 
-export default ExpenseList;
+export default ConnectedExpenseList;
