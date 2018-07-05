@@ -30,6 +30,11 @@ const expense2 = store.dispatch( addExpense( {
                                                amount: 50,
                                                createdAt: 800
                                              } ) );
+const expense3 = store.dispatch( addExpense( {
+                                               description: 'Lekky Bill',
+                                               amount: 60,
+                                               createdAt: 1800
+                                             } ) );
 
 const setFilter1 = store.dispatch( setTextFilter( 'water' ) );
 
