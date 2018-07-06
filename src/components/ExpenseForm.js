@@ -14,7 +14,8 @@ export default class ExpenseForm extends Component {
     note: '',
     amount: '',
     createdAt: moment(),
-    calendarFocused: false
+    calendarFocused: false,
+    error: null
   };
   
   onDescriptionChange = ( event ) => {
@@ -54,10 +55,28 @@ export default class ExpenseForm extends Component {
     this.setState( () => ({ calendarFocused: focused }) );
   };
   
+  onSubmit = ( event ) => {
+    event.preventDefault();
+    
+    console.log( event );
+    
+    if ( !this.state.description || !this.state.amount ) {
+      this.setState( { error: 'Please provide description and amount' } );
+    }
+    else {
+      // Clear the error
+      console.log( 'bye bye' );
+      this.setState( { error: null } );
+    }
+  };
+  
   render() {
     return (
       <div>
-        <form>
+        {
+          this.state.error && <p>ERROR: {this.state.error}</p>
+        }
+        <form onSubmit={this.onSubmit}>
           <input
             type="text"
             placeholder="Description"
