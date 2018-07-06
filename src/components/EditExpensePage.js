@@ -20,7 +20,7 @@ const EditExpensePage = ( props ) => {
           // console.log( 'EDIT!' );
           // console.log( expense );
           // console.log( props.match.params.id );
-          props.dispatch( editExpense( props.match.params.id, expense ) );
+          props.dispatch( editExpense( props.expense.id, expense ) );
           
           props.history.push( '/' );
         }}
