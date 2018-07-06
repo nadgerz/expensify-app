@@ -9,12 +9,6 @@ import ExpenseForm from './ExpenseForm';
 const EditExpensePage = ( props ) => {
   console.log( props );
   
-  const handleOnClick = ( id ) => {
-    props.dispatch( removeExpense( { id } ) );
-    
-    props.history.push( '/' );
-  };
-  
   return (
     <div>
       <p>Edit Expense</p>
@@ -23,16 +17,20 @@ const EditExpensePage = ( props ) => {
         expense={props.expense}
         
         onSubmit={( expense ) => {
-          // console.log( 'EDIT!' );
-          // console.log( expense );
-          // console.log( props.match.params.id );
           props.dispatch( editExpense( props.expense.id, expense ) );
           
           props.history.push( '/' );
         }}
       />
       
-      <button onClick={handleOnClick( props.match.params.id )}>Remove</button>
+      <button onClick={() => {
+        props.dispatch( removeExpense( { id: props.expense.id } ) );
+        
+        props.history.push( '/' );
+      }}>
+        Remove
+      </button>
+    
     
     </div>
   );
