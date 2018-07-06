@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import { addExpense } from '../actions/expenses';
-
 import ExpenseForm from './ExpenseForm';
 
 
@@ -12,8 +11,9 @@ const AddExpensePage = ( props ) => (
     
     <ExpenseForm
       onSubmit={( expense ) => {
-        console.log( 'ADD!' );
-        console.log( expense );
+        // console.log( 'ADD!' );
+        // console.log( expense );
+        
         props.dispatch( addExpense( expense ) );
       }}
     />
