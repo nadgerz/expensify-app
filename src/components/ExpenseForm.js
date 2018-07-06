@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 
-// import moment from 'moment'
+import moment from 'moment'
 
-const date = new Date();
+// const date = new Date();
+const now = moment();
+console.log( now );
 
 export default class ExpenseForm extends Component {
   
