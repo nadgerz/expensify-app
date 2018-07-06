@@ -15,7 +15,7 @@ import './styles/styles.scss';
 import { Provider } from 'react-redux';
 
 
-console.clear();
+// console.clear();
 
 const store = configureStore();
 
