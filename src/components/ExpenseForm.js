@@ -81,6 +81,7 @@ export default class ExpenseForm extends Component {
             focused={this.state.calendarFocused}
             onFocusChange={this.onFocusChange}
             numberOfMonths={1}
+            isOutsideRange={() => false}
           />
           
           <textarea
