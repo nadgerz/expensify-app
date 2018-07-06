@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 
+// import moment from 'moment'
+
+const date = new Date();
 
 export default class ExpenseForm extends Component {
   
