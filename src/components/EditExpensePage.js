@@ -11,21 +11,15 @@ const EditExpensePage = ( props ) => {
   
   return (
     <div>
-      {/*
-      <p>
-        Editing the expense with id of {props.match.params.id}
-      </p>
-*/}
-      
       <p>Edit Expense</p>
       
       <ExpenseForm
         expense={props.expense}
         
         onSubmit={( expense ) => {
-          console.log( 'EDIT!' );
-          console.log( expense );
-          console.log( props.match.params.id );
+          // console.log( 'EDIT!' );
+          // console.log( expense );
+          // console.log( props.match.params.id );
           props.dispatch( editExpense( props.match.params.id, expense ) );
           
           props.history.push( '/' );
