@@ -11,14 +11,20 @@ const EditExpensePage = ( props ) => {
   
   return (
     <div>
-      Editing the expense with id of {props.match.params.id}
+{/*
+      <p>
+        Editing the expense with id of {props.match.params.id}
+      </p>
+*/}
       
       <p>Edit Expense</p>
       
       <ExpenseForm
+        expense={props.expense}
+        
         onSubmit={( expense ) => {
           console.log( 'EDIT!' );
-          
+          console.log( expense );
           props.dispatch( editExpense( expense.id, ...expense ) );
         }}
       />
@@ -27,4 +33,13 @@ const EditExpensePage = ( props ) => {
   );
 };
 
-export default connect()( EditExpensePage );
+const mapStateToProps = ( state, props ) => {
+  return {
+    expense: state.expenses.find( ( expense ) => {
+      return expense.id === props.match.params.id;
+    } )
+  };
+};
+
+export default connect( mapStateToProps )( EditExpensePage );
+

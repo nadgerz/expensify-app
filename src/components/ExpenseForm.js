@@ -8,28 +8,16 @@ import 'react-dates/lib/css/_datepicker.css';
 
 
 export default class ExpenseForm extends Component {
-  
-  state = {
-    description: '',
-    note: '',
-    amount: '',
-    createdAt: moment(),
-    calendarFocused: false,
-    error: ''
-  };
-  
   onDescriptionChange = ( event ) => {
     const description = event.target.value;
     
     this.setState( () => ({ description }) );
   };
-  
   onNoteChange = ( event ) => {
     const note = event.target.value;
     
     this.setState( () => ({ note }) );
   };
-  
   onAmountChange = ( event ) => {
     const amount = event.target.value;
     
@@ -37,24 +25,20 @@ export default class ExpenseForm extends Component {
       this.setState( () => ({ amount }) );
     }
   };
-  
   onDateChange = ( createdAt ) => {
     
     this.setState( () => ({ createdAt }) );
   };
-  
   onDateChange = ( createdAt ) => {
     
     if ( createdAt ) {
       this.setState( () => ({ createdAt }) );
     }
   };
-  
   onFocusChange = ( { focused } ) => {
     
     this.setState( () => ({ calendarFocused: focused }) );
   };
-  
   onSubmit = ( event ) => {
     event.preventDefault();
     
@@ -74,6 +58,20 @@ export default class ExpenseForm extends Component {
                            } );
     }
   };
+  
+  constructor( props ) {
+    super( props );
+    
+    this.state = {
+      description: props.expense ? props.expense.description : '',
+      note: props.expense ? props.expense.note : '',
+      amount: '',
+      createdAt: moment(),
+      calendarFocused: false,
+      error: ''
+    };
+    
+  }
   
   render() {
     return (
