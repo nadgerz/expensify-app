@@ -7,6 +7,14 @@ import 'react-dates/lib/css/_datepicker.css';
 
 import { setEndDate, setStartDate, setTextFilter, sortByAmount, sortByDate } from '../actions/filters';
 
+/*
+import {
+  START_DATE,
+  END_DATE,
+  ICON_BEFORE_POSITION,
+  OPEN_DOWN,
+} from '../constants';
+*/
 
 class ExpenseListFilters extends Component {
   
@@ -60,7 +68,7 @@ class ExpenseListFilters extends Component {
           }}
         >
           <option value="date">Date</option>
-          <option value="amount">Amounty</option>
+          <option value="amount">Amount</option>
         </select>
         
         <DateRangePicker
