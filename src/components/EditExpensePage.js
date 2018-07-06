@@ -1,4 +1,9 @@
 import React from 'react';
+import { connect } from 'react-redux';
+
+import { editExpense } from '../actions/expenses';
+
+import ExpenseForm from './ExpenseForm';
 
 
 const EditExpensePage = ( props ) => {
@@ -11,8 +16,10 @@ const EditExpensePage = ( props ) => {
       <p>Edit Expense</p>
       
       <ExpenseForm
-        onSubmit={() => {
+        onSubmit={( expense ) => {
           console.log( 'EDIT!' );
+          
+          props.dispatch( editExpense( expense.id, ...expense ) );
         }}
       />
     
@@ -20,4 +27,4 @@ const EditExpensePage = ( props ) => {
   );
 };
 
-export default EditExpensePage;
+export default connect()( EditExpensePage );
