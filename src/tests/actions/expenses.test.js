@@ -44,6 +44,7 @@ test( 'should setup add expense action object with provided values', () => {
   
   expect( action ).toEqual( {
                               type: 'ADD_EXPENSE',
+                              id: expect.any( Bibble ),
                               expense: {
                                 ...expenseData
                               }
