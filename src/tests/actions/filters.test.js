@@ -1,5 +1,5 @@
 import moment from 'moment';
-import { setStartDate, setTextFilter, setEndDate } from '../../actions/filters';
+import { setEndDate, setStartDate, setTextFilter, sortByAmount, sortByDate } from '../../actions/filters';
 
 
 console.log( moment() );
@@ -40,22 +40,19 @@ test( 'should setup set end date filter action object', () => {
                             } );
 } );
 
-/*
 test( 'should setup set sort by amount filter action object', () => {
-  const action = sortByAmount( { sortBy: 'amount' } );
+  const action = sortByAmount();
   
   expect( action ).toEqual( {
-                              type: 'SORT_BY_AMOUNT',
-                              sortBy: 'amount'
+                              type: 'SORT_BY_AMOUNT'
                             } );
 } );
 
 test( 'should setup set sort by date filter action object', () => {
-  const action = sortByDate( {} );
+  const action = sortByDate();
   
   expect( action ).toEqual( {
-                              type: 'SORT_BY_DATE',
-                              sortBy: 'date'
+                              type: 'SORT_BY_DATE'
+    
                             } );
 } );
-*/
