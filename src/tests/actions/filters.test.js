@@ -57,3 +57,7 @@ test( 'should generate set sort by date filter action object', () => {
                               type: 'SORT_BY_DATE'
                             } );
 } );
+
+test( 'should generate set sort by date filter action object [2]', () => {
+  expect( sortByDate() ).toEqual( { type: 'SORT_BY_DATE' } );
+} );
