@@ -2,8 +2,6 @@ import moment from 'moment';
 import selectExpenses from '../../selectors/expenses';
 
 
-console.log( moment() );
-
 const expenses = [{
   id: 1,
   description: 'Gum',
@@ -15,13 +13,13 @@ const expenses = [{
   description: 'Rent',
   note: '',
   amount: 109500,
-  createdAt: -1000
+  createdAt: moment( 0 ).subtract( 4, 'days' ).valueOf()
 }, {
   id: 3,
   description: 'Credit Card',
   note: '',
   amount: 66600,
-  createdAt: 1000
+  createdAt: moment( 0 ).add( 4, 'days' ).valueOf()
 }];
 
 test( 'should filter by text value', () => {
