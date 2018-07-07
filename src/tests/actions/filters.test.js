@@ -1,5 +1,5 @@
 import moment from 'moment';
-import { setEndDate, setStartDate, setTextFilter, sortByAmount, sortByDate } from '../../actions/filters';
+import { setStartDate, setTextFilter, setEndDate } from '../../actions/filters';
 
 
 console.log( moment() );
@@ -14,7 +14,7 @@ test( 'should setup set start date filter action object', () => {
 } );
 
 test( 'should setup set text filter action object', () => {
-  const action = setTextFilter( { text: 'sex' } );
+  const action = setTextFilter( 'sex' );
   
   expect( action ).toEqual( {
                               type: 'SET_TEXT_FILTER',
@@ -22,13 +22,12 @@ test( 'should setup set text filter action object', () => {
                             } );
 } );
 
-/*
 test( 'should setup set text filter action object with default', () => {
   const action = setTextFilter();
   
   expect( action ).toEqual( {
                               type: 'SET_TEXT_FILTER',
-                              text: 'bill'
+                              text: ''
                             } );
 } );
 
@@ -41,6 +40,7 @@ test( 'should setup set end date filter action object', () => {
                             } );
 } );
 
+/*
 test( 'should setup set sort by amount filter action object', () => {
   const action = sortByAmount( { sortBy: 'amount' } );
   
