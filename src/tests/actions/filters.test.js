@@ -4,7 +4,7 @@ import { setEndDate, setStartDate, setTextFilter, sortByAmount, sortByDate } fro
 
 console.log( moment() );
 
-test( 'should setup set start date filter action object', () => {
+test( 'should generate set start date filter action object', () => {
   const action = setStartDate( moment( 0 ) );
   
   expect( action ).toEqual( {
@@ -13,25 +13,7 @@ test( 'should setup set start date filter action object', () => {
                             } );
 } );
 
-test( 'should setup set text filter action object', () => {
-  const action = setTextFilter( 'sex' );
-  
-  expect( action ).toEqual( {
-                              type: 'SET_TEXT_FILTER',
-                              text: 'sex'
-                            } );
-} );
-
-test( 'should setup set text filter action object with default', () => {
-  const action = setTextFilter();
-  
-  expect( action ).toEqual( {
-                              type: 'SET_TEXT_FILTER',
-                              text: ''
-                            } );
-} );
-
-test( 'should setup set end date filter action object', () => {
+test( 'should generate set end date filter action object', () => {
   const action = setEndDate( moment( 0 ) );
   
   expect( action ).toEqual( {
@@ -40,7 +22,27 @@ test( 'should setup set end date filter action object', () => {
                             } );
 } );
 
-test( 'should setup set sort by amount filter action object', () => {
+test( 'should generate set text filter action object', () => {
+  
+  const text = 'sex';
+  const action = setTextFilter( text );
+  
+  expect( action ).toEqual( {
+                              type: 'SET_TEXT_FILTER',
+                              text
+                            } );
+} );
+
+test( 'should generate set text filter action object with default', () => {
+  const action = setTextFilter();
+  
+  expect( action ).toEqual( {
+                              type: 'SET_TEXT_FILTER',
+                              text: ''
+                            } );
+} );
+
+test( 'should generate set sort by amount filter action object', () => {
   const action = sortByAmount();
   
   expect( action ).toEqual( {
@@ -48,7 +50,7 @@ test( 'should setup set sort by amount filter action object', () => {
                             } );
 } );
 
-test( 'should setup set sort by date filter action object', () => {
+test( 'should generate set sort by date filter action object', () => {
   const action = sortByDate();
   
   expect( action ).toEqual( {
