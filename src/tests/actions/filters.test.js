@@ -1,26 +1,28 @@
+import moment from 'moment';
 import { setEndDate, setStartDate, setTextFilter, sortByAmount, sortByDate } from '../../actions/filters';
 
 
-test( 'should setup set start date filter action object', () => {
-  const action = setStartDate( { startDate: 666 } );
-  
-  expect( action ).toEqual( {
-                              type: 'SET_START_DATE',
-                              startDate: 666
-                            } );
-} );
+console.log( moment() );
 
-test( 'should setup set start date filter action object with defaults', () => {
-  const action = setStartDate();
+test( 'should setup set start date filter action object', () => {
+  const action = setStartDate( moment( 0 ) );
   
   expect( action ).toEqual( {
                               type: 'SET_START_DATE',
-                              startDate: 666
+                              startDate: moment( 0 )
                             } );
 } );
 
 test( 'should setup set text filter action object', () => {
-  const action = setTextFilter( { text: 'bill' } );
+  const action = setTextFilter( { text: 'sex' } );
+  
+  expect( action ).toEqual( {
+                              type: 'SET_TEXT_FILTER',
+                              text: 'sex'
+                            } );
+} );
+test( 'should setup set text filter action object with default', () => {
+  const action = setTextFilter();
   
   expect( action ).toEqual( {
                               type: 'SET_TEXT_FILTER',
@@ -29,11 +31,11 @@ test( 'should setup set text filter action object', () => {
 } );
 
 test( 'should setup set end date filter action object', () => {
-  const action = setEndDate( { endDate: 123 } );
+  const action = setEndDate( moment( 0 ) );
   
   expect( action ).toEqual( {
                               type: 'SET_END_DATE',
-                              endDate: 123
+                              endDate: moment( 0 )
                             } );
 } );
 
