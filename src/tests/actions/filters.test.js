@@ -55,6 +55,5 @@ test( 'should generate set sort by date filter action object', () => {
   
   expect( action ).toEqual( {
                               type: 'SORT_BY_DATE'
-    
                             } );
 } );
