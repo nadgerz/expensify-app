@@ -35,7 +35,7 @@ test( 'should filter by text value', () => {
   
   expect( result ).toEqual( [
                               expenses[2],
-                              expenses[3]
+                              expenses[1]
                             ] );
   
 } );
@@ -53,7 +53,7 @@ test( 'should filter by startDate', () => {
   
   expect( result ).toEqual( [
                               expenses[2],
-                              expenses[3]
+                              expenses[0]
                             ] );
   
 } );
