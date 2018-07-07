@@ -47,7 +47,7 @@ test( 'should filter by startDate', () => {
   const filters = {
     text: '',
     sortBy: 'date',
-    startDate: undefined,
+    startDate: moment(),
     endDate: undefined
   };
   
