@@ -64,7 +64,7 @@ test( 'should filter by endDate', () => {
     text: '',
     sortBy: 'date',
     startDate: undefined,
-    endDate: moment( 0 ).add( 2, 'days' ).valueOf()
+    endDate: moment( 0 ).add( 2, 'days' )
   };
   
   const result = selectExpenses( expenses, filters );
