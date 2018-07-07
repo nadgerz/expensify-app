@@ -78,7 +78,9 @@ test( 'should filter by endDate', () => {
 test( 'should sort by date', () => {
   const filters = {
     text: '',
-    sortBy: 'date'
+    sortBy: 'date',
+    startDate: undefined,
+    endDate: undefined
   };
   
   const result = selectExpenses( expenses, filters );
@@ -93,7 +95,9 @@ test( 'should sort by date', () => {
 test( 'should sort by amount', () => {
   const filters = {
     text: '',
-    sortBy: 'amount'
+    sortBy: 'amount',
+    startDate: undefined,
+    endDate: undefined
   };
   
   const result = selectExpenses( expenses, filters );
@@ -108,7 +112,9 @@ test( 'should sort by amount', () => {
 test( 'should sort by date, bad sortBy', () => {
   const filters = {
     text: '',
-    sortBy: 'bibble' // TODO: make sure this can never happen
+    sortBy: 'bibble', // TODO: make sure this can never happen
+    startDate: undefined,
+    endDate: undefined
   };
   
   const result = selectExpenses( expenses, filters );
