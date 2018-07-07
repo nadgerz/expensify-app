@@ -57,3 +57,21 @@ test( 'should filter by startDate', () => {
                             ] );
   
 } );
+
+test( 'should filter by endDate', () => {
+  
+  const filters = {
+    text: '',
+    sortBy: 'date',
+    startDate: undefined,
+    endDate: moment( 0 ).add( 2, 'days' ).valueOf()
+  };
+  
+  const result = selectExpenses( expenses, filters );
+  
+  expect( result ).toEqual( [
+                              expenses[0],
+                              expenses[1]
+                            ] );
+  
+} );
