@@ -43,7 +43,7 @@ test( 'should setup add expense action object with provided values', () => {
   const action = addExpense( expenseData );
   
   expect( action ).toEqual( {
-                              type: 'ADD_EXENSE',
+                              type: 'ADD_EXPENSE',
                               expense: {
                                 ...expenseData
                               }
