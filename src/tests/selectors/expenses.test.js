@@ -85,8 +85,8 @@ test( 'should sort by date', () => {
   
   expect( result ).toEqual( [
                               expenses[2],
-                              expenses[1],
-                              expenses[0]
+                              expenses[0],
+                              expenses[1]
                             ] );
 } );
 
@@ -99,16 +99,16 @@ test( 'should sort by amount', () => {
   const result = selectExpenses( expenses, filters );
   
   expect( result ).toEqual( [
-                              expenses[0],
                               expenses[1],
-                              expenses[2]
+                              expenses[2],
+                              expenses[0]
                             ] );
 } );
 
-test( 'should sort by date', () => {
+test( 'should sort by date, bad sortBy', () => {
   const filters = {
     text: '',
-    sortBy: 'bibble'
+    sortBy: 'bibble' // TODO: make sure this can never happen
   };
   
   const result = selectExpenses( expenses, filters );
