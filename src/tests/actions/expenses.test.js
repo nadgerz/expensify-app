@@ -1,4 +1,4 @@
-import { editExpense, removeExpense } from '../../actions/expenses';
+import { addExpense, editExpense, removeExpense } from '../../actions/expenses';
 
 
 test( 'should setup remove expense action object', () => {
@@ -31,3 +31,27 @@ test( 'should setup edit expense action object', () => {
                               }
                             } );
 } );
+
+test( 'should setup add expense action object with provided values', () => {
+  const expenseData = {
+    description: 'Rent',
+    note: 'This was last months rent',
+    amount: 109500,
+    createdAt: 1000
+  };
+  
+  const action = addExpense( expenseData );
+  
+  expect( action ).toEqual( {
+                              type: 'ADD_EXENSE',
+                              expense: {
+                                ...expenseData
+                              }
+                            } );
+  
+} );
+
+test( 'should setup add expense action object with default values', () => {
+
+} );
+
