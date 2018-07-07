@@ -1,4 +1,5 @@
 import moment from 'moment';
+
 import selectExpenses from '../../selectors/expenses';
 
 
@@ -55,7 +56,6 @@ test( 'should filter by startDate', () => {
                               expenses[2],
                               expenses[0]
                             ] );
-  
 } );
 
 test( 'should filter by endDate', () => {
@@ -73,5 +73,50 @@ test( 'should filter by endDate', () => {
                               expenses[0],
                               expenses[1]
                             ] );
-  
 } );
+
+test( 'should sort by date', () => {
+  const filters = {
+    text: '',
+    sortBy: 'date'
+  };
+  
+  const result = selectExpenses( expenses, filters );
+  
+  expect( result ).toEqual( [
+                              expenses[2],
+                              expenses[1],
+                              expenses[0]
+                            ] );
+} );
+
+test( 'should sort by amount', () => {
+  const filters = {
+    text: '',
+    sortBy: 'amount'
+  };
+  
+  const result = selectExpenses( expenses, filters );
+  
+  expect( result ).toEqual( [
+                              expenses[0],
+                              expenses[1],
+                              expenses[2]
+                            ] );
+} );
+
+test( 'should sort by date', () => {
+  const filters = {
+    text: '',
+    sortBy: 'bibble'
+  };
+  
+  const result = selectExpenses( expenses, filters );
+  
+  expect( result ).toEqual( [
+                              expenses[0],
+                              expenses[1],
+                              expenses[2]
+                            ] );
+} );
+
