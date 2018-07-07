@@ -21,6 +21,8 @@ test( 'should setup set text filter action object', () => {
                               text: 'sex'
                             } );
 } );
+
+/*
 test( 'should setup set text filter action object with default', () => {
   const action = setTextFilter();
   
@@ -56,3 +58,4 @@ test( 'should setup set sort by date filter action object', () => {
                               sortBy: 'date'
                             } );
 } );
+*/
