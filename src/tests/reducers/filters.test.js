@@ -47,6 +47,7 @@ test( 'should set text filter', () => {
     endDate: undefined,
     sortBy: 'date'
   };
+  
   const action = {
     type: 'SET_TEXT_FILTER',
     text: textValue
@@ -58,3 +59,44 @@ test( 'should set text filter', () => {
   
 } );
 
+test( 'should setup startDate filter', () => {
+  const startDateValue = moment().subtract( 4, 'days' );
+  
+  const currentState = {
+    text: '',
+    startDate: undefined,
+    endDate: undefined,
+    sortBy: 'date'
+  };
+  
+  const action = {
+    type: 'SET_START_DATE',
+    startDate: startDateValue
+  };
+  
+  const state = filtersReducer( currentState, action );
+  
+  expect( state.startDate ).toBe( startDateValue );
+  
+} );
+
+test( 'should setup endDate filter', () => {
+  const endDateValue = moment().add( 4, 'days' );
+  
+  const currentState = {
+    text: '',
+    startDate: undefined,
+    endDate: undefined,
+    sortBy: 'date'
+  };
+  
+  const action = {
+    type: 'SET_END_DATE',
+    endDate: endDateValue
+  };
+  
+  const state = filtersReducer( currentState, action );
+  
+  expect( state.endDate ).toBe( endDateValue );
+  
+} );
