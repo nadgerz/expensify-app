@@ -37,3 +37,64 @@ test( 'should NOT remove expenses if id NOT found', () => {
   expect( state ).toEqual( expenses );
   
 } );
+
+test( 'should add an expense', () => {
+  
+  const expense = {
+    id: 666,
+    description: 'Sex',
+    note: '',
+    amount: 1,
+    createdAt: 20000
+  };
+  
+  const action = {
+    type: 'ADD_EXPENSE',
+    expense
+  };
+  
+  const state = expensesReducer( expenses, action );
+  
+  // expect( state ).toEqual( expenses.concat( expense ) );
+  expect( state ).toEqual( [...expenses, expense] );
+} );
+
+test( 'should edit an expense', () => {
+  
+  const expense = {
+    id: 1,
+    description: 'Bum',
+    note: '',
+    amount: 195,
+    createdAt: 0
+  };
+  
+  const action = {
+    type: 'EDIT_EXPENSE',
+    expense
+  };
+  
+  const state = expensesReducer( expenses, action );
+  
+  expect( state ).toEqual( expenses );
+} );
+
+test( 'should NOT edit an expense if expense NOT found', () => {
+  
+  const expense = {
+    id: 1,
+    description: 'Gum',
+    note: '',
+    amount: 195,
+    createdAt: 0
+  };
+  
+  const action = {
+    type: 'EDIT_EXPENSE',
+    expense
+  };
+  
+  const state = expensesReducer( expenses, action );
+  
+  expect( state ).toEqual( expenses );
+} );
