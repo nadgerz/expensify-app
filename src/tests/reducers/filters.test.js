@@ -73,7 +73,7 @@ test( 'should setup endDate filter', () => {
     type: 'SET_END_DATE',
     endDate: endDateValue
   };
-  
+   
   const state = filtersReducer( undefined, action );
   
   expect( state.endDate ).toEqual( endDateValue );
