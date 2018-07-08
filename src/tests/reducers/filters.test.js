@@ -39,20 +39,22 @@ test( 'should set sortBy to date', () => {
 
 test( 'should set text filter', () => {
   
+  const textValue = 'BIBBLE';
+  
   const currentState = {
-    text: 'BIBBLE',
+    text: textValue,
     startDate: undefined,
     endDate: undefined,
     sortBy: 'date'
   };
   const action = {
     type: 'SET_TEXT_FILTER',
-    text: 'BIBBLE'
+    text: textValue
   };
   
   const state = filtersReducer( currentState, action );
   
-  expect( state.text ).toBe( 'BIBBLE' );
+  expect( state.text ).toBe( textValue );
   
 } );
 
