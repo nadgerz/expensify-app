@@ -102,5 +102,6 @@ test( 'should call onSubmit prop for valid form submission', () => {
   const onSubmitSpy = jest.fn();
   
   // console.log( onSubmitSpy );
+  onSubmitSpy();
   expect( onSubmitSpy ).toHaveBeenCalled();
 } );
