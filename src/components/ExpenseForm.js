@@ -4,7 +4,6 @@ import moment from 'moment';
 
 import 'react-dates/initialize';
 import { SingleDatePicker } from 'react-dates';
-import 'react-dates/lib/css/_datepicker.css';
 
 
 export default class ExpenseForm extends Component {
@@ -24,10 +23,6 @@ export default class ExpenseForm extends Component {
     if ( !amount || amount.match( /^\d+(\.\d{0,2})?$/ ) ) {
       this.setState( () => ({ amount }) );
     }
-  };
-  onDateChange = ( createdAt ) => {
-    
-    this.setState( () => ({ createdAt }) );
   };
   onDateChange = ( createdAt ) => {
     
@@ -67,7 +62,9 @@ export default class ExpenseForm extends Component {
       note: props.expense ? props.expense.note : '',
       amount: props.expense ? (props.expense.amount / 100).toString() : '',
       createdAt: props.expense ? moment( props.expense.createdAt ) : moment(),
+      
       calendarFocused: false,
+      
       error: ''
     };
     

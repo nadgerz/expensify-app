@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+
 import AppRouter from './routers/AppRouter';
 
 import configureStore from './store/configureStore';
@@ -11,37 +13,35 @@ import getVisibleExpenses from './selectors/expenses';
 
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
-
-import { Provider } from 'react-redux';
-
+import 'react-dates/lib/css/_datepicker.css';
 
 // console.clear();
 
 const store = configureStore();
 
-const expense1 = store.dispatch( addExpense( {
-                                               description: 'Water Bill',
-                                               amount: 10,
-                                               createdAt: 1000
-                                             } ) );
+store.dispatch( addExpense( {
+                              description: 'Water Bill',
+                              amount: 10,
+                              createdAt: 1000
+                            } ) );
 
-const expense2 = store.dispatch( addExpense( {
-                                               description: 'Gas Bill',
-                                               amount: 50,
-                                               createdAt: 800
-                                             } ) );
+store.dispatch( addExpense( {
+                              description: 'Gas Bill',
+                              amount: 50,
+                              createdAt: 800
+                            } ) );
 
-const expense3 = store.dispatch( addExpense( {
-                                               description: 'Lekky Bill',
-                                               amount: 60,
-                                               createdAt: 1800
-                                             } ) );
+store.dispatch( addExpense( {
+                              description: 'Lekky Bill',
+                              amount: 60,
+                              createdAt: 1800
+                            } ) );
 
-const expense4 = store.dispatch( addExpense( {
-                                               description: 'Rent Bill',
-                                               amount: 109500,
-                                               createdAt: 400
-                                             } ) );
+store.dispatch( addExpense( {
+                              description: 'Rent Bill',
+                              amount: 109500,
+                              createdAt: 400
+                            } ) );
 /*
 const wait = 500;
 
@@ -58,8 +58,8 @@ setTimeout( () => {
 }, wait );
 */
 
-// const setFilter4 = store.dispatch( setTextFilter() );
-const setFilter5 = store.dispatch( setTextFilter( 'bill' ) );
+store.dispatch( setTextFilter() );
+// store.dispatch( setTextFilter( 'bill' ) );
 
 /*
 const unsubscribe1 = store.subscribe( () => {
