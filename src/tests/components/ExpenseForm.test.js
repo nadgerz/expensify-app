@@ -1,9 +1,9 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import moment from 'moment';
 
 import ExpenseForm from '../../components/ExpenseForm';
 import expenses from '../fixtures/expenses';
+import moment from '../__mocks__/moment';
 
 
 test( 'should render ExpenseForm correctly', () => {
@@ -132,5 +132,9 @@ test( 'should set new date on date change', () => {
   const wrapper = shallow( <ExpenseForm/> );
   
   // 2: Find the component
-  wrapper.find( 'SingleDatePicker' ).prop( 'onDateChange' )( moment() );
+  const now = moment();
+  wrapper.find( 'SingleDatePicker' ).prop( 'onDateChange' )( now );
+  
+  expect( wrapper.state( 'createdAt' ) ).toEqual( now );
+  
 } );
