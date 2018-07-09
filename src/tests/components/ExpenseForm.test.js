@@ -1,5 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+import moment from 'moment';
 
 import ExpenseForm from '../../components/ExpenseForm';
 import expenses from '../fixtures/expenses';
@@ -124,4 +125,12 @@ test( 'should call onSubmit prop for valid form submission', () => {
                                                     description: expense.description,
                                                     note: expense.note
                                                   } );
+} );
+
+test( 'should set new date on date change', () => {
+  // 1: Render ExpenseForm.
+  const wrapper = shallow( <ExpenseForm/> );
+  
+  // 2: Find the component
+  wrapper.find( 'SingleDatePicker' ).prop( 'onDateChange' )( moment() );
 } );
