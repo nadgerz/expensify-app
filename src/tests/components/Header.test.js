@@ -8,4 +8,5 @@ test( 'should render Header correctly', () => {
   
   // expect( wrapper.find( 'h1' ).length ).toBe( 1 );
   // expect( wrapper.find( 'h1' ).text() ).toBe( 'Expensify' );
+  expect( wrapper ).toMatchSnapshot();
 } );
