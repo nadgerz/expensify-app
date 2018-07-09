@@ -13,6 +13,8 @@ import getVisibleExpenses from './selectors/expenses';
 
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
+
+import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
 
 // console.clear();
@@ -74,6 +76,7 @@ const unsubscribe1 = store.subscribe( () => {
 
 const state = store.getState();
 // console.log( state );
+// console.log( state.expenses );
 
 const visibleExpenses = getVisibleExpenses( state.expenses, state.filters );
 console.log( visibleExpenses );

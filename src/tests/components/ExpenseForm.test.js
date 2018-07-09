@@ -1,5 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+import { SingleDatePicker } from 'react-dates';
 
 import ExpenseForm from '../../components/ExpenseForm';
 import expenses from '../fixtures/expenses';
@@ -105,6 +106,7 @@ test( 'should call onSubmit prop for valid form submission', () => {
   
   // 1: Render ExpenseForm.
   const wrapper = shallow( <ExpenseForm expense={expense} onSubmit={onSubmitSpy}/> );
+  console.log( wrapper );
   
   // 2: Submit the form!
   wrapper.find( 'form' ).simulate( 'submit', {
@@ -130,11 +132,21 @@ test( 'should call onSubmit prop for valid form submission', () => {
 test( 'should set new date on date change', () => {
   // 1: Render ExpenseForm.
   const wrapper = shallow( <ExpenseForm/> );
-  
+
   // 2: Find the component
   const now = moment();
+  // console.dir( wrapper.find( 'SingleDatePicker' ).props() );
   wrapper.find( 'SingleDatePicker' ).prop( 'onDateChange' )( now );
   
   expect( wrapper.state( 'createdAt' ) ).toEqual( now );
+} );
+
+test( 'should set calendar focus on change', () => {
+  // 1: Render ExpenseForm.
+  const wrapper = shallow( <ExpenseForm/> );
   
+  const focused = true;
+  wrapper.find( 'SingleDatePicker' ).prop( 'focused' )( focused );
+  
+  expect( wrapper.state( 'calendarFocused' ) ).toEqual( focused );
 } );
