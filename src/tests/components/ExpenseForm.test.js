@@ -63,3 +63,38 @@ test( 'should set not on textarea change', () => {
   // 3: Make an assertion that the note state was set.
   expect( wrapper.state( 'note' ) ).toBe( value );
 } );
+
+
+test( 'should set amount if VALID input', () => {
+  // 1: Render ExpenseForm.
+  const wrapper = shallow( <ExpenseForm/> );
+  
+  // 2: Change the amount.
+  const value = '23.50';
+  
+  wrapper.find( 'input' ).at( 1 ).simulate( 'change', {
+    target: {
+      value
+    }
+  } );
+  
+  // 3: Make an assertion that the amount state WAS set.
+  expect( wrapper.state( 'amount' ) ).toBe( value );
+} );
+
+test( 'should NOT set amount if INVALID input', () => {
+  // 1: Render ExpenseForm.
+  const wrapper = shallow( <ExpenseForm/> );
+  
+  // 2: Change the amount.
+  const value = '12.122';
+  
+  wrapper.find( 'input' ).at( 1 ).simulate( 'change', {
+    target: {
+      value
+    }
+  } );
+  
+  // 3: Make an assertion that the amount state was NOT set.
+  expect( wrapper.state( 'amount' ) ).not.toBe( value );
+} );
