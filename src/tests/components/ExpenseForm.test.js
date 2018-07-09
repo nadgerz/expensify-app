@@ -111,7 +111,9 @@ test( 'should call onSubmit prop for valid form submission', () => {
     }
   } );
   
-  // onSubmitSpy( 'Steve', 'Berlin' );
+  //
+  //    What should have happened?
+  //
   expect( onSubmitSpy ).toHaveBeenCalled();
   
   expect( wrapper.state( 'error' ) ).toBe( '' );
