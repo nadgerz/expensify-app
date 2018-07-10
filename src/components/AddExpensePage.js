@@ -14,7 +14,8 @@ const AddExpensePage = ( props ) => (
         // console.log( 'ADD!' );
         // console.log( expense );
         
-        props.dispatch( addExpense( expense ) );
+        // props.dispatch( addExpense( expense ) );
+        props.onSubmit( expense );
         
         props.history.push( '/' );
       }}
@@ -23,10 +24,12 @@ const AddExpensePage = ( props ) => (
 );
 
 const mapDispatchToProps = ( dispatch ) => {
-  return {};
+  return {
+    onSubmit: ( expense ) => dispatch( addExpense( expense ) )
+  };
 };
 
 //
 //    Do not need anything from state, so we can have an empty connect()
 //
-export default connect( undefined )( AddExpensePage );
+export default connect( undefined, mapDispatchToProps )( AddExpensePage );
