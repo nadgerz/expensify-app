@@ -22,7 +22,11 @@ const AddExpensePage = ( props ) => (
   </div>
 );
 
+const mapDispatchToProps = ( dispatch ) => {
+  return {};
+};
+
 //
 //    Do not need anything from state, so we can have an empty connect()
 //
-export default connect()( AddExpensePage );
+export default connect( undefined )( AddExpensePage );
