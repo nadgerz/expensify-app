@@ -27,7 +27,9 @@ export class AddExpensePage extends Component {
 }
 
 
-const mapDispatchToProps = ( dispatch ) => ({ addExpense: ( expense ) => dispatch( addExpense( expense ) ) });
+const mapDispatchToProps = ( dispatch ) => ({
+  addExpense: ( expense ) => dispatch( addExpense( expense ) )
+});
 
 //
 //    Do not need anything from state, so we can have an empty connect()

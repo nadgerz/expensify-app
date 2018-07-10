@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import { editExpense, removeExpense } from '../actions/expenses';
@@ -6,35 +6,37 @@ import { editExpense, removeExpense } from '../actions/expenses';
 import ExpenseForm from './ExpenseForm';
 
 
-const EditExpensePage = ( props ) => {
-  console.log( props );
+export class EditExpensePage extends Component {
   
-  return (
-    <div>
-      <p>Edit Expense</p>
-      
-      <ExpenseForm
-        expense={props.expense}
+  render() {
+    
+    return (
+      <div>
+        <p>Edit Expense</p>
         
-        onSubmit={( expense ) => {
-          props.dispatch( editExpense( props.expense.id, expense ) );
+        <ExpenseForm
+          expense={this.props.expense}
           
-          props.history.push( '/' );
-        }}
-      />
-      
-      <button onClick={() => {
-        props.dispatch( removeExpense( { id: props.expense.id } ) );
+          onSubmit={( expense ) => {
+            this.props.dispatch( editExpense( this.props.expense.id, expense ) );
+            
+            this.props.history.push( '/' );
+          }}
+        />
         
-        props.history.push( '/' );
-      }}>
-        Remove
-      </button>
-    
-    
-    </div>
-  );
-};
+        <button onClick={() => {
+          this.props.dispatch( removeExpense( { id: this.props.expense.id } ) );
+          
+          this.props.history.push( '/' );
+        }}>
+          Remove
+        </button>
+      
+      
+      </div>
+    );
+  }
+}
 
 const mapStateToProps = ( state, props ) => {
   return {
@@ -44,4 +46,10 @@ const mapStateToProps = ( state, props ) => {
   };
 };
 
-export default connect( mapStateToProps )( EditExpensePage );
+const mapDispatchToProps = ( dispatch ) => (
+  {
+    editExpense: ( expense ) => dispatch( editExpense( expense ) ),
+    removeExpense: ( expense ) => dispatch( removeExpense( expense ) )
+  });
+
+export default connect( mapStateToProps, mapDispatchToProps )( EditExpensePage );
