@@ -7,6 +7,9 @@
 #
 myname=$(basename $0)
 
-cat JetBrains.gitignore Node.gitignore local-project.gitignore > ../../.gitignore
+cat \
+    JetBrains.gitignore \
+    Node.gitignore \
+    local-project.gitignore > ../../.gitignore
 
 exit 0
