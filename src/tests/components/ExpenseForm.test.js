@@ -129,6 +129,7 @@ test( 'should call onSubmit prop for valid form submission', () => {
                                                   } );
 } );
 
+/*
 test( 'should set new date on date change', () => {
   // 1: Render ExpenseForm.
   const wrapper = shallow( <ExpenseForm/> );
@@ -150,3 +151,4 @@ test( 'should set calendar focus on change', () => {
   
   expect( wrapper.state( 'calendarFocused' ) ).toEqual( focused );
 } );
+*/
