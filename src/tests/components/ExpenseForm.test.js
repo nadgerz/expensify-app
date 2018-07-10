@@ -1,10 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { SingleDatePicker } from 'react-dates';
 
 import ExpenseForm from '../../components/ExpenseForm';
 import expenses from '../fixtures/expenses';
-import moment from '../__mocks__/moment';
 
 
 test( 'should render ExpenseForm correctly', () => {
@@ -141,14 +139,15 @@ test( 'should set new date on date change', () => {
   
   expect( wrapper.state( 'createdAt' ) ).toEqual( now );
 } );
-
+*/
+/*
 test( 'should set calendar focus on change', () => {
   // 1: Render ExpenseForm.
   const wrapper = shallow( <ExpenseForm/> );
   
   const focused = true;
-  wrapper.find( 'SingleDatePicker' ).prop( 'focused' )( focused );
+  wrapper.find( 'SingleDatePicker' ).prop( 'onFocusChange' )( { focused } );
   
-  expect( wrapper.state( 'calendarFocused' ) ).toEqual( focused );
+  expect( wrapper.state( 'calendarFocused' ) ).toBew( focused );
 } );
 */
