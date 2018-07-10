@@ -21,6 +21,7 @@ import 'react-dates/lib/css/_datepicker.css';
 
 const store = configureStore();
 
+/*
 store.dispatch( addExpense( {
                               description: 'Water Bill',
                               amount: 10,
@@ -44,6 +45,7 @@ store.dispatch( addExpense( {
                               amount: 109500,
                               createdAt: 400
                             } ) );
+*/
 /*
 const wait = 500;
 
@@ -60,7 +62,7 @@ setTimeout( () => {
 }, wait );
 */
 
-store.dispatch( setTextFilter() );
+// store.dispatch( setTextFilter() );
 // store.dispatch( setTextFilter( 'bill' ) );
 
 /*
@@ -74,12 +76,12 @@ const unsubscribe1 = store.subscribe( () => {
 } );
 */
 
-const state = store.getState();
+// const state = store.getState();
 // console.log( state );
 // console.log( state.expenses );
 
-const visibleExpenses = getVisibleExpenses( state.expenses, state.filters );
-console.log( visibleExpenses );
+// const visibleExpenses = getVisibleExpenses( state.expenses, state.filters );
+// console.log( visibleExpenses );
 // console.log( visibleExpenses.length );
 
 // console.log( 'ACTUAL STATE' );
