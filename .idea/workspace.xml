@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88ba2f5a-0dfc-4786-b6de-50aaf5e52cf6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -244,8 +244,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="71" />
     <option name="y" value="23" />
-    <option name="width" value="1325" />
-    <option name="height" value="877" />
+    <option name="width" value="1334" />
+    <option name="height" value="864" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -317,7 +317,7 @@
       <workItem from="1530007451549" duration="1222000" />
       <workItem from="1530558118191" duration="82101000" />
       <workItem from="1531006442954" duration="25363000" />
-      <workItem from="1531225612640" duration="16345000" />
+      <workItem from="1531225612640" duration="16597000" />
     </task>
     <task id="LOCAL-00441" summary="textarea test!">
       <created>1531151290212</created>
@@ -666,13 +666,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="213664000" />
+    <option name="totallyTimeSpent" value="213916000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="71" y="23" width="1325" height="877" extended-state="0" />
-    <editor active="true" />
+    <frame x="71" y="23" width="1334" height="864" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.63013697" visible="true" weight="0.1595092" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.63013697" visible="true" weight="0.15841584" />
       <window_info id="Structure" order="1" sideWeight="0.369863" side_tool="true" weight="0.24940048" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -685,7 +684,7 @@
       <window_info anchor="bottom" id="Docker" order="7" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="RNConsole" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49880096" visible="true" weight="0.3608924" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49880096" visible="true" weight="0.3671562" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50153375" side_tool="true" weight="0.26771653" />
       <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49846625" weight="0.26771653" />
       <window_info anchor="bottom" id="TypeScript" order="13" />
