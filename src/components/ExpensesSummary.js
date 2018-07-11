@@ -12,13 +12,15 @@ export const ExpensesSummary = ( props ) => {
   
   const numberOfExpenses = props.expenses.length;
   const expensStr = numberOfExpenses === 1 ? 'expense' : 'expenses';
+  
   const total = getExpenseTotal( props.expenses );
+  const formattedExpensesTotal = numeral( total / 100 ).format( '$0,0.00' );
   
   return (
     <div>
-      <p>
-        Viewing {numberOfExpenses} {expensStr} totalling {numeral( total / 100 ).format( '$0,0.00' )}
-      </p>
+      <h1>
+        Viewing {numberOfExpenses} {expensStr} totalling {formattedExpensesTotal}
+      </h1>
     </div>
   );
 };
