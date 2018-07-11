@@ -13,8 +13,6 @@ import 'react-dates/lib/css/_datepicker.css';
 
 import './firebase/firebase';
 
-import './playground/promises'
-
 /*
 import { addExpense } from './actions/expenses';
 import { setTextFilter } from './actions/filters';
