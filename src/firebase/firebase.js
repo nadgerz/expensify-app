@@ -36,14 +36,21 @@ database.ref()
 
 // database.ref().set( 'This is my data' );
 
-database.ref( 'age' ).set( 53 );
-database.ref( 'location/city' ).set( 'Augsburg' );
+// database.ref( 'age' ).set( 53 );
+// database.ref( 'location/city' ).set( 'Augsburg' );
 
 const attrs = {
-  height: 50,
-  weight: 180
+  height: 45,
+  weight: 280
 };
 
-database.ref( 'attributes' ).set( attrs );
+database.ref( 'attributes' )
+        .set( attrs )
+        .then( () => {
+          console.log( 'Attributes were saved' );
+        } )
+        .catch( ( error ) => {
+          console.log( 'Attributes died on the vine.', error );
+        } );
 
-console.log( 'I made a request to change the data.' );
+// console.log( 'I made a request to change the data.' );
