@@ -22,9 +22,7 @@ export default ( expenses = [] ) => {
   
   return expenses
     .map( ( expense ) => expense.amount )
-    .reduce( ( sum, amount ) => {
-      return sum + amount;
-    }, 0 );
+    .reduce( ( sum, amount ) => sum + amount, 0 );
 }
 
 /*
