@@ -4,13 +4,19 @@ const promise = new Promise( ( resolve, reject ) => {
   
   setTimeout( () => {
     resolve( 'This got resolved after 1.5 seconds' );
-  }, 1500 );
+  }, 5000 );
   
+/*
   setTimeout( () => {
     console.log( 'This waited 1.5 seconds' );
-  }, 1500 );
+  }, 5000 );
+*/
 } );
+
+console.log( 'before' );
 
 promise.then( ( data ) => {
   console.log( data );
 } );
+
+console.log( 'after' );
