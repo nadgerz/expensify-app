@@ -14,6 +14,21 @@ const config = {
 
 firebase.initializeApp( config );
 
-firebase.database().ref().set( {
-                                 name: 'Steve'
-                               } );
+const database = firebase.database();
+
+database.ref().set( {
+                      name: 'Steve Ingram',
+                      age: 52,
+                      isSingle: false,
+                      location: {
+                        city: 'Berlin',
+                        postcode: 12105,
+                        country: 'Germany'
+                      }
+                    } );
+
+// database.ref().set( 'This is my data' );
+
+database.ref().set( {
+                      age: 53
+                    } );
