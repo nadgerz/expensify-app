@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88ba2f5a-0dfc-4786-b6de-50aaf5e52cf6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -121,7 +121,7 @@
         <entry file="file://$PROJECT_DIR$/webpack.config.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="361">
-              <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+              <caret line="52" selection-start-line="52" selection-end-line="52" />
             </state>
           </provider>
         </entry>
@@ -322,7 +322,7 @@
       <workItem from="1530007451549" duration="1222000" />
       <workItem from="1530558118191" duration="82101000" />
       <workItem from="1531006442954" duration="25363000" />
-      <workItem from="1531225612640" duration="17946000" />
+      <workItem from="1531225612640" duration="18564000" />
     </task>
     <task id="LOCAL-00442" summary="getting jiggy with tests">
       <created>1531151793197</created>
@@ -671,7 +671,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="215265000" />
+    <option name="totallyTimeSpent" value="215883000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="71" y="23" width="1334" height="864" extended-state="0" />
@@ -1128,7 +1128,7 @@
     <entry file="file://$PROJECT_DIR$/webpack.config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
-          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+          <caret line="52" selection-start-line="52" selection-end-line="52" />
         </state>
       </provider>
     </entry>
