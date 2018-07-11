@@ -6,14 +6,7 @@ const promise = new Promise( ( resolve, reject ) => {
   
   setTimeout( () => {
     resolve( `This got resolved after ${millis / 1000} seconds.` );
-    resolve( 'This is my other resolved data.' );
   }, millis );
-  
-  /*
-    setTimeout( () => {
-      console.log( `This waited ${millis/1000} seconds` );
-    }, millis );
-  */
 } );
 
 console.log( 'before' );
