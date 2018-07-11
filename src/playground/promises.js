@@ -5,6 +5,10 @@ const promise = new Promise( ( resolve, reject ) => {
   console.log( `Starting a wait of ${millis / 1000} seconds` );
   
   setTimeout( () => {
+    reject( {
+              error: 'Something went wrong!'
+            } );
+    
     resolve( {
                name: 'Steve Ingram',
                age: 53,
@@ -17,6 +21,8 @@ console.log( 'before' );
 
 promise.then( ( data ) => {
   console.log( '1', data );
+} ).catch( ( error ) => {
+  console.log( 'error: ', error );
 } );
 
 console.log( 'after' );
