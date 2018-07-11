@@ -16,6 +16,7 @@ firebase.initializeApp( config );
 
 const database = firebase.database();
 
+/*
 database.ref()
         .set( {
                 name: 'Steve Ingram',
@@ -33,12 +34,14 @@ database.ref()
         .catch( ( error ) => {
           console.log( 'This failed.', error );
         } );
+*/
 
 // database.ref().set( 'This is my data' );
 
 // database.ref( 'age' ).set( 53 );
 // database.ref( 'location/city' ).set( 'Augsburg' );
 
+/*
 const attrs = {
   height: 45,
   weight: 280
@@ -52,5 +55,6 @@ database.ref( 'attributes' )
         .catch( ( error ) => {
           console.log( 'Attributes died on the vine.', error );
         } );
+*/
 
 // console.log( 'I made a request to change the data.' );
