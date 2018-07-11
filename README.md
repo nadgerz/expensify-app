@@ -73,3 +73,8 @@ https://yarnpkg.com/en/
 For all things numbery/currency
 
 https://numeraljs.com
+
+
+firebase
+
+http://firebase.google.com
