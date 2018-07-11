@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="88ba2f5a-0dfc-4786-b6de-50aaf5e52cf6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -89,7 +90,7 @@
           <entry key="babelrc" value="20" />
           <entry key="html" value="141" />
           <entry key="js" value="16724" />
-          <entry key="json" value="284" />
+          <entry key="json" value="297" />
           <entry key="md" value="68" />
           <entry key="scss" value="81" />
           <entry key="txt" value="6187" />
@@ -98,7 +99,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="141" />
-          <entry key="JSON" value="304" />
+          <entry key="JSON" value="317" />
           <entry key="JavaScript" value="16724" />
           <entry key="Markdown" value="68" />
           <entry key="PLAIN_TEXT" value="6187" />
@@ -120,8 +121,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+            <state relative-caret-position="271">
+              <caret line="41" column="28" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -317,7 +318,7 @@
       <workItem from="1530007451549" duration="1222000" />
       <workItem from="1530558118191" duration="82101000" />
       <workItem from="1531006442954" duration="25363000" />
-      <workItem from="1531225612640" duration="16597000" />
+      <workItem from="1531225612640" duration="17218000" />
     </task>
     <task id="LOCAL-00441" summary="textarea test!">
       <created>1531151290212</created>
@@ -666,10 +667,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="213916000" />
+    <option name="totallyTimeSpent" value="214537000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="71" y="23" width="1334" height="864" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.63013697" visible="true" weight="0.15841584" />
       <window_info id="Structure" order="1" sideWeight="0.369863" side_tool="true" weight="0.24940048" />
@@ -1122,8 +1124,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+        <state relative-caret-position="271">
+          <caret line="41" column="28" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
         </state>
       </provider>
     </entry>
