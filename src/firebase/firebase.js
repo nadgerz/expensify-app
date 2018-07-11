@@ -30,3 +30,13 @@ database.ref().set( {
 // database.ref().set( 'This is my data' );
 
 database.ref( 'age' ).set( 53 );
+database.ref( 'location/city' ).set( 'Augsburg' );
+
+const attrs = {
+  height: 50,
+  weight: 180
+};
+
+database.ref( 'attributes' ).set( attrs );
+
+
