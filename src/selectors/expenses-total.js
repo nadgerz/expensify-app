@@ -9,21 +9,21 @@ export default ( expenses ) => {
 }
 */
 
-/*
 export default ( expenses = [] ) => {
   
-  const reducer = ( accumulator, expense ) => accumulator + expense.amount;
+  const reducer = ( sum, expense ) => sum + expense.amount;
   
   return expenses.reduce( reducer, 0 );
 }
-*/
 
+/*
 export default ( expenses = [] ) => {
   
   return expenses
     .map( ( expense ) => expense.amount )
     .reduce( ( sum, amount ) => sum + amount, 0 );
 }
+*/
 
 /*
 export default ( expenses ) => {

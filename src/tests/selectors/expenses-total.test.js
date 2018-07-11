@@ -9,6 +9,13 @@ test( 'should return 0 if no expenses', () => {
   expect( total ).toBe( 0 );
 } );
 
+test( 'should return 0 if nothing passed in', () => {
+  
+  const total = getExpensesTotal();
+  
+  expect( total ).toBe( 0 );
+} );
+
 test( 'should correctly add up a single expense', () => {
   
   const total = getExpensesTotal( [expenses[1]] );
