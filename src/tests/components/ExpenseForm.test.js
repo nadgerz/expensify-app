@@ -104,7 +104,7 @@ test( 'should call onSubmit prop for valid form submission', () => {
   
   // 1: Render ExpenseForm.
   const wrapper = shallow( <ExpenseForm expense={expense} onSubmit={onSubmitSpy}/> );
-  console.log( wrapper );
+  // console.log( wrapper );
   
   // 2: Submit the form!
   wrapper.find( 'form' ).simulate( 'submit', {
