@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render ExpensesSummary correctly 1`] = `
+<div>
+  expenses
+</div>
+`;
+
+exports[`should render correct summary for 1 expense 1`] = `
+<div>
+  expenses
+</div>
+`;
