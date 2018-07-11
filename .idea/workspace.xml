@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="88ba2f5a-0dfc-4786-b6de-50aaf5e52cf6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -63,8 +62,8 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="babelrc" value="1" />
-          <entry key="html" value="2" />
-          <entry key="js" value="482" />
+          <entry key="html" value="3" />
+          <entry key="js" value="484" />
           <entry key="json" value="15" />
           <entry key="jsx" value="1" />
           <entry key="md" value="1" />
@@ -75,10 +74,10 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="2" />
+          <entry key="HTML" value="3" />
           <entry key="JSON" value="16" />
           <entry key="JSX Harmony" value="1" />
-          <entry key="JavaScript" value="482" />
+          <entry key="JavaScript" value="484" />
           <entry key="Jest Snapshot" value="19" />
           <entry key="Markdown" value="1" />
           <entry key="SCSS" value="5" />
@@ -88,21 +87,21 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="babelrc" value="20" />
-          <entry key="html" value="141" />
-          <entry key="js" value="16724" />
+          <entry key="html" value="151" />
+          <entry key="js" value="16773" />
           <entry key="json" value="297" />
           <entry key="md" value="68" />
           <entry key="scss" value="81" />
-          <entry key="txt" value="6187" />
+          <entry key="txt" value="6253" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="141" />
+          <entry key="HTML" value="151" />
           <entry key="JSON" value="317" />
-          <entry key="JavaScript" value="16724" />
+          <entry key="JavaScript" value="16773" />
           <entry key="Markdown" value="68" />
-          <entry key="PLAIN_TEXT" value="6187" />
+          <entry key="PLAIN_TEXT" value="6253" />
           <entry key="SCSS" value="81" />
         </counts>
       </usages-collector>
@@ -119,10 +118,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/package.json">
+        <entry file="file://$PROJECT_DIR$/webpack.config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="41" column="28" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
+            <state relative-caret-position="361">
+              <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
             </state>
           </provider>
         </entry>
@@ -215,10 +214,10 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/components/EditExpensePage.js" />
         <option value="$PROJECT_DIR$/src/app.js" />
-        <option value="$PROJECT_DIR$/public/index.html" />
-        <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/server/server.js" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/public/index.html" />
+        <option value="$PROJECT_DIR$/webpack.config.js" />
       </list>
     </option>
   </component>
@@ -264,6 +263,11 @@
             <path>
               <item name="indecision-app" type="b2602c69:ProjectViewProjectNode" />
               <item name="expensify-app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="indecision-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="expensify-app" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -318,14 +322,7 @@
       <workItem from="1530007451549" duration="1222000" />
       <workItem from="1530558118191" duration="82101000" />
       <workItem from="1531006442954" duration="25363000" />
-      <workItem from="1531225612640" duration="17218000" />
-    </task>
-    <task id="LOCAL-00441" summary="textarea test!">
-      <created>1531151290212</created>
-      <option name="number" value="00441" />
-      <option name="presentableId" value="LOCAL-00441" />
-      <option name="project" value="LOCAL" />
-      <updated>1531151290212</updated>
+      <workItem from="1531225612640" duration="17946000" />
     </task>
     <task id="LOCAL-00442" summary="getting jiggy with tests">
       <created>1531151793197</created>
@@ -663,15 +660,21 @@
       <option name="project" value="LOCAL" />
       <updated>1531264561150</updated>
     </task>
-    <option name="localTasksCounter" value="490" />
+    <task id="LOCAL-00490" summary="move stuff to dist folder - yarn run from scratch... weird changes">
+      <created>1531305579784</created>
+      <option name="number" value="00490" />
+      <option name="presentableId" value="LOCAL-00490" />
+      <option name="project" value="LOCAL" />
+      <updated>1531305579784</updated>
+    </task>
+    <option name="localTasksCounter" value="491" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="214537000" />
+    <option name="totallyTimeSpent" value="215265000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="71" y="23" width="1334" height="864" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.63013697" visible="true" weight="0.15841584" />
       <window_info id="Structure" order="1" sideWeight="0.369863" side_tool="true" weight="0.24940048" />
@@ -688,7 +691,7 @@
       <window_info anchor="bottom" id="RNConsole" order="9" />
       <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49880096" visible="true" weight="0.3671562" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50153375" side_tool="true" weight="0.26771653" />
-      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49846625" weight="0.26771653" />
+      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49846625" weight="0.2670227" />
       <window_info anchor="bottom" id="TypeScript" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -702,7 +705,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="this is going to need some checking out" />
     <MESSAGE value="A lot cleaner" />
     <MESSAGE value="typo" />
     <MESSAGE value="snapshot" />
@@ -727,7 +729,8 @@
     <MESSAGE value="sendFile or send?" />
     <MESSAGE value="the app will work regardless of what page the user starts on" />
     <MESSAGE value="compatible with heroku" />
-    <option name="LAST_COMMIT_MESSAGE" value="compatible with heroku" />
+    <MESSAGE value="move stuff to dist folder - yarn run from scratch... weird changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="move stuff to dist folder - yarn run from scratch... weird changes" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
@@ -1101,20 +1104,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="7" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webpack.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="32" column="25" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/server.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -1126,6 +1115,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="271">
           <caret line="41" column="28" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="7" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webpack.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
         </state>
       </provider>
     </entry>
