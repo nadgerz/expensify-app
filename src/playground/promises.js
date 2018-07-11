@@ -5,7 +5,11 @@ const promise = new Promise( ( resolve, reject ) => {
   console.log( `Starting a wait of ${millis / 1000} seconds` );
   
   setTimeout( () => {
-    resolve( `This got resolved after ${millis / 1000} seconds.` );
+    resolve( {
+               name: 'Steve Ingram',
+               age: 53,
+               comment: `This got resolved after ${millis / 1000} seconds.`
+             } );
   }, millis );
 } );
 
