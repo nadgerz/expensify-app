@@ -27,8 +27,8 @@ database.ref()
                   country: 'Germany'
                 }
               } )
-        .then( ( data ) => {
-          console.log( 'Data is saved', data );
+        .then( () => {
+          console.log( 'Data is saved' );
         } )
         .catch( ( error ) => {
           console.log( 'This failed.', error );
