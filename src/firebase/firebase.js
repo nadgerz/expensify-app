@@ -29,6 +29,9 @@ database.ref()
               } )
         .then( () => {
           console.log( 'Data is saved' );
+        } )
+        .catch( ( error ) => {
+          console.log( 'This failed.', error );
         } );
 
 // database.ref().set( 'This is my data' );
