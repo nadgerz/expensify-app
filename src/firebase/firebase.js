@@ -46,4 +46,4 @@ const attrs = {
 
 database.ref( 'attributes' ).set( attrs );
 
-
+console.log( 'I made a request to change the data.' );
