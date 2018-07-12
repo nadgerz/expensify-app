@@ -16,6 +16,18 @@ firebase.initializeApp( config );
 
 const database = firebase.database();
 
+const numbers = [1, 2, 3];
+
+database.ref()
+        .set( numbers )
+        .then( () => {
+          console.log( 'Data is saved' );
+        } )
+        .catch( ( error ) => {
+          console.log( 'This failed.', error );
+        } );
+
+/*
 database.ref()
         .set( {
                 name: 'Steve Ingram',
@@ -38,6 +50,7 @@ database.ref()
         .catch( ( error ) => {
           console.log( 'This failed.', error );
         } );
+*/
 
 /*
 const ref1 = database.ref();
@@ -131,6 +144,7 @@ setTimeout( () => {
 
 // const field = 'name';
 
+/*
 const ref5 = database.ref();
 
 const onValueChange = ref5.on( 'value', ( snapshot ) => {
@@ -163,6 +177,7 @@ setTimeout( () => {
                }
   );
 }, 15000 );
+*/
 
 // var ref = firebase.database().ref();
 
