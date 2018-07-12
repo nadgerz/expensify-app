@@ -16,6 +16,7 @@ firebase.initializeApp( config );
 
 const database = firebase.database();
 
+/*
 const ref1 = database.ref();
 
 ref1.once( 'value' )
@@ -27,7 +28,9 @@ ref1.once( 'value' )
     .catch( ( error ) => {
       console.log( 'Error fetching data', error.message );
     } );
+*/
 
+/*
 const ref2 = database.ref( 'location/city' );
 
 ref2.once( 'value' )
@@ -39,7 +42,9 @@ ref2.once( 'value' )
     .catch( ( error ) => {
       console.log( 'Error fetching data', error.message );
     } );
+*/
 
+/*
 const ref3 = database.ref( 'location/city' );
 
 ref3.on( 'value', ( snapshot ) => {
@@ -47,7 +52,9 @@ ref3.on( 'value', ( snapshot ) => {
   const val = snapshot.val();
   console.log( val );
 } );
+*/
 
+/*
 const ref4 = database.ref();
 
 ref4.on( 'value', ( snapshot ) => {
@@ -56,10 +63,8 @@ ref4.on( 'value', ( snapshot ) => {
   console.log( val );
 } );
 
-const onValueChange = ( snapshot ) => {
-  const val = snapshot.val();
-  console.log( val );
-};
+ref4.off();
+*/
 
 /*
 setTimeout( () => {
@@ -75,16 +80,17 @@ setTimeout( () => {
 }, 15000 );
 */
 
-ref4.off();
-
 const field = 'age';
 
 const ref5 = database.ref( field );
 
-ref5.on( 'value', onValueChange );
+const onValueChange = ref5.on( 'value', ( snapshot ) => {
+  const value = snapshot.val();
+  console.log( `VALUE CHANGED for ${field} field => [${value}]` );
+} );
 
 setTimeout( () => {
-  ref5.set( 350 );
+  ref5.set( 555 );
 }, 5000 );
 
 setTimeout( () => {
@@ -93,7 +99,7 @@ setTimeout( () => {
 
 setTimeout( () => {
   console.log( 'no subscription' );
-  ref5.set( 325 );
+  ref5.set( 444 );
 }, 15000 );
 
 /*
