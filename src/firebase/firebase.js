@@ -37,21 +37,35 @@ database.ref()
 
 var ref = firebase.database().ref();
 
-const updateAttrs = {
+/*
+const updateAttrs1 = {
   location: {
-    city: 'New York',
-    postcode: 10001,
-    country: 'USA'
+    city: 'New York'
   }
 };
 
-ref.update( updateAttrs )
+ref.update( updateAttrs1 )
    .then( function() {
      console.log( 'Update succeeded.' );
    } )
    .catch( function( error ) {
      console.log( 'Update failed: ' + error.message );
    } );
+
+const updateAttrs2 = {
+  'location/city': {
+    city: 'Boston'
+  }
+};
+
+ref.update( updateAttrs2 )
+   .then( function() {
+     console.log( 'Update succeeded.' );
+   } )
+   .catch( function( error ) {
+     console.log( 'Update failed: ' + error.message );
+   } );
+*/
 
 /*
 var isSingleRef = firebase.database().ref( 'isSingle' );
