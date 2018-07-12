@@ -21,6 +21,7 @@ database.ref()
                 name: 'Steve Ingram',
                 age: 52,
                 isSingle: false,
+                job: 'Software Developer',
                 location: {
                   city: 'Berlin',
                   postcode: 12105,
@@ -37,10 +38,11 @@ database.ref()
 var ref = firebase.database().ref();
 
 const updateAttrs = {
-  name: 'Frankie Boyle',
-  age: 60,
-  isSingle: null,
-  job: 'Software Developer'
+  location: {
+    city: 'New York',
+    postcode: 10001,
+    country: 'USA'
+  }
 };
 
 ref.update( updateAttrs )
