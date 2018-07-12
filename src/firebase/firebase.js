@@ -28,7 +28,6 @@ const expandedLog = (function(){
 })();
 */
 
-
 // Initialize Firebase
 const config = {
   apiKey: 'AIzaSyACcP7_rN3n3Zrz2GSF10HlJwSmetmznuo',
@@ -125,6 +124,10 @@ ref1.on( 'value', ( snapshot ) => {
   } );
   
   console.log( JSON.stringify( expenses, true, 2 ) );
+} );
+
+ref1.on( 'child_removed', ( snapshot ) => {
+  console.log( snapshot.key, snapshot.val() );
 } );
 
 /*
