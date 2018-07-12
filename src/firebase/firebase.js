@@ -4,12 +4,12 @@ import * as firebase from 'firebase';
 
 // Initialize Firebase
 const config = {
-  apiKey: 'AIzaSyDZKMs7gzhi3Bz0UzSv2n_SNHpfMZhHNaU',
-  authDomain: 'expensify-11951.firebaseapp.com',
-  databaseURL: 'https://expensify-11951.firebaseio.com',
-  projectId: 'expensify-11951',
-  storageBucket: 'expensify-11951.appspot.com',
-  messagingSenderId: '426252954500'
+  apiKey: 'AIzaSyAfKHmjjJqNI1RlcBolbUSiu_LIrb80iiQ',
+  authDomain: 'expensify-98b1c.firebaseapp.com',
+  databaseURL: 'https://expensify-98b1c.firebaseio.com',
+  projectId: 'expensify-98b1c',
+  storageBucket: '',
+  messagingSenderId: '74233013279'
 };
 
 firebase.initializeApp( config );
