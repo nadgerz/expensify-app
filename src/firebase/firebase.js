@@ -44,37 +44,46 @@ const database = firebase.database();
 
 const tableName = 'expenses';
 
-/*
-database.ref( tableName ).set( null );
+const seed = () => {
+  
+  console.clear();
+  
+  const database = firebase.database();
+  
+  const tableName = 'expenses';
+  
+  database.ref( tableName ).set( null );
+  
+  database.ref( tableName ).push( {
+                                    description: 'Water Bill',
+                                    amount: 10,
+                                    createdAt: 1000,
+                                    note: 'Splishy'
+                                  } );
+  
+  database.ref( tableName ).push( {
+                                    description: 'Gas Bill',
+                                    amount: 50,
+                                    createdAt: 800,
+                                    note: 'Gassy'
+                                  } );
+  
+  database.ref( tableName ).push( {
+                                    description: 'Lekky Bill',
+                                    amount: 60,
+                                    createdAt: 1800,
+                                    note: 'Licky'
+                                  } );
+  
+  database.ref( tableName ).push( {
+                                    description: 'Rent Bill',
+                                    amount: 109500,
+                                    createdAt: 400,
+                                    note: 'Rentboy'
+                                  } );
+};
 
-database.ref( tableName ).push( {
-                                  description: 'Water Bill',
-                                  amount: 10,
-                                  createdAt: 1000,
-                                  note: 'Splishy'
-                                } );
-
-database.ref( tableName ).push( {
-                                  description: 'Gas Bill',
-                                  amount: 50,
-                                  createdAt: 800,
-                                  note: 'Gassy'
-                                } );
-
-database.ref( tableName ).push( {
-                                  description: 'Lekky Bill',
-                                  amount: 60,
-                                  createdAt: 1800,
-                                  note: 'Licky'
-                                } );
-
-database.ref( tableName ).push( {
-                                  description: 'Rent Bill',
-                                  amount: 109500,
-                                  createdAt: 400,
-                                  note: 'Rentboy'
-                                } );
-*/
+seed();
 
 /*
 const ref1 = database.ref( tableName );
@@ -127,11 +136,11 @@ ref1.on( 'value', ( snapshot ) => {
 } );
 
 ref1.on( 'child_removed', ( snapshot ) => {
-  console.log( "DELETED:", snapshot.key, snapshot.val() );
+  console.log( 'DELETED:', snapshot.key, snapshot.val() );
 } );
 
 ref1.on( 'child_changed', ( snapshot ) => {
-  console.log( "CHANGED:", snapshot.key, snapshot.val() );
+  console.log( 'CHANGED:', snapshot.key, snapshot.val() );
 } );
 
 /*
