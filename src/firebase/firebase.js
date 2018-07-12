@@ -15,7 +15,19 @@ const config = {
 firebase.initializeApp( config );
 
 const database = firebase.database();
+const ref = database.ref();
 
+ref.once( 'value' )
+   .then( ( snapshot ) => {
+     console.log( 'Fetching data', snapshot );
+     const val = snapshot.val();
+     console.log( val );
+   } )
+   .catch( ( error ) => {
+     console.log( 'Error fetching data', error.message );
+   } );
+
+/*
 database.ref()
         .set( {
                 name: 'Steve Ingram',
@@ -34,8 +46,9 @@ database.ref()
         .catch( ( error ) => {
           console.log( 'This failed.', error );
         } );
+*/
 
-var ref = firebase.database().ref();
+// var ref = firebase.database().ref();
 
 /*
 const updateAttrs1 = {
