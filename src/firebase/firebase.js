@@ -4,12 +4,12 @@ import * as firebase from 'firebase';
 
 // Initialize Firebase
 const config = {
-  apiKey: "AIzaSyACcP7_rN3n3Zrz2GSF10HlJwSmetmznuo",
-  authDomain: "expensify-ce9e6.firebaseapp.com",
-  databaseURL: "https://expensify-ce9e6.firebaseio.com",
-  projectId: "expensify-ce9e6",
-  storageBucket: "expensify-ce9e6.appspot.com",
-  messagingSenderId: "386378967206"
+  apiKey: 'AIzaSyACcP7_rN3n3Zrz2GSF10HlJwSmetmznuo',
+  authDomain: 'expensify-ce9e6.firebaseapp.com',
+  databaseURL: 'https://expensify-ce9e6.firebaseio.com',
+  projectId: 'expensify-ce9e6',
+  storageBucket: 'expensify-ce9e6.appspot.com',
+  messagingSenderId: '386378967206'
 };
 
 firebase.initializeApp( config );
@@ -36,25 +36,33 @@ database.ref()
         } );
 */
 
-// database.ref().set( 'This is my data' );
+var isSingleRef = firebase.database().ref( 'isSingle' );
 
+isSingleRef.remove()
+           .then( function() {
+             console.log( 'Remove succeeded.' );
+           } )
+           .catch( function( error ) {
+             console.log( 'Remove failed: ' + error.message );
+           } );
+
+// database.ref().set( 'This is my data' );
+//
 // database.ref( 'age' ).set( 53 );
 // database.ref( 'location/city' ).set( 'Augsburg' );
 
-/*
 const attrs = {
   height: 45,
   weight: 280
 };
 
-database.ref( 'attributes' )
-        .set( attrs )
-        .then( () => {
-          console.log( 'Attributes were saved' );
-        } )
-        .catch( ( error ) => {
-          console.log( 'Attributes died on the vine.', error );
-        } );
-*/
-
+// database.ref( 'attributes' )
+//         .set( attrs )
+//         .then( () => {
+//           console.log( 'Attributes were saved' );
+//         } )
+//         .catch( ( error ) => {
+//           console.log( 'Attributes died on the vine.', error );
+//         } );
+//
 // console.log( 'I made a request to change the data.' );
