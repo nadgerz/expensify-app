@@ -143,6 +143,10 @@ ref1.on( 'child_changed', ( snapshot ) => {
   console.log( 'CHANGED:', snapshot.key, snapshot.val() );
 } );
 
+ref1.on( 'child_added', ( snapshot ) => {
+  console.log( 'ADDED:', snapshot.key, snapshot.val() );
+} );
+
 /*
 const numbers = [1, 2, 3];
 
