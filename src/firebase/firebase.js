@@ -56,6 +56,10 @@ ref4.on( 'value', ( snapshot ) => {
   console.log( val );
 } );
 
+setTimeout( () => {
+  database.ref( 'age' ).set( 18 );
+}, 5000 );
+
 /*
 database.ref()
         .set( {
