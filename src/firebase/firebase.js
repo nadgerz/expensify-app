@@ -16,6 +16,29 @@ firebase.initializeApp( config );
 
 const database = firebase.database();
 
+database.ref()
+        .set( {
+                name: 'Steve Ingram',
+                age: 52,
+                isSingle: false,
+                job: {
+                  company: 'Arcos',
+                  title: 'Software Developer'
+                },
+                location: {
+                  city: 'Berlin',
+                  postcode: 12105,
+                  country: 'Germany'
+                },
+                stressLevel: 11
+              } )
+        .then( () => {
+          console.log( 'Data is saved' );
+        } )
+        .catch( ( error ) => {
+          console.log( 'This failed.', error );
+        } );
+
 /*
 const ref1 = database.ref();
 
@@ -80,6 +103,7 @@ setTimeout( () => {
 }, 15000 );
 */
 
+/*
 const field = 'age';
 
 const ref5 = database.ref( field );
@@ -87,10 +111,12 @@ const ref5 = database.ref( field );
 const onValueChange = ref5.on( 'value', ( snapshot ) => {
   const value = snapshot.val();
   console.log( `VALUE CHANGED for ${field} field => [${value}]` );
+}, ( error ) => {
+  console.log( 'summin blew up!', error.message );
 } );
 
 setTimeout( () => {
-  ref5.set( 555 );
+  ref5.set( 666 );
 }, 5000 );
 
 setTimeout( () => {
@@ -99,29 +125,44 @@ setTimeout( () => {
 
 setTimeout( () => {
   console.log( 'no subscription' );
-  ref5.set( 444 );
+  ref5.set( 667 );
 }, 15000 );
-
-/*
-database.ref()
-        .set( {
-                name: 'Steve Ingram',
-                age: 52,
-                isSingle: false,
-                job: 'Software Developer',
-                location: {
-                  city: 'Berlin',
-                  postcode: 12105,
-                  country: 'Germany'
-                }
-              } )
-        .then( () => {
-          console.log( 'Data is saved' );
-        } )
-        .catch( ( error ) => {
-          console.log( 'This failed.', error );
-        } );
 */
+
+// const field = 'name';
+
+const ref5 = database.ref();
+
+const onValueChange = ref5.on( 'value', ( snapshot ) => {
+  const data = snapshot.val();
+  // console.log( data );
+  
+  const name = data.name;
+  const title = data.job.title;
+  const company = data.job.company;
+  
+  console.log( `${name} is a ${title} at ${company}` );
+}, ( error ) => {
+  console.log( 'summin blew up!', error.message );
+} );
+
+setTimeout( () => {
+  ref5.update( {
+                 name: 'Fred Bloggs'
+               }
+  );
+}, 5000 );
+
+setTimeout( () => {
+  ref5.off( 'value', onValueChange );
+}, 10000 );
+
+setTimeout( () => {
+  ref5.update( {
+                 name: 'Steve Ingram'
+               }
+  );
+}, 15000 );
 
 // var ref = firebase.database().ref();
 
