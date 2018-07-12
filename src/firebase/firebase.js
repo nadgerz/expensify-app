@@ -19,6 +19,8 @@ const database = firebase.database();
 const tableName = 'expenses';
 
 /*
+database.ref( tableName ).set( null );
+
 database.ref( tableName ).push( {
                                   description: 'Water Bill',
                                   amount: 10,
@@ -48,6 +50,7 @@ database.ref( tableName ).push( {
                                 } );
 */
 
+/*
 const ref1 = database.ref( tableName );
 console.log( ref1 );
 
@@ -62,15 +65,22 @@ ref1.once( 'value' )
     .catch( ( error ) => {
       console.log( 'Error fetching data', error.message );
     } );
+*/
 
 database.ref( tableName )
         .once( 'value' )
         .then( ( snapshot ) => {
-          console.log( 'Fetching data', snapshot );
   
-          const data = snapshot.val();
+          const expenses = [];
   
-          console.log( 'DATA2', data );
+          snapshot.forEach( ( childSnapshot ) => {
+            expenses.push( {
+                             id: childSnapshot.key,
+                             ...childSnapshot.val()
+                           } );
+          } );
+  
+          console.log( expenses );
         } )
         .catch( ( error ) => {
           console.log( 'Error fetching data', error.message );
