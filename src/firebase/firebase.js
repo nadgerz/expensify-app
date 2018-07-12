@@ -16,6 +16,37 @@ firebase.initializeApp( config );
 
 const database = firebase.database();
 
+const tableName = 'expenses';
+
+database.ref( tableName ).push( {
+                                  description: 'Water Bill',
+                                  amount: 10,
+                                  createdAt: 1000,
+                                  note: 'Splishy'
+                                } );
+
+database.ref( tableName ).push( {
+                                  description: 'Gas Bill',
+                                  amount: 50,
+                                  createdAt: 800,
+                                  note: 'Gassy'
+                                } );
+
+database.ref( tableName ).push( {
+                                  description: 'Lekky Bill',
+                                  amount: 60,
+                                  createdAt: 1800,
+                                  note: 'Licky'
+                                } );
+
+database.ref( tableName ).push( {
+                                  description: 'Rent Bill',
+                                  amount: 109500,
+                                  createdAt: 400,
+                                  note: 'Rentboy'
+                                } );
+
+/*
 const numbers = [1, 2, 3];
 
 const notes = [
@@ -50,6 +81,7 @@ database.ref( 'notes' ).push( {
                                 cost: 123
                               } );
 
+*/
 /*
 database.ref( 'notes' )
         .set( notes )
