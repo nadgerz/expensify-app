@@ -31,6 +31,26 @@ const notes = [
   }
 ];
 
+const firebaseNotes = {
+  notes: {
+    banzai: {
+      title: 'Banzai!'
+    },
+    glibble: {
+      title: 'Glibble!'
+    },
+    neep: {
+      title: 'Neep!'
+    }
+  }
+};
+
+database.ref( 'notes' ).push( {
+                                title: 'todo',
+                                cost: 123
+                              } );
+
+/*
 database.ref( 'notes' )
         .set( notes )
         .then( () => {
@@ -39,6 +59,7 @@ database.ref( 'notes' )
         .catch( ( error ) => {
           console.log( 'This failed.', error );
         } );
+*/
 
 /*
 database.ref()
