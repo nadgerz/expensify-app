@@ -39,7 +39,8 @@ var ref = firebase.database().ref();
 const updateAttrs = {
   name: 'Frankie Boyle',
   age: 60,
-  isSingle: null
+  isSingle: null,
+  job: 'Software Developer'
 };
 
 ref.update( updateAttrs )
