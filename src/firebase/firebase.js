@@ -31,10 +31,10 @@ const notes = [
   }
 ];
 
-database.ref()
+database.ref( 'notes' )
         .set( notes )
         .then( () => {
-          console.log( 'Data is saved' );
+          console.log( 'Data is saved.' );
         } )
         .catch( ( error ) => {
           console.log( 'This failed.', error );
