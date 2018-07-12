@@ -18,8 +18,21 @@ const database = firebase.database();
 
 const numbers = [1, 2, 3];
 
+const notes = [
+  {
+    id: 1,
+    title: 'Banzai!'
+  }, {
+    id: 2,
+    title: 'Glibble!'
+  }, {
+    id: 3,
+    title: 'Neep!'
+  }
+];
+
 database.ref()
-        .set( numbers )
+        .set( notes )
         .then( () => {
           console.log( 'Data is saved' );
         } )
