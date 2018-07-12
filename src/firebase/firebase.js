@@ -127,7 +127,11 @@ ref1.on( 'value', ( snapshot ) => {
 } );
 
 ref1.on( 'child_removed', ( snapshot ) => {
-  console.log( snapshot.key, snapshot.val() );
+  console.log( "DELETED:", snapshot.key, snapshot.val() );
+} );
+
+ref1.on( 'child_changed', ( snapshot ) => {
+  console.log( "CHANGED:", snapshot.key, snapshot.val() );
 } );
 
 /*
