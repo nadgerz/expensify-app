@@ -2,6 +2,33 @@ import * as firebase from 'firebase';
 
 // <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
 
+/*
+const expandedLog = (function(){
+  var MAX_DEPTH = 100;
+  
+  return function(item, depth){
+    
+    depth = depth || 0;
+    
+    if (depth > MAX_DEPTH ) {
+      console.log(item);
+      return;
+    }
+    
+    if (_.isObject(item)) {
+      _.each(item, function(value, key) {
+        console.group(key + ' : ' +(typeof value));
+        expandedLog(value, depth + 1);
+        console.groupEnd();
+      });
+    } else {
+      console.log(item);
+    }
+  }
+})();
+*/
+
+
 // Initialize Firebase
 const config = {
   apiKey: 'AIzaSyACcP7_rN3n3Zrz2GSF10HlJwSmetmznuo',
@@ -67,24 +94,38 @@ ref1.once( 'value' )
     } );
 */
 
-database.ref( tableName )
-        .once( 'value' )
-        .then( ( snapshot ) => {
+const ref1 = database.ref( tableName );
+
+ref1.once( 'value' )
+    .then( ( snapshot ) => {
   
-          const expenses = [];
+      const expenses = [];
   
-          snapshot.forEach( ( childSnapshot ) => {
-            expenses.push( {
-                             id: childSnapshot.key,
-                             ...childSnapshot.val()
-                           } );
-          } );
+      snapshot.forEach( ( childSnapshot ) => {
+        expenses.push( {
+                         id: childSnapshot.key,
+                         ...childSnapshot.val()
+                       } );
+      } );
   
-          console.log( expenses );
-        } )
-        .catch( ( error ) => {
-          console.log( 'Error fetching data', error.message );
-        } );
+      console.log( JSON.stringify( expenses, true, 1 ) );
+    } )
+    .catch( ( error ) => {
+      console.log( 'Error fetching data', error.message );
+    } );
+
+ref1.on( 'value', ( snapshot ) => {
+  const expenses = [];
+  
+  snapshot.forEach( ( childSnapshot ) => {
+    expenses.push( {
+                     id: childSnapshot.key,
+                     ...childSnapshot.val()
+                   } );
+  } );
+  
+  console.log( JSON.stringify( expenses, true, 2 ) );
+} );
 
 /*
 const numbers = [1, 2, 3];
