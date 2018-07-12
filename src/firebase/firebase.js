@@ -15,17 +15,46 @@ const config = {
 firebase.initializeApp( config );
 
 const database = firebase.database();
-const ref = database.ref();
 
-ref.once( 'value' )
-   .then( ( snapshot ) => {
-     console.log( 'Fetching data', snapshot );
-     const val = snapshot.val();
-     console.log( val );
-   } )
-   .catch( ( error ) => {
-     console.log( 'Error fetching data', error.message );
-   } );
+const ref1 = database.ref();
+
+ref1.once( 'value' )
+    .then( ( snapshot ) => {
+      console.log( 'Fetching data ALL:', snapshot );
+      const val = snapshot.val();
+      console.log( val );
+    } )
+    .catch( ( error ) => {
+      console.log( 'Error fetching data', error.message );
+    } );
+
+const ref2 = database.ref( 'location/city' );
+
+ref2.once( 'value' )
+    .then( ( snapshot ) => {
+      console.log( 'Fetching data 2:', snapshot );
+      const val = snapshot.val();
+      console.log( val );
+    } )
+    .catch( ( error ) => {
+      console.log( 'Error fetching data', error.message );
+    } );
+
+const ref3 = database.ref( 'location/city' );
+
+ref3.on( 'value', ( snapshot ) => {
+  console.log( 'Fetching data by subscribing', snapshot );
+  const val = snapshot.val();
+  console.log( val );
+} );
+
+const ref4 = database.ref();
+
+ref4.on( 'value', ( snapshot ) => {
+  console.log( 'Fetching data by subscribing ALL', snapshot );
+  const val = snapshot.val();
+  console.log( val );
+} );
 
 /*
 database.ref()
