@@ -16,7 +16,6 @@ firebase.initializeApp( config );
 
 const database = firebase.database();
 
-/*
 database.ref()
         .set( {
                 name: 'Steve Ingram',
@@ -34,8 +33,36 @@ database.ref()
         .catch( ( error ) => {
           console.log( 'This failed.', error );
         } );
+
+var ref = firebase.database().ref();
+
+const updateAttrs = {
+  name: 'Frankie Boyle',
+  age: 60,
+  isSingle: null
+};
+
+ref.update( updateAttrs )
+   .then( function() {
+     console.log( 'Update succeeded.' );
+   } )
+   .catch( function( error ) {
+     console.log( 'Update failed: ' + error.message );
+   } );
+
+/*
+var isSingleRef = firebase.database().ref( 'isSingle' );
+
+isSingleRef.set( null )
+           .then( function() {
+             console.log( 'Remove succeeded set by null.' );
+           } )
+           .catch( function( error ) {
+             console.log( 'Remove failed by set null: ' + error.message );
+           } );
 */
 
+/*
 var isSingleRef = firebase.database().ref( 'isSingle' );
 
 isSingleRef.remove()
@@ -45,16 +72,29 @@ isSingleRef.remove()
            .catch( function( error ) {
              console.log( 'Remove failed: ' + error.message );
            } );
+*/
+
+/*
+var ref = firebase.database().ref();
+
+ref.remove()
+   .then( function() {
+     console.log( 'Remove succeeded.' );
+   } )
+   .catch( function( error ) {
+     console.log( 'Remove failed: ' + error.message );
+   } );
+*/
 
 // database.ref().set( 'This is my data' );
 //
 // database.ref( 'age' ).set( 53 );
 // database.ref( 'location/city' ).set( 'Augsburg' );
 
-const attrs = {
-  height: 45,
-  weight: 280
-};
+// const attrs = {
+//   height: 45,
+//   weight: 280
+// };
 
 // database.ref( 'attributes' )
 //         .set( attrs )
