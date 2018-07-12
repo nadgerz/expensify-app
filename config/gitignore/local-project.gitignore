@@ -1,4 +1,2 @@
-node_modules/
 public/dist/
 .idea/workspace.xml
-src/firebase//firebase.js
