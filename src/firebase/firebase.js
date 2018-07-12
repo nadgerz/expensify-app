@@ -61,20 +61,39 @@ const onValueChange = ( snapshot ) => {
   console.log( val );
 };
 
-const ref5 = database.ref();
-
-ref5().on( 'value', onValueChange );
-
+/*
 setTimeout( () => {
   database.ref( 'age' ).set( 50 );
 }, 5000 );
 
 setTimeout( () => {
-  database.ref().off( onValueChange );
+  database.ref().off();
 }, 10000 );
 
 setTimeout( () => {
   database.ref( 'age' ).set( 100 );
+}, 15000 );
+*/
+
+ref4.off();
+
+const field = 'age';
+
+const ref5 = database.ref( field );
+
+ref5.on( 'value', onValueChange );
+
+setTimeout( () => {
+  ref5.set( 350 );
+}, 5000 );
+
+setTimeout( () => {
+  ref5.off( 'value', onValueChange );
+}, 10000 );
+
+setTimeout( () => {
+  console.log( 'no subscription' );
+  ref5.set( 325 );
 }, 15000 );
 
 /*
