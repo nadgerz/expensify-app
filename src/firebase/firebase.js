@@ -56,12 +56,21 @@ ref4.on( 'value', ( snapshot ) => {
   console.log( val );
 } );
 
+const onValueChange = ( snapshot ) => {
+  const val = snapshot.val();
+  console.log( val );
+};
+
+const ref5 = database.ref();
+
+ref5().on( 'value', onValueChange );
+
 setTimeout( () => {
   database.ref( 'age' ).set( 50 );
 }, 5000 );
 
 setTimeout( () => {
-  database.ref().off();
+  database.ref().off( onValueChange );
 }, 10000 );
 
 setTimeout( () => {
