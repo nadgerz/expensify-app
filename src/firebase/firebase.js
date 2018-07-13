@@ -85,6 +85,8 @@ const seed = () => {
 
 // seed();
 
+export { firebase, database as default };
+
 /*
 const ref1 = database.ref( tableName );
 console.log( ref1 );
