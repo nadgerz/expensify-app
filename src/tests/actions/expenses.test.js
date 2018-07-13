@@ -63,20 +63,24 @@ test( 'should setup add expense action object with provided values', () => {
   
 } );
 
-test( 'should add expense to database and store', () => {
+test( 'should add expense to database and store', ( done ) => {
   //  Section 15: Lecture 153. Testing Async Redux Actions: Part I 16:59
   const store = createMockStore( {} );
   
   const expenseData = {
-    description: '',
-    note: '',
-    amount: 0,
-    createdAt: 0
+    description: 'Mouse',
+    note: 'This one is better',
+    amount: 3000,
+    createdAt: 997
   };
   
-  const expense = expenses[1];
+  // const expense = expenses[1];
   
-  store.dispatch( startAddExpense( expense ) );
+  store.dispatch( startAddExpense( expenseData ) ).then( () => {
+    console.log( 'woo hoo' );
+    expect( 1 ).toBe( 2 );
+    done();
+  } );
 } );
 
 test( 'should add expense with defaults to database and store', () => {

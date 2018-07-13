@@ -33,15 +33,15 @@ export const startAddExpense = ( expenseData = {} ) => {
     
     const expense = { description, note, amount, createdAt };
     
-    database.ref( 'expenses' )
-            .push( expense )
-            .then( ( ref ) => {
-              dispatch( addExpense( {
-                                      id: ref.key,
-                                      ...expense
+    return database.ref( 'expenses' )
+                   .push( expense )
+                   .then( ( ref ) => {
+                     dispatch( addExpense( {
+                                             id: ref.key,
+                                             ...expense
         
-                                    } ) );
-            } );
+                                           } ) );
+                   } );
   };
 };
 
