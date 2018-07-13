@@ -1,6 +1,6 @@
 import React from 'react';
 
-const LoginPage = ( props ) => {
+export const LoginPage = ( props ) => {
     return (
       <div>
         <button>
@@ -9,5 +9,3 @@ const LoginPage = ( props ) => {
       </div>
     )
 };
-
-export default LoginPage;
