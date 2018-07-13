@@ -1,7 +1,16 @@
 // ADD_EXPENSE
 import uuid from 'uuid';
 
+// use push
+// attach then callback
+// dispatch action
+// redirect
 
+// WHAT WE DO:
+// component calls action generator
+// action generator returns object
+// component dispatches object
+// redux store changes
 export const addExpense = ( {
                               description = '',
                               note = '',
