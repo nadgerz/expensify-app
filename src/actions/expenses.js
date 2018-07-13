@@ -32,6 +32,17 @@ export const addExpense = ( {
   }
 });
 
+export const startAddExpense = ( expenseData = {} ) => {
+  return ( dispatch ) => {
+    const {
+            description = '',
+            note        = '',
+            amount      = 0,
+            createdAt   = 0
+          } = expenseData;
+  };
+};
+
 // REMOVE_EXPENSE
 export const removeExpense = ( {
                                  id
