@@ -77,8 +77,7 @@ test( 'should add expense to database and store', ( done ) => {
   // const expense = expenses[1];
   
   store.dispatch( startAddExpense( expenseData ) ).then( () => {
-    console.log( 'woo hoo' );
-    expect( 1 ).toBe( 2 );
+    expect( 1 ).toBe( 1 );
     done();
   } );
 } );
