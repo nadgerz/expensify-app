@@ -8,6 +8,10 @@ import ExpenseForm from './ExpenseForm';
 export class AddExpensePage extends Component {
   
   onSubmit = ( expense ) => {
+    // use push
+    // attach then callback
+    // dispatch action
+    // redirect
     this.props.addExpense( expense );
     
     this.props.history.push( '/' );
