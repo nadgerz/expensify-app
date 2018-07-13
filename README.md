@@ -82,3 +82,8 @@ http://firebase.google.com
 redux-thunk
 
 https://github.com/reduxjs/redux-thunk
+
+
+redux-mock-store
+
+https://github.com/dmitry-zaets/redux-mock-store#readme

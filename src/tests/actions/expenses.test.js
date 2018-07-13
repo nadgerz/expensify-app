@@ -56,6 +56,14 @@ test( 'should setup add expense action object with provided values', () => {
   
 } );
 
+test( 'should add expense to database and store', () => {
+
+} );
+
+test( 'should add expense with defaults to database and store', () => {
+
+} );
+
 /*
 test( 'should setup add expense action object with default values', () => {
   
