@@ -83,7 +83,7 @@ const seed = () => {
                                   } );
 };
 
-seed();
+// seed();
 
 /*
 const ref1 = database.ref( tableName );
@@ -102,6 +102,7 @@ ref1.once( 'value' )
     } );
 */
 
+/*
 const ref1 = database.ref( tableName );
 
 ref1.once( 'value' )
@@ -146,6 +147,7 @@ ref1.on( 'child_changed', ( snapshot ) => {
 ref1.on( 'child_added', ( snapshot ) => {
   console.log( 'ADDED:', snapshot.key, snapshot.val() );
 } );
+*/
 
 /*
 const numbers = [1, 2, 3];
