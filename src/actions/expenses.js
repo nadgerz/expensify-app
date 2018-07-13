@@ -17,7 +17,7 @@ import database from '../firebase/firebase';
 // action generator returns function
 // component dispatches function (?)
 // function runs (has the ability to dispatch other actions and do whatvere it wants)
-const addExpense = ( expense ) => ({
+export const addExpense = ( expense ) => ({
   type: 'ADD_EXPENSE',
   expense
 });
