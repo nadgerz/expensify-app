@@ -78,3 +78,7 @@ https://numeraljs.com
 firebase
 
 http://firebase.google.com
+
+redux-thunk
+
+http://github.com/gaearon/redux-thunk
