@@ -35,9 +35,13 @@ export const startAddExpense = ( expenseData = {} ) => {
   
   database.ref( 'expenses' )
           .push( expense )
-          .then( () => {
-            dispatch( addExpense() );
-          } );
+          .then( (( ref ) => {
+            dispatch( addExpense( {
+                                    id: ref.key,
+                                    ...expense
+      
+                                  } ) );
+          });
   
 };
 
