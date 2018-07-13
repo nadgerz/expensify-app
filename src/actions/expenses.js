@@ -1,5 +1,6 @@
 // ADD_EXPENSE
 import uuid from 'uuid';
+import database from '../firebase/firebase'
 
 // use push
 // attach then callback
@@ -41,6 +42,15 @@ export const startAddExpense = ( expenseData = {} ) => {
             createdAt   = 0
           } = expenseData;
   };
+  
+  const expense = { description, note        , amount     , createdAt }
+  
+  database.ref('expenses')
+          .push(expense)
+          .then(() => {
+    dispatch(addExpense())
+  })
+  
 };
 
 // REMOVE_EXPENSE
