@@ -11,6 +11,11 @@ import uuid from 'uuid';
 // action generator returns object
 // component dispatches object
 // redux store changes
+
+// components call action generator
+// action generator returns function
+// component dispatches function (?)
+// function runs (has the ability to dispatch other actions and do whatvere it wants)
 export const addExpense = ( {
                               description = '',
                               note = '',
