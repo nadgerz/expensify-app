@@ -1,5 +1,6 @@
-// ADD_EXPENSE
 import database from '../firebase/firebase';
+
+// ADD_EXPENSE
 
 // use push
 // attach then callback
@@ -16,7 +17,7 @@ import database from '../firebase/firebase';
 // action generator returns function
 // component dispatches function (?)
 // function runs (has the ability to dispatch other actions and do whatvere it wants)
-export const addExpense = ( expense ) => ({
+const addExpense = ( expense ) => ({
   type: 'ADD_EXPENSE',
   expense
 });
@@ -29,20 +30,19 @@ export const startAddExpense = ( expenseData = {} ) => {
             amount      = 0,
             createdAt   = 0
           } = expenseData;
+    
+    const expense = { description, note, amount, createdAt };
+    
+    database.ref( 'expenses' )
+            .push( expense )
+            .then( ( ref ) => {
+              dispatch( addExpense( {
+                                      id: ref.key,
+                                      ...expense
+        
+                                    } ) );
+            } );
   };
-  
-  const expense = { description, note, amount, createdAt };
-  
-  database.ref( 'expenses' )
-          .push( expense )
-          .then( (( ref ) => {
-            dispatch( addExpense( {
-                                    id: ref.key,
-                                    ...expense
-      
-                                  } ) );
-          });
-  
 };
 
 // REMOVE_EXPENSE
