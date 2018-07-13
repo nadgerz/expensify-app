@@ -81,4 +81,4 @@ http://firebase.google.com
 
 redux-thunk
 
-http://github.com/gaearon/redux-thunk
+https://github.com/reduxjs/redux-thunk
