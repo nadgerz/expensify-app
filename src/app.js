@@ -11,7 +11,7 @@ import './styles/styles.scss';
 import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
 
-import './firebase/firebase';
+import { firebase } from './firebase/firebase';
 
 /*
 import { addExpense } from './actions/expenses';
@@ -96,3 +96,13 @@ const jsx = (
 );
 
 ReactDOM.render( jsx, document.getElementById( 'app' ) );
+
+firebase.auth().onAuthStateChanged( ( user ) => {
+  if ( user ) {
+    console.log( 'Hello' );
+    console.log( user );
+  }
+  else {
+    console.log( 'Bye!' );
+  }
+} );
