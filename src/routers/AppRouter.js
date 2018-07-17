@@ -13,7 +13,7 @@ import Header from '../components/Header';
 import LoginPage from '../components/LoginPage';
 
 
-const history = createHistory();
+export const history = createHistory();
 
 export const AppRouter = () => (
   
