@@ -118,8 +118,8 @@ firebase.auth().onAuthStateChanged( ( user ) => {
         } );
     */
     renderApp();
-    if ( true ) {
-      history.push( '/' );
+    if ( history.location.pathname === '/' ) {
+      history.push( '/dashboard' );
     }
   }
   else {
