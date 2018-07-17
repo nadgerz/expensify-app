@@ -16,6 +16,7 @@ test( 'should call startLogout on button click', () => {
   
   const wrapper = shallow( <Header startLogout={startLogout} /> );
   
+  wrapper.find('')
   expect( wrapper ).toMatchSnapshot();
 } );
 
