@@ -118,6 +118,9 @@ firebase.auth().onAuthStateChanged( ( user ) => {
         } );
     */
     renderApp();
+    if ( true ) {
+      history.push( '/' );
+    }
   }
   else {
     console.log( 'Bye!' );
