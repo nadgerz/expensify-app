@@ -95,6 +95,15 @@ const jsx = (
   </Provider>
 );
 
+let hasRendered = false;
+
+const renderApp = () => {
+  if ( !hasRendered ) {
+    ReactDOM.render( jsx, document.getElementById( 'app' ) );
+    hasRendered = true;
+  }
+};
+
 // ReactDOM.render( <p>Loading...</p>, document.getElementById( 'app' ) );
 ReactDOM.render( jsx, document.getElementById( 'app' ) );
 
@@ -105,13 +114,14 @@ firebase.auth().onAuthStateChanged( ( user ) => {
     
     /*
         store.dispatch( startSetExpenses() ).then( () => {
-          ReactDOM.render( jsx, document.getElementById( 'app' ) );
+          renderApp();
         } );
     */
+    renderApp();
   }
   else {
     console.log( 'Bye!' );
-    ReactDOM.render( jsx, document.getElementById( 'app' ) );
+    renderApp();
     history.push( '/' );
   }
 } );
