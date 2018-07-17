@@ -111,6 +111,7 @@ firebase.auth().onAuthStateChanged( ( user ) => {
   if ( user ) {
     console.log( 'Hello' );
     console.dir( user );
+    console.dir( user.uid );
     
     /*
         store.dispatch( startSetExpenses() ).then( () => {
@@ -126,5 +127,8 @@ firebase.auth().onAuthStateChanged( ( user ) => {
     console.log( 'Bye!' );
     renderApp();
     history.push( '/' );
+    
+    console.dir( user );
+    console.dir( user.uid );
   }
 } );
