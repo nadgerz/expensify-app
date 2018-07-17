@@ -98,16 +98,16 @@ const jsx = (
 // ReactDOM.render( <p>Loading...</p>, document.getElementById( 'app' ) );
 ReactDOM.render( jsx, document.getElementById( 'app' ) );
 
-/*
-store.dispatch( startSetExpenses() ).then( () => {
-  ReactDOM.render( jsx, document.getElementById( 'app' ) );
-} );
-*/
-
 firebase.auth().onAuthStateChanged( ( user ) => {
   if ( user ) {
     console.log( 'Hello' );
-    console.log( user );
+    console.dir( user );
+  
+/*
+    store.dispatch( startSetExpenses() ).then( () => {
+      ReactDOM.render( jsx, document.getElementById( 'app' ) );
+    } );
+*/
   }
   else {
     console.log( 'Bye!' );
