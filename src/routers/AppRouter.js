@@ -1,6 +1,8 @@
 import React from 'react';
 
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Route, Router, Switch } from 'react-router-dom';
+
+import createHistory from 'history/createBrowserHistory';
 
 import ExpenseDashboardPage from '../components/ExpenseDashboardPage';
 import AddExpensePage from '../components/AddExpensePage';
@@ -11,9 +13,11 @@ import Header from '../components/Header';
 import LoginPage from '../components/LoginPage';
 
 
-const AppRouter = () => (
+const history = createHistory();
+
+export const AppRouter = () => (
   
-  <BrowserRouter>
+  <Router history={history}>
     <div>
       
       <Header/>
@@ -46,7 +50,7 @@ const AppRouter = () => (
       </Switch>
     
     </div>
-  </BrowserRouter>
+  </Router>
 );
 
 export default AppRouter;
