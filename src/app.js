@@ -102,15 +102,16 @@ firebase.auth().onAuthStateChanged( ( user ) => {
   if ( user ) {
     console.log( 'Hello' );
     console.dir( user );
-  
-/*
-    store.dispatch( startSetExpenses() ).then( () => {
-      ReactDOM.render( jsx, document.getElementById( 'app' ) );
-    } );
-*/
+    
+    /*
+        store.dispatch( startSetExpenses() ).then( () => {
+          ReactDOM.render( jsx, document.getElementById( 'app' ) );
+        } );
+    */
   }
   else {
     console.log( 'Bye!' );
+    ReactDOM.render( jsx, document.getElementById( 'app' ) );
     history.push( '/' );
   }
 } );
