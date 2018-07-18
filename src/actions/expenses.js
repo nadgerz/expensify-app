@@ -98,6 +98,9 @@ export const startSetExpenses = () => {
                        } );
       } );
       
+      //
+      //    TODO: Does not seem to be setting the values
+      //
       dispatch( setExpenses( expenses ) );
     } );
   };
