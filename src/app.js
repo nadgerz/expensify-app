@@ -130,6 +130,6 @@ firebase.auth().onAuthStateChanged( ( user ) => {
     history.push( '/' );
     
     console.dir( user );
-    console.dir( user.uid );
+    // console.dir( user.uid );
   }
 } );
