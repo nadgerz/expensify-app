@@ -106,30 +106,27 @@ ReactDOM.render( jsx, document.getElementById( 'app' ) );
 
 firebase.auth().onAuthStateChanged( ( user ) => {
   if ( user ) {
-    console.log( 'Hello' );
+    // console.log( 'Hello' );
     console.dir( user );
-    console.dir( user.uid );
+    // console.dir( user.uid );
     
     store.dispatch( login( user.uid ) );
     
-    /*
-        store.dispatch( startSetExpenses() ).then( () => {
-          renderApp();
-        } );
-    */
-    renderApp();
-    if ( history.location.pathname === '/' ) {
-      history.push( '/dashboard' );
-    }
+    store.dispatch( startSetExpenses() ).then( () => {
+      renderApp();
+      
+      if ( history.location.pathname === '/' ) {
+        history.push( '/dashboard' );
+      }
+    } );
   }
   else {
-    console.log( 'Bye!' );
+    // console.log( 'Bye!' );
     
     store.dispatch( logout() );
-    renderApp();
-    history.push( '/' );
     
-    console.dir( user );
-    // console.dir( user.uid );
+    renderApp();
+    
+    history.push( '/' );
   }
 } );
